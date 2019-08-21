@@ -83,7 +83,6 @@ namespace Common.Utility
             fileSize = 0;
 
             string Result = "";
-            bool typeFlag = false;
             string FilePath = filePath;
             int MaxSize = maxSize;
             string strFileName, strNewName, strFilePath;

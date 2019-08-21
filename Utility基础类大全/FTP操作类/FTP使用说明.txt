@@ -1,4 +1,4 @@
-﻿ 源码己托管:http://git.oschina.net/kuiyu/dotnetcodes
+ 源码己托管:http://git.oschina.net/kuiyu/dotnetcodes
 
  说明:
  推荐使用 edtFTPnet.dll

@@ -1,4 +1,4 @@
-﻿using Common.Utility;
+using Common.Utility;
 using System;
 using System.Configuration;
 namespace HD.DBHelper

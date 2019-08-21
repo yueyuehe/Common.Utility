@@ -1,4 +1,4 @@
-﻿/******************利用正则表达式，在字符串中，对特殊的字符： ' " < > & 进行编码*******************/
+/******************利用正则表达式，在字符串中，对特殊的字符： ' " < > & 进行编码*******************/
 //参数：strSource ---- 需要替换的源字符串
 //返回：编码过的字符串
 function EncodeSpecialChar(strSource) {
@@ -38,32 +38,32 @@ function EncodeSpecialChar(strSource) {
 }
 
 /*
-*功能：检查字符串长度,超过最大长度返回false
-*参数：strValue 字符串,maxLength 允许输入最大长度
-*/
+ *功能：检查字符串长度,超过最大长度返回false
+ *参数：strValue 字符串,maxLength 允许输入最大长度
+ */
 function CheckValueLength(strValue, maxLength) {
     return (strValue.length <= maxLength) ? true : false;
 }
 
 /*
-*功能：检查字符串是否为空,为空则返回true
-*参数：strValue 字符串
-*/
+ *功能：检查字符串是否为空,为空则返回true
+ *参数：strValue 字符串
+ */
 function CheckEmpty(strValue) {
     return (!(strValue != null & strValue != "")) ? true : false;
 }
 
 /**
-* 验证整数,包含正整数和负整数
-*/
+ * 验证整数,包含正整数和负整数
+ */
 function CheckINTEGER(strValue) {
     var regTextInteger = /^(-|\+)?(\d)*$/;
     return regTextInteger.test(strValue);
 }
 
 /**
-*2 positive integer检查是否为正整数 (  /^[1-9]+[0-9]*]*$/
-*/
+ *2 positive integer检查是否为正整数 (  /^[1-9]+[0-9]*]*$/
+ */
 function CheckPositiveInt(strValue) {
     var regExpInfo = /^[1-9]+[0-9]*]*$/;
     return regExpInfo.test(strValue);
@@ -75,14 +75,14 @@ xxxxx3 检查是否输入的是数字,并保留 正确输入的数字
 *参数: objInput, 控件对象
 */
 function CheckNumInput(objInput) {
-    var i = 0, returnVal = '';
+    var i = 0,
+        returnVal = '';
     var strInput = objInput.value;
     for (i = 0; i < strInput.length; i++) {
         if (returnVal == '') {
             if (CheckPositiveInt(strInput.charAt(i))) //显示的第1个数字为正整数
                 returnVal = returnVal.concat(strInput.charAt(i));
-        }
-        else {
+        } else {
             if (!CheckNUMBER(strInput.charAt(i))) break;
             returnVal = returnVal.concat(strInput.charAt(i));
         }
@@ -95,80 +95,80 @@ function CheckNumInput(objInput) {
 }
 
 /**
-*验证钱数,带单位
-*/
+ *验证钱数,带单位
+ */
 function CheckMoney(strValue, strUnit) {
     var testMoney = eval("/^\\d+(\\.\\d{0," + (strUnit.length - 1) + "})?$/");
     return testMoney.test(strValue);
 }
 
 /**
-* 验证浮点数
-*/
+ * 验证浮点数
+ */
 function CheckFLOAT(strValue) {
     var regTextFloat = /^(-)?(\d)*(\.)?(\d)*$/;
     return regTextFloat.test(strValue);
 }
 
 /**
-* 验证数字
-*/
+ * 验证数字
+ */
 function CheckNUMBER(strValue) {
     var regTextNumber = /^(\d)*$/;
     return regTextNumber.test(strValue);
 }
 
 /**
-* 验证英文字母，不区分大小写
-*/
+ * 验证英文字母，不区分大小写
+ */
 function CheckTextForENGLISH(strValue) {
     var regTextEnglish = /^[a-zA-Z]*$/;
     return regTextEnglish.test(strValue);
 }
 
 /**
-* 验证英文字母和数字，不区分大小写
-*/
+ * 验证英文字母和数字，不区分大小写
+ */
 function CheckTextForENGLISHNUMBER(strValue) {
     var regTextEnglishNumber = /^[a-zA-Z0-9]*$/;
     return regTextEnglishNumber.test(strValue);
 }
 
 /**
-* 验证电话号码
-*/
+ * 验证电话号码
+ */
 function CheckPHONE(strValue) {
     var regExpInfo = /^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/;
     return regExpInfo.test(strValue);
 }
 
 /**
-* 验证时间  (XXX问题 只是时间格式)
-*/
+ * 验证时间  (XXX问题 只是时间格式)
+ */
 function CheckTextDataForTIME(strValue) {
     var regTextTime = /^(\d+):(\d{1,2}):(\d{1,2})$/;
     return regTextTime.test(strValue);
 }
 
 /**
-* 验证EMail
-*/
+ * 验证EMail
+ */
 function CheckEMAIL(strValue) {
     var regTextEmail = /^[\w-]+@[\w-]+(\.(\w)+)*(\.(\w){2,3})$/;
     return regTextEmail.test(strValue);
 }
 
 /**
-* 验证URL
-*/
+ * 验证URL
+ */
 function CheckURL(strValue) {
     var regTextUrl = /^(file|http|https|ftp|mms|telnet|news|wais|mailto):\/\/(.+)$/;
     return regTextUrl.test(strValue);
 }
 
 /**
-*验证身份证
-*/
+ *验证身份证
+ */
 function CheckIdCard(strValue) {
     var regExpInfo = /^(\w{15}|\w{18})$/;
     return regExpInfo.test(strValue);
@@ -183,21 +183,16 @@ function CheckComDate(obj_dateBegain, obj_dateEnd) {
     if (dates <= datee) {
         if (dates == datee) {
             var dates1, datee1;
-            dates1 = new Date(obj_dateBegain.substr(0, 4), obj_dateBegain.substr(5, 2)
-				, obj_dateBegain.substr(8, 2), obj_dateBegain.substr(11, 2), obj_dateBegain.substr(14, 2)
-				, obj_dateBegain.substr(17, 2));
-            datee1 = new Date(obj_dateEnd.substr(0, 4), obj_dateEnd.substr(5, 2), obj_dateEnd.substr(8, 2)
-			, obj_dateEnd.substr(11, 2), obj_dateEnd.substr(14, 2), obj_dateEnd.substr(17, 2));
+            dates1 = new Date(obj_dateBegain.substr(0, 4), obj_dateBegain.substr(5, 2), obj_dateBegain.substr(8, 2), obj_dateBegain.substr(11, 2), obj_dateBegain.substr(14, 2), obj_dateBegain.substr(17, 2));
+            datee1 = new Date(obj_dateEnd.substr(0, 4), obj_dateEnd.substr(5, 2), obj_dateEnd.substr(8, 2), obj_dateEnd.substr(11, 2), obj_dateEnd.substr(14, 2), obj_dateEnd.substr(17, 2));
             if (dates1 <= datee1)
                 return true;
             else
                 return false;
-        }
-        else {
+        } else {
             return true;
         }
-    }
-    else {
+    } else {
         return false;
     }
 }
@@ -252,8 +247,7 @@ function CheckSpecialChar(strSource) {
 
     if (intIndex == -1) {
         return false;
-    }
-    else {
+    } else {
         return true;
     }
 }
@@ -263,13 +257,11 @@ function CheckFixFloat(objName) {
     var regExpInfo = /^-?\d+$/;
     if (objName.value.search(regExpInfo) >= 0) {
         return true;
-    }
-    else {
+    } else {
         var regExpInfo1 = /^\d+.[0-9]{1,2}$/;
         if (objName.value.search(regExpInfo1) >= 0) {
             return true;
-        }
-        else {
+        } else {
             if (Trim(objName.value) != "") {
                 alert("输入内容必须为整数或小数！小数点后最多2位数");
                 objName.value = "0.00";
@@ -287,8 +279,7 @@ function CheckName(objName) {
         alert("输入内容必须为字母，数字或下划线!");
         objName.value = "";
         return false;
-    }
-    else {
+    } else {
         return true;
     }
 }
@@ -299,8 +290,7 @@ function NumOnly() {
     var i = window.event.keyCode;
     if ((i <= 57 && i >= 45) || (i >= 96 && i <= 105) || (i == 8) || (i == 9) || (i == 37) || (i == 39) || (i == 46) || (i == 17)) {
         return true;
-    }
-    else {
+    } else {
         event.returnValue = false;
         return false;
     }
@@ -311,8 +301,7 @@ function FloatOnly() {
     var i = window.event.keyCode;
     if ((i <= 57 && i >= 45) || (i >= 96 && i <= 105) || (i == 8) || (i == 9) || (i == 37) || (i == 39) || (i == 46) || (i == 17) || (i == 189) || (i == 190)) {
         return true;
-    }
-    else {
+    } else {
         event.returnValue = false;
         return false;
     }
@@ -332,8 +321,7 @@ function EventCheckInt(objControl, chineseName) {
         objControl.value = oldValue;
         alert(chineseName + "内容不是有效数字!");
         objControl.focus();
-    }
-    else {
+    } else {
         oldValue = objControl.value;
     }
 }
@@ -344,8 +332,7 @@ function EventCheckFloat(objControl, chineseName) {
         objControl.value = oldValue;
         alert(chineseName + "内容不是有效数字!");
         objControl.focus();
-    }
-    else {
+    } else {
         oldValue = objControl.value;
     }
 }
@@ -356,8 +343,7 @@ function EventCheckSpecialChar(objControl, chineseName) {
         objControl.value = oldValue;
         alert(chineseName + "内容不能包含 * \"  < > / ) 等特殊字符!");
         objControl.focus();
-    }
-    else {
+    } else {
         oldValue = objControl.value;
     }
 }
@@ -368,8 +354,7 @@ function EventCheckMaxLength(objControl, chineseName, intMaxLength) {
         objControl.value = objControl.value.substring(0, intMaxLength);
         alert(chineseName + "超过最大长度" + intMaxLength + ',系统自动截取有效值!');
         objControl.focus();
-    }
-    else {
+    } else {
         oldValue = objControl.value;
     }
 }
@@ -379,4 +364,4 @@ function EventCheckMaxLength(objControl, chineseName, intMaxLength) {
 function CheckTextForNORMAL(strValue) {
     var regTextChar = /([\*\"\'<>\/\(\&\)\\\卐\卍\ ])+/;
     return !regTextChar.test(strValue);
-} 
+}

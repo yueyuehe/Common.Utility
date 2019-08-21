@@ -5,12 +5,12 @@ using System.Web;
 namespace Common.Utility
 {
 	/// <summary>
-	/// »º´æÏà¹ØµÄ²Ù×÷Àà
+	/// ç¼“å­˜ç›¸å…³çš„æ“ä½œç±»
 	/// </summary>
 	public class DataCache
 	{
 		/// <summary>
-		/// »ñÈ¡µ±Ç°Ó¦ÓÃ³ÌĞòÖ¸¶¨CacheKeyµÄCacheÖµ
+		/// è·å–å½“å‰åº”ç”¨ç¨‹åºæŒ‡å®šCacheKeyçš„Cacheå€¼
 		/// </summary>
 		/// <param name="CacheKey"></param>
 		/// <returns></returns>
@@ -21,7 +21,7 @@ namespace Common.Utility
 		}
 
 		/// <summary>
-		/// ÉèÖÃµ±Ç°Ó¦ÓÃ³ÌĞòÖ¸¶¨CacheKeyµÄCacheÖµ
+		/// è®¾ç½®å½“å‰åº”ç”¨ç¨‹åºæŒ‡å®šCacheKeyçš„Cacheå€¼
 		/// </summary>
 		/// <param name="CacheKey"></param>
 		/// <param name="objObject"></param>
@@ -32,7 +32,7 @@ namespace Common.Utility
 		}
 
 		/// <summary>
-		/// ÉèÖÃµ±Ç°Ó¦ÓÃ³ÌĞòÖ¸¶¨CacheKeyµÄCacheÖµ
+		/// è®¾ç½®å½“å‰åº”ç”¨ç¨‹åºæŒ‡å®šCacheKeyçš„Cacheå€¼
 		/// </summary>
 		/// <param name="CacheKey"></param>
 		/// <param name="objObject"></param>

@@ -12,7 +12,7 @@ namespace Common.Utility
         string[] strArrMencoder = { "wmv", "rmvb", "rm" };
         string[] strArrFfmpeg = { "asf", "avi", "mpg", "3gp", "mov" };
 
-        #region ÅäÖÃ
+        #region é…ç½®
         public static string ffmpegtool = ConfigurationManager.AppSettings["ffmpeg"];
         public static string mencodertool = ConfigurationManager.AppSettings["mencoder"];
         public static string savefile = ConfigurationManager.AppSettings["savefile"] + "/";
@@ -21,9 +21,9 @@ namespace Common.Utility
         public static string heightOfFile = ConfigurationManager.AppSettings["heightSize"];
         #endregion
 
-        #region »ñÈ¡ÎÄ¼şµÄÃû×Ö
+        #region è·å–æ–‡ä»¶çš„åå­—
         /// <summary>
-        /// »ñÈ¡ÎÄ¼şµÄÃû×Ö
+        /// è·å–æ–‡ä»¶çš„åå­—
         /// </summary>
         public static string GetFileName(string fileName)
         {
@@ -32,9 +32,9 @@ namespace Common.Utility
         }
         #endregion
 
-        #region »ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
+        #region è·å–æ–‡ä»¶æ‰©å±•å
         /// <summary>
-        /// »ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
+        /// è·å–æ–‡ä»¶æ‰©å±•å
         /// </summary>
         public static string GetExtension(string fileName)
         {
@@ -43,9 +43,9 @@ namespace Common.Utility
         }
         #endregion
 
-        #region »ñÈ¡ÎÄ¼şÀàĞÍ
+        #region è·å–æ–‡ä»¶ç±»å‹
         /// <summary>
-        /// »ñÈ¡ÎÄ¼şÀàĞÍ
+        /// è·å–æ–‡ä»¶ç±»å‹
         /// </summary>
         public string CheckExtension(string extension)
         {
@@ -58,13 +58,13 @@ namespace Common.Utility
         }
 		#endregion
 
-		#region ÊÓÆµ¸ñÊ½×ªÎªFlv
+		#region è§†é¢‘æ ¼å¼è½¬ä¸ºFlv
 		/// <summary>
 		/// Converts the flv.
 		/// </summary>
 		/// <returns><c>true</c>, if flv was converted, <c>false</c> otherwise.</returns>
-		/// <param name="vFileName">Ô­ÊÓÆµÎÄ¼şµØÖ·</param>
-		/// <param name="ExportName">Éú³ÉºóµÄFlvÎÄ¼şµØÖ·</param>
+		/// <param name="vFileName">åŸè§†é¢‘æ–‡ä»¶åœ°å€</param>
+		/// <param name="ExportName">ç”Ÿæˆåçš„Flvæ–‡ä»¶åœ°å€</param>
 	public bool ConvertFlv(string vFileName, string ExportName)
     {
         if ((!System.IO.File.Exists(ffmpegtool)) || (!System.IO.File.Exists(HttpContext.Current.Server.MapPath(vFileName))))
@@ -74,7 +74,7 @@ namespace Common.Utility
 
         vFileName = HttpContext.Current.Server.MapPath(vFileName);
         ExportName = HttpContext.Current.Server.MapPath(ExportName);
-        string Command = " -i \"" + vFileName + "\" -y -ab 32 -ar 22050 -b 800000 -s  480*360 \"" + ExportName + "\""; //Flv¸ñÊ½     
+        string Command = " -i \"" + vFileName + "\" -y -ab 32 -ar 22050 -b 800000 -s  480*360 \"" + ExportName + "\""; //Flvæ ¼å¼     
         System.Diagnostics.Process p = new System.Diagnostics.Process();
         p.StartInfo.FileName = ffmpegtool;
         p.StartInfo.Arguments = Command;
@@ -93,12 +93,12 @@ namespace Common.Utility
     }
     #endregion
 
-    #region Éú³ÉFlvÊÓÆµµÄËõÂÔÍ¼       
+    #region ç”ŸæˆFlvè§†é¢‘çš„ç¼©ç•¥å›¾       
     /// <summary>
-    /// Éú³ÉFlvÊÓÆµµÄËõÂÔÍ¼
+    /// ç”ŸæˆFlvè§†é¢‘çš„ç¼©ç•¥å›¾
     /// </summary>
-    /// <param name="vFileName">ÊÓÆµÎÄ¼şµØÖ·</param>
-    /// <returns>·µ»ØÊÓÆµËõÂÔÍ¼Î»ÖÃ</returns>
+    /// <param name="vFileName">è§†é¢‘æ–‡ä»¶åœ°å€</param>
+    /// <returns>è¿”å›è§†é¢‘ç¼©ç•¥å›¾ä½ç½®</returns>
     public string CatchImg(string vFileName)
     {
         if ((!System.IO.File.Exists(ffmpegtool)) || (!System.IO.File.Exists(HttpContext.Current.Server.MapPath(vFileName)))) return "";
@@ -125,7 +125,7 @@ namespace Common.Utility
             }
             System.Threading.Thread.Sleep(4000);
 
-            //×¢Òâ:Í¼Æ¬½ØÈ¡³É¹¦ºó,Êı¾İÓÉÄÚ´æ»º´æĞ´µ½´ÅÅÌĞèÒªÊ±¼ä½Ï³¤,´ó¸ÅÔÚ3,4ÃëÉõÖÁ¸ü³¤;
+            //æ³¨æ„:å›¾ç‰‡æˆªå–æˆåŠŸå,æ•°æ®ç”±å†…å­˜ç¼“å­˜å†™åˆ°ç£ç›˜éœ€è¦æ—¶é—´è¾ƒé•¿,å¤§æ¦‚åœ¨3,4ç§’ç”šè‡³æ›´é•¿;
             if (System.IO.File.Exists(HttpContext.Current.Server.MapPath(flv_img_p)))
             {
                 return flv_img_p;
@@ -139,14 +139,14 @@ namespace Common.Utility
     }
     #endregion
 
-    #region ÔËĞĞFFMpegµÄÊÓÆµ½âÂë(¾ø¶ÔÂ·¾¶)
+    #region è¿è¡ŒFFMpegçš„è§†é¢‘è§£ç (ç»å¯¹è·¯å¾„)
     /// <summary>
-    /// ×ª»»ÎÄ¼ş²¢±£´æÔÚÖ¸¶¨ÎÄ¼ş¼ĞÏÂ
+    /// è½¬æ¢æ–‡ä»¶å¹¶ä¿å­˜åœ¨æŒ‡å®šæ–‡ä»¶å¤¹ä¸‹
     /// </summary>
-    /// <param name="fileName">ÉÏ´«ÊÓÆµÎÄ¼şµÄÂ·¾¶£¨Ô­ÎÄ¼ş£©</param>
-    /// <param name="playFile">×ª»»ºóµÄÎÄ¼şµÄÂ·¾¶£¨ÍøÂç²¥·ÅÎÄ¼ş£©</param>
-    /// <param name="imgFile">´ÓÊÓÆµÎÄ¼şÖĞ×¥È¡µÄÍ¼Æ¬Â·¾¶</param>
-    /// <returns>³É¹¦:·µ»ØÍ¼Æ¬ĞéÄâµØÖ·;Ê§°Ü:·µ»Ø¿Õ×Ö·û´®</returns>
+    /// <param name="fileName">ä¸Šä¼ è§†é¢‘æ–‡ä»¶çš„è·¯å¾„ï¼ˆåŸæ–‡ä»¶ï¼‰</param>
+    /// <param name="playFile">è½¬æ¢åçš„æ–‡ä»¶çš„è·¯å¾„ï¼ˆç½‘ç»œæ’­æ”¾æ–‡ä»¶ï¼‰</param>
+    /// <param name="imgFile">ä»è§†é¢‘æ–‡ä»¶ä¸­æŠ“å–çš„å›¾ç‰‡è·¯å¾„</param>
+    /// <returns>æˆåŠŸ:è¿”å›å›¾ç‰‡è™šæ‹Ÿåœ°å€;å¤±è´¥:è¿”å›ç©ºå­—ç¬¦ä¸²</returns>
     public string ChangeFilePhy(string fileName, string playFile, string imgFile)
     {
         string ffmpeg = Server.MapPath(VideoConvert.ffmpegtool);
@@ -163,8 +163,8 @@ namespace Common.Utility
         };
         try
         {
-            System.Diagnostics.Process.Start(FilestartInfo);//×ª»»
-            CatchImg(fileName, imgFile); //½ØÍ¼
+            System.Diagnostics.Process.Start(FilestartInfo);//è½¬æ¢
+            CatchImg(fileName, imgFile); //æˆªå›¾
         }
         catch
         {
@@ -199,14 +199,14 @@ namespace Common.Utility
     }
     #endregion
 
-    #region ÔËĞĞFFMpegµÄÊÓÆµ½âÂë(Ïà¶ÔÂ·¾¶)
+    #region è¿è¡ŒFFMpegçš„è§†é¢‘è§£ç (ç›¸å¯¹è·¯å¾„)
     /// <summary>
-    /// ×ª»»ÎÄ¼ş²¢±£´æÔÚÖ¸¶¨ÎÄ¼ş¼ĞÏÂ
+    /// è½¬æ¢æ–‡ä»¶å¹¶ä¿å­˜åœ¨æŒ‡å®šæ–‡ä»¶å¤¹ä¸‹
     /// </summary>
-    /// <param name="fileName">ÉÏ´«ÊÓÆµÎÄ¼şµÄÂ·¾¶£¨Ô­ÎÄ¼ş£©</param>
-    /// <param name="playFile">×ª»»ºóµÄÎÄ¼şµÄÂ·¾¶£¨ÍøÂç²¥·ÅÎÄ¼ş£©</param>
-    /// <param name="imgFile">´ÓÊÓÆµÎÄ¼şÖĞ×¥È¡µÄÍ¼Æ¬Â·¾¶</param>
-    /// <returns>³É¹¦:·µ»ØÍ¼Æ¬ĞéÄâµØÖ·;Ê§°Ü:·µ»Ø¿Õ×Ö·û´®</returns>
+    /// <param name="fileName">ä¸Šä¼ è§†é¢‘æ–‡ä»¶çš„è·¯å¾„ï¼ˆåŸæ–‡ä»¶ï¼‰</param>
+    /// <param name="playFile">è½¬æ¢åçš„æ–‡ä»¶çš„è·¯å¾„ï¼ˆç½‘ç»œæ’­æ”¾æ–‡ä»¶ï¼‰</param>
+    /// <param name="imgFile">ä»è§†é¢‘æ–‡ä»¶ä¸­æŠ“å–çš„å›¾ç‰‡è·¯å¾„</param>
+    /// <returns>æˆåŠŸ:è¿”å›å›¾ç‰‡è™šæ‹Ÿåœ°å€;å¤±è´¥:è¿”å›ç©ºå­—ç¬¦ä¸²</returns>
     public string ChangeFileVir(string fileName, string playFile, string imgFile)
     {
         string ffmpeg = Server.MapPath(VideoConvert.ffmpegtool);
@@ -238,8 +238,8 @@ namespace Common.Utility
             return "";
         }
 
-        ///×¢Òâ:Í¼Æ¬½ØÈ¡³É¹¦ºó,Êı¾İÓÉÄÚ´æ»º´æĞ´µ½´ÅÅÌĞèÒªÊ±¼ä½Ï³¤,´ó¸ÅÔÚ3,4ÃëÉõÖÁ¸ü³¤;   
-        ///Õâ¶ùĞèÒªÑÓÊ±ºóÔÙ¼ì²â,ÎÒ·şÎñÆ÷ÑÓÊ±8Ãë,¼´Èç¹û³¬¹ı8ÃëÍ¼Æ¬ÈÔ²»´æÔÚ,ÈÏÎª½ØÍ¼Ê§°Ü;    
+        ///æ³¨æ„:å›¾ç‰‡æˆªå–æˆåŠŸå,æ•°æ®ç”±å†…å­˜ç¼“å­˜å†™åˆ°ç£ç›˜éœ€è¦æ—¶é—´è¾ƒé•¿,å¤§æ¦‚åœ¨3,4ç§’ç”šè‡³æ›´é•¿;   
+        ///è¿™å„¿éœ€è¦å»¶æ—¶åå†æ£€æµ‹,æˆ‘æœåŠ¡å™¨å»¶æ—¶8ç§’,å³å¦‚æœè¶…è¿‡8ç§’å›¾ç‰‡ä»ä¸å­˜åœ¨,è®¤ä¸ºæˆªå›¾å¤±è´¥;    
         if (System.IO.File.Exists(flv_img))
         {
             return flv_img;
@@ -248,9 +248,9 @@ namespace Common.Utility
     }
     #endregion
 
-    #region ÔËĞĞmencoderµÄÊÓÆµ½âÂëÆ÷×ª»»(¾ø¶ÔÂ·¾¶)
+    #region è¿è¡Œmencoderçš„è§†é¢‘è§£ç å™¨è½¬æ¢(ç»å¯¹è·¯å¾„)
     /// <summary>
-    /// ÔËĞĞmencoderµÄÊÓÆµ½âÂëÆ÷×ª»»
+    /// è¿è¡Œmencoderçš„è§†é¢‘è§£ç å™¨è½¬æ¢
     /// </summary>
     public string MChangeFilePhy(string vFileName, string playFile, string imgFile)
     {

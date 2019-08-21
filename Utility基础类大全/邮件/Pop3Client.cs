@@ -1,4 +1,4 @@
-﻿using Maticsoft.Common.Mime;
+using Maticsoft.Common.Mime;
 using System;
 using System.Collections.Generic;
 using System.IO;

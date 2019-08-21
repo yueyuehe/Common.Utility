@@ -1,4 +1,4 @@
-﻿有两个操作excel的工具 Aspose.Cells 和Npoi
+有两个操作excel的工具 Aspose.Cells 和Npoi
 
 Aspose.Cells是一款功能强大的Excel文档处理和转换控件，开发人员和客户电脑无需安装Microsoft Excel也能在应用程序中实现类似Excel的强大数据管理功能，
 支持所有Excel格式类型的操作，在没有Microsoft Excel的环境下，用户也可为其应用程序嵌入类似Excel的强大数据管理功能。

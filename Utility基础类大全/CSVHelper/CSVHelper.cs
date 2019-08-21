@@ -1,4 +1,4 @@
-﻿using Quartz.Util;
+using Quartz.Util;
 using System;
 using System.Collections.Generic;
 using System.Data;

@@ -1,4 +1,4 @@
-﻿using System.Web;
+using System.Web;
 using System.Text;
 
 public static class PSD2swfHelper

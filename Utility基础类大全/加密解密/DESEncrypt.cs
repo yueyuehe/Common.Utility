@@ -5,7 +5,7 @@ using System.Text;
 namespace Common.Utility
 {
 	/// <summary>
-	/// DES¼ÓÃÜ/½âÃÜÀà¡£
+	/// DESåŠ å¯†/è§£å¯†ç±»ã€‚
 	/// </summary>
 	public class DESEncrypt
 	{
@@ -13,10 +13,10 @@ namespace Common.Utility
 		{			
 		}
 
-		#region ========¼ÓÃÜ======== 
+		#region ========åŠ å¯†======== 
  
         /// <summary>
-        /// ¼ÓÃÜ
+        /// åŠ å¯†
         /// </summary>
         /// <param name="Text"></param>
         /// <returns></returns>
@@ -25,7 +25,7 @@ namespace Common.Utility
 			return Encrypt(Text,"MATICSOFT");
 		}
 		/// <summary> 
-		/// ¼ÓÃÜÊı¾İ 
+		/// åŠ å¯†æ•°æ® 
 		/// </summary> 
 		/// <param name="Text"></param> 
 		/// <param name="sKey"></param> 
@@ -51,11 +51,11 @@ namespace Common.Utility
 
 		#endregion
 		
-		#region ========½âÃÜ======== 
+		#region ========è§£å¯†======== 
    
  
         /// <summary>
-        /// ½âÃÜ
+        /// è§£å¯†
         /// </summary>
         /// <param name="Text"></param>
         /// <returns></returns>
@@ -64,7 +64,7 @@ namespace Common.Utility
 			return Decrypt(Text,"MATICSOFT");
 		}
 		/// <summary> 
-		/// ½âÃÜÊı¾İ 
+		/// è§£å¯†æ•°æ® 
 		/// </summary> 
 		/// <param name="Text"></param> 
 		/// <param name="sKey"></param> 

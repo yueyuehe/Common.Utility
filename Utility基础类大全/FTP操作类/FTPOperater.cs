@@ -6,14 +6,14 @@ using System.IO;
 namespace Common.Utility
 {
     /// <summary>
-    /// FTP²Ù×÷Àà
+    /// FTPæ“ä½œç±»
     /// </summary>
     public class FTPOperater
     {
-        #region ÊôĞÔ
+        #region å±æ€§
         private FTPClient ftp;
         /// <summary>
-        /// È«¾ÖFTP·ÃÎÊ±äÁ¿
+        /// å…¨å±€FTPè®¿é—®å˜é‡
         /// </summary>
         public FTPClient Ftp
         {
@@ -23,7 +23,7 @@ namespace Common.Utility
 
         private string _server;
         /// <summary>
-        /// Ftp·şÎñÆ÷
+        /// FtpæœåŠ¡å™¨
         /// </summary>
         public string Server
         {
@@ -33,7 +33,7 @@ namespace Common.Utility
 
         private string _User;
         /// <summary>
-        /// FtpÓÃ»§
+        /// Ftpç”¨æˆ·
         /// </summary>
         public string User
         {
@@ -43,7 +43,7 @@ namespace Common.Utility
 
         private string _Pass;
         /// <summary>
-        /// FtpÃÜÂë
+        /// Ftpå¯†ç 
         /// </summary>
         public string Pass
         {
@@ -53,7 +53,7 @@ namespace Common.Utility
 
         private string _FolderZJ;
         /// <summary>
-        /// FtpÃÜÂë
+        /// Ftpå¯†ç 
         /// </summary>
         public string FolderZJ
         {
@@ -63,7 +63,7 @@ namespace Common.Utility
 
         private string _FolderWX;
         /// <summary>
-        /// FtpÃÜÂë
+        /// Ftpå¯†ç 
         /// </summary>
         public string FolderWX
         {
@@ -73,7 +73,7 @@ namespace Common.Utility
         #endregion
 
         /// <summary>
-        /// µÃµ½ÎÄ¼şÁĞ±í
+        /// å¾—åˆ°æ–‡ä»¶åˆ—è¡¨
         /// </summary>
         /// <returns></returns>
         public string[] GetList(string strPath)
@@ -85,12 +85,12 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// ÏÂÔØÎÄ¼ş
+        /// ä¸‹è½½æ–‡ä»¶
         /// </summary>
-        /// <param name="ftpFolder">ftpÄ¿Â¼</param>
-        /// <param name="ftpFileName">ftpÎÄ¼şÃû</param>
-        /// <param name="localFolder">±¾µØÄ¿Â¼</param>
-        /// <param name="localFileName">±¾µØÎÄ¼şÃû</param>
+        /// <param name="ftpFolder">ftpç›®å½•</param>
+        /// <param name="ftpFileName">ftpæ–‡ä»¶å</param>
+        /// <param name="localFolder">æœ¬åœ°ç›®å½•</param>
+        /// <param name="localFileName">æœ¬åœ°æ–‡ä»¶å</param>
         public bool GetFile(string ftpFolder, string ftpFileName, string localFolder, string localFileName)
         {
             try
@@ -118,17 +118,17 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// ĞŞ¸ÄÎÄ¼ş
+        /// ä¿®æ”¹æ–‡ä»¶
         /// </summary>
-        /// <param name="ftpFolder">±¾µØÄ¿Â¼</param>
-        /// <param name="ftpFileName">±¾µØÎÄ¼şÃûtemp</param>
-        /// <param name="localFolder">±¾µØÄ¿Â¼</param>
-        /// <param name="localFileName">±¾µØÎÄ¼şÃû</param>
+        /// <param name="ftpFolder">æœ¬åœ°ç›®å½•</param>
+        /// <param name="ftpFileName">æœ¬åœ°æ–‡ä»¶åtemp</param>
+        /// <param name="localFolder">æœ¬åœ°ç›®å½•</param>
+        /// <param name="localFileName">æœ¬åœ°æ–‡ä»¶å</param>
         public bool AddMSCFile(string ftpFolder, string ftpFileName, string localFolder, string localFileName, string BscInfo)
         {
             string sLine = "";
             string sResult = "";
-            string path = "»ñµÃÓ¦ÓÃ³ÌĞòËùÔÚµÄÍêÕûµÄÂ·¾¶";
+            string path = "è·å¾—åº”ç”¨ç¨‹åºæ‰€åœ¨çš„å®Œæ•´çš„è·¯å¾„";
             path = path.Substring(0, path.LastIndexOf("\\"));
             try
             {
@@ -163,10 +163,10 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// É¾³ıÎÄ¼ş
+        /// åˆ é™¤æ–‡ä»¶
         /// </summary>
-        /// <param name="ftpFolder">ftpÄ¿Â¼</param>
-        /// <param name="ftpFileName">ftpÎÄ¼şÃû</param>
+        /// <param name="ftpFolder">ftpç›®å½•</param>
+        /// <param name="ftpFileName">ftpæ–‡ä»¶å</param>
         public bool DelFile(string ftpFolder, string ftpFileName)
         {
             try
@@ -187,10 +187,10 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// ÉÏ´«ÎÄ¼ş
+        /// ä¸Šä¼ æ–‡ä»¶
         /// </summary>
-        /// <param name="ftpFolder">ftpÄ¿Â¼</param>
-        /// <param name="ftpFileName">ftpÎÄ¼şÃû</param>
+        /// <param name="ftpFolder">ftpç›®å½•</param>
+        /// <param name="ftpFileName">ftpæ–‡ä»¶å</param>
         public bool PutFile(string ftpFolder, string ftpFileName)
         {
             try
@@ -211,12 +211,12 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// ÏÂÔØÎÄ¼ş
+        /// ä¸‹è½½æ–‡ä»¶
         /// </summary>
-        /// <param name="ftpFolder">ftpÄ¿Â¼</param>
-        /// <param name="ftpFileName">ftpÎÄ¼şÃû</param>
-        /// <param name="localFolder">±¾µØÄ¿Â¼</param>
-        /// <param name="localFileName">±¾µØÎÄ¼şÃû</param>
+        /// <param name="ftpFolder">ftpç›®å½•</param>
+        /// <param name="ftpFileName">ftpæ–‡ä»¶å</param>
+        /// <param name="localFolder">æœ¬åœ°ç›®å½•</param>
+        /// <param name="localFileName">æœ¬åœ°æ–‡ä»¶å</param>
         public bool GetFileNoBinary(string ftpFolder, string ftpFileName, string localFolder, string localFileName)
         {
             try
@@ -246,10 +246,10 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// µÃµ½FTPÉÏÎÄ¼şĞÅÏ¢
+        /// å¾—åˆ°FTPä¸Šæ–‡ä»¶ä¿¡æ¯
         /// </summary>
-        /// <param name="ftpFolder">FTPÄ¿Â¼</param>
-        /// <param name="ftpFileName">ftpÎÄ¼şÃû</param>
+        /// <param name="ftpFolder">FTPç›®å½•</param>
+        /// <param name="ftpFileName">ftpæ–‡ä»¶å</param>
         public string GetFileInfo(string ftpFolder, string ftpFileName)
         {
             string strResult = "";
@@ -269,7 +269,7 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// ²âÊÔFTP·şÎñÆ÷ÊÇ·ñ¿ÉµÇÂ½
+        /// æµ‹è¯•FTPæœåŠ¡å™¨æ˜¯å¦å¯ç™»é™†
         /// </summary>
         public bool CanConnect()
         {
@@ -287,10 +287,10 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// µÃµ½FTPÉÏÎÄ¼şĞÅÏ¢
+        /// å¾—åˆ°FTPä¸Šæ–‡ä»¶ä¿¡æ¯
         /// </summary>
-        /// <param name="ftpFolder">FTPÄ¿Â¼</param>
-        /// <param name="ftpFileName">ftpÎÄ¼şÃû</param>
+        /// <param name="ftpFolder">FTPç›®å½•</param>
+        /// <param name="ftpFileName">ftpæ–‡ä»¶å</param>
         public string GetFileInfoConnected(string ftpFolder, string ftpFileName)
         {
             string strResult = "";
@@ -312,10 +312,10 @@ namespace Common.Utility
         }
 
         /// <summary>
-        /// µÃµ½ÎÄ¼şÁĞ±í
+        /// å¾—åˆ°æ–‡ä»¶åˆ—è¡¨
         /// </summary>
-        /// <param name="ftpFolder">FTPÄ¿Â¼</param>
-        /// <returns>FTPÍ¨Åä·ûºÅ</returns>
+        /// <param name="ftpFolder">FTPç›®å½•</param>
+        /// <returns>FTPé€šé…ç¬¦å·</returns>
         public string[] GetFileList(string ftpFolder, string strMask)
         {
             string[] strResult;
@@ -337,7 +337,7 @@ namespace Common.Utility
         }
 
         /// <summary>
-        ///µÃµ½FTP´«Êä¶ÔÏó
+        ///å¾—åˆ°FTPä¼ è¾“å¯¹è±¡
         /// </summary>
         public FTPClient getFtpClient()
         {

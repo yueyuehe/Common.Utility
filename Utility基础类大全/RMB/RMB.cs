@@ -3,43 +3,43 @@ using System;
 namespace Utilities
 {
     /// <summary> 
-    /// Rmb µÄÕªÒªËµÃ÷¡£ 
+    /// Rmb çš„æ‘˜è¦è¯´æ˜ã€‚ 
     /// </summary> 
     public class Rmb
     {
         /// <summary> 
-        /// ×ª»»ÈËÃñ±Ò´óĞ¡½ğ¶î 
+        /// è½¬æ¢äººæ°‘å¸å¤§å°é‡‘é¢ 
         /// </summary> 
-        /// <param name="num">½ğ¶î</param> 
-        /// <returns>·µ»Ø´óĞ´ĞÎÊ½</returns> 
+        /// <param name="num">é‡‘é¢</param> 
+        /// <returns>è¿”å›å¤§å†™å½¢å¼</returns> 
         public static string CmycurD(decimal num)
         {
-            string str1 = "ÁãÒ¼·¡ÈşËÁÎéÂ½Æâ°Æ¾Á";            //0-9Ëù¶ÔÓ¦µÄºº×Ö 
-            string str2 = "ÍòÇª°ÛÊ°ÒÚÇª°ÛÊ°ÍòÇª°ÛÊ°Ôª½Ç·Ö"; //Êı×ÖÎ»Ëù¶ÔÓ¦µÄºº×Ö 
-            string str3 = "";    //´ÓÔ­numÖµÖĞÈ¡³öµÄÖµ 
-            string str4 = "";    //Êı×ÖµÄ×Ö·û´®ĞÎÊ½ 
-            string str5 = "";  //ÈËÃñ±Ò´óĞ´½ğ¶îĞÎÊ½ 
-            int i;    //Ñ­»·±äÁ¿ 
-            int j;    //numµÄÖµ³ËÒÔ100µÄ×Ö·û´®³¤¶È 
-            string ch1 = "";    //Êı×ÖµÄººÓï¶Á·¨ 
-            string ch2 = "";    //Êı×ÖÎ»µÄºº×Ö¶Á·¨ 
-            int nzero = 0;  //ÓÃÀ´¼ÆËãÁ¬ĞøµÄÁãÖµÊÇ¼¸¸ö 
-            int temp;            //´ÓÔ­numÖµÖĞÈ¡³öµÄÖµ 
+            string str1 = "é›¶å£¹è´°åè‚†ä¼é™†æŸ’æŒç–";            //0-9æ‰€å¯¹åº”çš„æ±‰å­— 
+            string str2 = "ä¸‡ä»Ÿä½°æ‹¾äº¿ä»Ÿä½°æ‹¾ä¸‡ä»Ÿä½°æ‹¾å…ƒè§’åˆ†"; //æ•°å­—ä½æ‰€å¯¹åº”çš„æ±‰å­— 
+            string str3 = "";    //ä»åŸnumå€¼ä¸­å–å‡ºçš„å€¼ 
+            string str4 = "";    //æ•°å­—çš„å­—ç¬¦ä¸²å½¢å¼ 
+            string str5 = "";  //äººæ°‘å¸å¤§å†™é‡‘é¢å½¢å¼ 
+            int i;    //å¾ªç¯å˜é‡ 
+            int j;    //numçš„å€¼ä¹˜ä»¥100çš„å­—ç¬¦ä¸²é•¿åº¦ 
+            string ch1 = "";    //æ•°å­—çš„æ±‰è¯­è¯»æ³• 
+            string ch2 = "";    //æ•°å­—ä½çš„æ±‰å­—è¯»æ³• 
+            int nzero = 0;  //ç”¨æ¥è®¡ç®—è¿ç»­çš„é›¶å€¼æ˜¯å‡ ä¸ª 
+            int temp;            //ä»åŸnumå€¼ä¸­å–å‡ºçš„å€¼ 
 
-            num = Math.Round(Math.Abs(num), 2);    //½«numÈ¡¾ø¶ÔÖµ²¢ËÄÉáÎåÈëÈ¡2Î»Ğ¡Êı 
-            str4 = ((long)(num * 100)).ToString();        //½«num³Ë100²¢×ª»»³É×Ö·û´®ĞÎÊ½ 
-            j = str4.Length;      //ÕÒ³ö×î¸ßÎ» 
-            if (j > 15) { return "Òç³ö"; }
-            str2 = str2.Substring(15 - j);   //È¡³ö¶ÔÓ¦Î»ÊıµÄstr2µÄÖµ¡£Èç£º200.55,jÎª5ËùÒÔstr2=°ÛÊ°Ôª½Ç·Ö 
+            num = Math.Round(Math.Abs(num), 2);    //å°†numå–ç»å¯¹å€¼å¹¶å››èˆäº”å…¥å–2ä½å°æ•° 
+            str4 = ((long)(num * 100)).ToString();        //å°†numä¹˜100å¹¶è½¬æ¢æˆå­—ç¬¦ä¸²å½¢å¼ 
+            j = str4.Length;      //æ‰¾å‡ºæœ€é«˜ä½ 
+            if (j > 15) { return "æº¢å‡º"; }
+            str2 = str2.Substring(15 - j);   //å–å‡ºå¯¹åº”ä½æ•°çš„str2çš„å€¼ã€‚å¦‚ï¼š200.55,jä¸º5æ‰€ä»¥str2=ä½°æ‹¾å…ƒè§’åˆ† 
 
-            //Ñ­»·È¡³öÃ¿Ò»Î»ĞèÒª×ª»»µÄÖµ 
+            //å¾ªç¯å–å‡ºæ¯ä¸€ä½éœ€è¦è½¬æ¢çš„å€¼ 
             for (i = 0; i < j; i++)
             {
-                str3 = str4.Substring(i, 1);          //È¡³öĞè×ª»»µÄÄ³Ò»Î»µÄÖµ 
-                temp = Convert.ToInt32(str3);      //×ª»»ÎªÊı×Ö 
+                str3 = str4.Substring(i, 1);          //å–å‡ºéœ€è½¬æ¢çš„æŸä¸€ä½çš„å€¼ 
+                temp = Convert.ToInt32(str3);      //è½¬æ¢ä¸ºæ•°å­— 
                 if (i != (j - 3) && i != (j - 7) && i != (j - 11) && i != (j - 15))
                 {
-                    //µ±ËùÈ¡Î»Êı²»ÎªÔª¡¢Íò¡¢ÒÚ¡¢ÍòÒÚÉÏµÄÊı×ÖÊ± 
+                    //å½“æ‰€å–ä½æ•°ä¸ä¸ºå…ƒã€ä¸‡ã€äº¿ã€ä¸‡äº¿ä¸Šçš„æ•°å­—æ—¶ 
                     if (str3 == "0")
                     {
                         ch1 = "";
@@ -50,7 +50,7 @@ namespace Utilities
                     {
                         if (str3 != "0" && nzero != 0)
                         {
-                            ch1 = "Áã" + str1.Substring(temp * 1, 1);
+                            ch1 = "é›¶" + str1.Substring(temp * 1, 1);
                             ch2 = str2.Substring(i, 1);
                             nzero = 0;
                         }
@@ -64,10 +64,10 @@ namespace Utilities
                 }
                 else
                 {
-                    //¸ÃÎ»ÊÇÍòÒÚ£¬ÒÚ£¬Íò£¬ÔªÎ»µÈ¹Ø¼üÎ» 
+                    //è¯¥ä½æ˜¯ä¸‡äº¿ï¼Œäº¿ï¼Œä¸‡ï¼Œå…ƒä½ç­‰å…³é”®ä½ 
                     if (str3 != "0" && nzero != 0)
                     {
-                        ch1 = "Áã" + str1.Substring(temp * 1, 1);
+                        ch1 = "é›¶" + str1.Substring(temp * 1, 1);
                         ch2 = str2.Substring(i, 1);
                         nzero = 0;
                     }
@@ -106,29 +106,29 @@ namespace Utilities
                 }
                 if (i == (j - 11) || i == (j - 3))
                 {
-                    //Èç¹û¸ÃÎ»ÊÇÒÚÎ»»òÔªÎ»£¬Ôò±ØĞëĞ´ÉÏ 
+                    //å¦‚æœè¯¥ä½æ˜¯äº¿ä½æˆ–å…ƒä½ï¼Œåˆ™å¿…é¡»å†™ä¸Š 
                     ch2 = str2.Substring(i, 1);
                 }
                 str5 = str5 + ch1 + ch2;
 
                 if (i == j - 1 && str3 == "0")
                 {
-                    //×îºóÒ»Î»£¨·Ö£©Îª0Ê±£¬¼ÓÉÏ¡°Õû¡± 
-                    str5 = str5 + 'Õû';
+                    //æœ€åä¸€ä½ï¼ˆåˆ†ï¼‰ä¸º0æ—¶ï¼ŒåŠ ä¸Šâ€œæ•´â€ 
+                    str5 = str5 + 'æ•´';
                 }
             }
             if (num == 0)
             {
-                str5 = "ÁãÔªÕû";
+                str5 = "é›¶å…ƒæ•´";
             }
             return str5;
         }
 
         /**/
         /// <summary> 
-        /// Ò»¸öÖØÔØ£¬½«×Ö·û´®ÏÈ×ª»»³ÉÊı×ÖÔÚµ÷ÓÃCmycurD(decimal num) 
+        /// ä¸€ä¸ªé‡è½½ï¼Œå°†å­—ç¬¦ä¸²å…ˆè½¬æ¢æˆæ•°å­—åœ¨è°ƒç”¨CmycurD(decimal num) 
         /// </summary> 
-        /// <param name="num">ÓÃ»§ÊäÈëµÄ½ğ¶î£¬×Ö·û´®ĞÎÊ½Î´×ª³Édecimal</param> 
+        /// <param name="num">ç”¨æˆ·è¾“å…¥çš„é‡‘é¢ï¼Œå­—ç¬¦ä¸²å½¢å¼æœªè½¬æˆdecimal</param> 
         /// <returns></returns> 
         public static string CmycurD(string numstr)
         {
@@ -139,7 +139,7 @@ namespace Utilities
             }
             catch
             {
-                return "·ÇÊı×ÖĞÎÊ½£¡";
+                return "éæ•°å­—å½¢å¼ï¼";
             }
         }
     } 

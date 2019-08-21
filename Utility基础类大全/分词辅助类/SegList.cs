@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace Utilities
 {
     /// <summary>
-    /// ·Ö´Ê¸¨ÖúÀà
+    /// åˆ†è¯è¾…åŠ©ç±»
     /// </summary>
     public class SegList
     {
@@ -55,7 +55,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// °´³¤¶ÈÅÅĞò
+        /// æŒ‰é•¿åº¦æ’åº
         /// </summary>
         public void Sort()
         {
@@ -63,7 +63,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// °´³¤¶ÈÅÅĞò
+        /// æŒ‰é•¿åº¦æ’åº
         /// </summary>
         public void Sort(SegList list)
         {
@@ -99,18 +99,18 @@ namespace Utilities
     }
 
     /// <summary>
-    /// ·Ö´ÊÀà
+    /// åˆ†è¯ç±»
     /// </summary>
-    //----------------µ÷ÓÃ----------------------
+    //----------------è°ƒç”¨----------------------
     //Segment seg = new Segment();
     //seg.InitWordDics();
     //seg.EnablePrefix = true;
     //seg.Separator =" ";
-    //seg.SegmentText("×Ö·û´®", false).Trim();
+    //seg.SegmentText("å­—ç¬¦ä¸²", false).Trim();
     //-------------------------------------------
     public class Segment
     {
-        #region Ë½ÓĞ×Ö¶Î
+        #region ç§æœ‰å­—æ®µ
         private string m_DicPath = System.Web.HttpContext.Current.Server.MapPath("bin/ShootSeg/sDict.dic");
         private string m_NoisePath = System.Web.HttpContext.Current.Server.MapPath("bin/ShootSeg/sNoise.dic");
         private string m_NumberPath = System.Web.HttpContext.Current.Server.MapPath("bin/ShootSeg/sNumber.dic");
@@ -124,19 +124,19 @@ namespace Utilities
         private double m_EventTime = 0;
 
         /// <summary>
-        /// ·Ö¸ô·û
+        /// åˆ†éš”ç¬¦
         /// </summary>
         private string m_Separator = " ";
 
         /// <summary>
-        /// ÓÃÓÚÑéÖ¤ºº×ÖµÄÕıÔò±í´ïÊ½
+        /// ç”¨äºéªŒè¯æ±‰å­—çš„æ­£åˆ™è¡¨è¾¾å¼
         /// </summary>
         private string strChinese = "[\u4e00-\u9fa5]";
         #endregion
 
-        #region ¹«ÓĞÊôĞÔ
+        #region å…¬æœ‰å±æ€§
         /// <summary>
-        /// »ù±¾´ÊµäÂ·¾¶
+        /// åŸºæœ¬è¯å…¸è·¯å¾„
         /// </summary>
         public string DicPath
         {
@@ -151,10 +151,10 @@ namespace Utilities
         }
 
         /// <summary>
-        /// Êı¾İ»º´æº¯Êı
+        /// æ•°æ®ç¼“å­˜å‡½æ•°
         /// </summary>
-        /// <param name="key">Ë÷Òı¼ü</param>
-        /// <param name="val">»º´æµÄÊı¾İ</param>
+        /// <param name="key">ç´¢å¼•é”®</param>
+        /// <param name="val">ç¼“å­˜çš„æ•°æ®</param>
         private static void SetCache(string key, object val)
         {
             if (val == null) val = " ";
@@ -164,7 +164,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ¶ÁÈ¡»º´æ
+        /// è¯»å–ç¼“å­˜
         /// </summary>
         private static object GetCache(string key)
         {
@@ -172,7 +172,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ÔİÊ±ÎŞÓÃ
+        /// æš‚æ—¶æ— ç”¨
         /// </summary>
         public string NoisePath
         {
@@ -187,7 +187,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// Êı×Ö´ÊµäÂ·¾¶
+        /// æ•°å­—è¯å…¸è·¯å¾„
         /// </summary>
         public string NumberPath
         {
@@ -202,7 +202,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ×ÖÄ¸´ÊµäÂ·¾¶
+        /// å­—æ¯è¯å…¸è·¯å¾„
         /// </summary>
         public string WordPath
         {
@@ -217,7 +217,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ĞÕÃûÇ°×º×Öµä ÓÃÓÚ¾À´íĞÕÃû
+        /// å§“åå‰ç¼€å­—å…¸ ç”¨äºçº é”™å§“å
         /// </summary>
         public string PrefixPath
         {
@@ -232,7 +232,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ÊÇ·ñ¿ªÆôĞÕÃû¾À´í¹¦ÄÜ
+        /// æ˜¯å¦å¼€å¯å§“åçº é”™åŠŸèƒ½
         /// </summary>
         public bool EnablePrefix
         {
@@ -253,8 +253,8 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ÓÃÊ±Ã¿´Î½øĞĞ¼ÓÔØ»ò·Ö´Ê¶¯×÷ºó¸ÄÊôĞÔ±íÊ¾ÎªÉÏÒ»´Î¶¯×÷ËùÓÃÊ±¼ä
-        /// ÒÑ¾«È·µ½ºÁÃëµ«·Ö´Ê²Ù×÷ÔÚ×Ö·û´®½Ï¶ÌÊ±¿ÉÄÜÎª0
+        /// ç”¨æ—¶æ¯æ¬¡è¿›è¡ŒåŠ è½½æˆ–åˆ†è¯åŠ¨ä½œåæ”¹å±æ€§è¡¨ç¤ºä¸ºä¸Šä¸€æ¬¡åŠ¨ä½œæ‰€ç”¨æ—¶é—´
+        /// å·²ç²¾ç¡®åˆ°æ¯«ç§’ä½†åˆ†è¯æ“ä½œåœ¨å­—ç¬¦ä¸²è¾ƒçŸ­æ—¶å¯èƒ½ä¸º0
         /// </summary>
         public double EventTime
         {
@@ -265,7 +265,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ·Ö¸ô·û,Ä¬ÈÏÎª¿Õ¸ñ
+        /// åˆ†éš”ç¬¦,é»˜è®¤ä¸ºç©ºæ ¼
         /// </summary>
         public string Separator
         {
@@ -280,15 +280,15 @@ namespace Utilities
         }
         #endregion
 
-        #region ¹¹Ôì·½·¨
+        #region æ„é€ æ–¹æ³•
         /// <summary>
-        /// ¹¹Ôì·½·¨
+        /// æ„é€ æ–¹æ³•
         /// </summary>
         public Segment()
         { }
 
         /// <summary>
-        /// ¹¹Ôì·½·¨
+        /// æ„é€ æ–¹æ³•
         /// </summary>
         public Segment(string p_DicPath, string p_NoisePath, string p_NumberPath, string p_WordPath)
         {
@@ -300,9 +300,9 @@ namespace Utilities
         }
         #endregion
 
-        #region ¹«ÓĞ·½·¨
+        #region å…¬æœ‰æ–¹æ³•
         /// <summary>
-        /// ¼ÓÔØ´ÊÁĞ±í
+        /// åŠ è½½è¯åˆ—è¡¨
         /// </summary>
         public void InitWordDics()
         {
@@ -383,7 +383,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ¼ÓÔØÎÄ±¾´Ê×éµ½ArrayList
+        /// åŠ è½½æ–‡æœ¬è¯ç»„åˆ°ArrayList
         /// </summary>
         public ArrayList LoadWords(string strPath, ArrayList list)
         {
@@ -405,7 +405,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// Êä³ö´ÊÁĞ±í
+        /// è¾“å‡ºè¯åˆ—è¡¨
         /// </summary>
         public void OutWords()
         {
@@ -425,7 +425,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// Êä³öArrayList
+        /// è¾“å‡ºArrayList
         /// </summary>
         public void OutArrayList(ArrayList list)
         {
@@ -437,10 +437,10 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ·Ö´Ê¹ı³Ì,²»Ö§³Ö»Ø³µ 
+        /// åˆ†è¯è¿‡ç¨‹,ä¸æ”¯æŒå›è½¦ 
         /// </summary>
-        /// <param name="strText">Òª·Ö´ÊµÄÎÄ±¾</param>
-        /// <returns>·Ö´ÊºóµÄÎÄ±¾</returns>
+        /// <param name="strText">è¦åˆ†è¯çš„æ–‡æœ¬</param>
+        /// <returns>åˆ†è¯åçš„æ–‡æœ¬</returns>
         public string SegmentText(string strText)
         {
             strText = (strText + "$").Trim();
@@ -458,7 +458,7 @@ namespace Utilities
 
             for (int i = 0; i < strText.Length - 1; i++)
             {
-                #region ¶ÔÓÚÃ¿Ò»¸ö×ÖµÄ´¦Àí¹ı³Ì
+                #region å¯¹äºæ¯ä¸€ä¸ªå­—çš„å¤„ç†è¿‡ç¨‹
                 string strChar1 = strText.Substring(i, 1);
                 string strChar2 = strText.Substring(i + 1, 1).Trim();
                 bool yes;
@@ -479,7 +479,7 @@ namespace Utilities
                 switch (CharType)
                 {
                     case 1:
-                        #region  Èç¹ûÊÇÊı×Ö£¬Èç¹ûÊı×ÖµÄÉÏÒ»Î»ÊÇ×ÖÄ¸ÒªºÍºóÃæµÄÊı×Ö·Ö¿ª
+                        #region  å¦‚æœæ˜¯æ•°å­—ï¼Œå¦‚æœæ•°å­—çš„ä¸Šä¸€ä½æ˜¯å­—æ¯è¦å’Œåé¢çš„æ•°å­—åˆ†å¼€
                         if (word)
                         {
                             reText += Separator;
@@ -491,7 +491,7 @@ namespace Utilities
                         #endregion
                     case 2:
                     case 5:
-                        #region Èç¹ûÊÇ×ÖÄ¸
+                        #region å¦‚æœæ˜¯å­—æ¯
                         if (number)
                             strLastWords = Separator;
                         else
@@ -503,11 +503,11 @@ namespace Utilities
                         #endregion
                     case 3:
                     case 4:
-                        #region µÚÒ»¼¶¹şÏ£±íÊÇ·ñ°üº¬¹Ø¼ü×Ö£¬¼ÙÈç°üº¬´¦ÀíµÚ¶ş¼¶¹şÏ£±í
-                        //ÉÏÒ»¸ö×ÖÊÇ·ñÎª×ÖÄ¸
+                        #region ç¬¬ä¸€çº§å“ˆå¸Œè¡¨æ˜¯å¦åŒ…å«å…³é”®å­—ï¼Œå‡å¦‚åŒ…å«å¤„ç†ç¬¬äºŒçº§å“ˆå¸Œè¡¨
+                        //ä¸Šä¸€ä¸ªå­—æ˜¯å¦ä¸ºå­—æ¯
                         if (word) reText += Separator;
 
-                        #region ¼ì²âÉÏÒ»¸öÊÇ·ñÊÇÊı×Ö£¬Õâ¸ö¹ı³ÌÊÇÓÃÓÚĞŞÕıÊı×ÖºóµÄÁ¿´ÊµÄ
+                        #region æ£€æµ‹ä¸Šä¸€ä¸ªæ˜¯å¦æ˜¯æ•°å­—ï¼Œè¿™ä¸ªè¿‡ç¨‹æ˜¯ç”¨äºä¿®æ­£æ•°å­—åçš„é‡è¯çš„
                         if (number && CharType != 4)
                         {
                             h = (Hashtable)htWords["n"];
@@ -531,7 +531,7 @@ namespace Utilities
                         }
                         #endregion
 
-                        //·Çºº×ÖÊı×ÖµÄºº×Ö
+                        //éæ±‰å­—æ•°å­—çš„æ±‰å­—
                         if (CharType == 3)
                         {
                             word = false;
@@ -545,26 +545,26 @@ namespace Utilities
                             strLastWords = "";
                         }
 
-                        //µÚ¶ş¼¶¹şÏ£±íÈ¡³ö
+                        //ç¬¬äºŒçº§å“ˆå¸Œè¡¨å–å‡º
                         h = (Hashtable)htWords[strChar1];
 
-                        //µÚ¶ş¼¶¹şÏ£±íÊÇ·ñ°üº¬¹Ø¼ü×Ö
+                        //ç¬¬äºŒçº§å“ˆå¸Œè¡¨æ˜¯å¦åŒ…å«å…³é”®å­—
                         if (h.ContainsKey(strChar2))
                         {
-                            #region  µÚ¶ş¼¶°üº¬¹Ø¼ü×Ö
-                            //È¡³öArrayList¶ÔÏó
+                            #region  ç¬¬äºŒçº§åŒ…å«å…³é”®å­—
+                            //å–å‡ºArrayListå¯¹è±¡
                             l = (SegList)h[strChar2];
 
-                            //±éÀúÃ¿Ò»¸ö¶ÔÏó ¿´ÊÇ·ñÄÜ×éºÏ³É´Ê
+                            //éå†æ¯ä¸€ä¸ªå¯¹è±¡ çœ‹æ˜¯å¦èƒ½ç»„åˆæˆè¯
                             for (int j = 0; j < l.Count; j++)
                             {
                                 bool have = false;
                                 string strChar3 = l.GetElem(j).ToString();
 
-                                //¶ÔÓÚÃ¿Ò»¸öÈ¡³öµÄ´Ê½øĞĞ¼ì²â,¿´ÊÇ·ñÆ¥Åä£¬³¤¶È±£»¤
+                                //å¯¹äºæ¯ä¸€ä¸ªå–å‡ºçš„è¯è¿›è¡Œæ£€æµ‹,çœ‹æ˜¯å¦åŒ¹é…ï¼Œé•¿åº¦ä¿æŠ¤
                                 if ((strChar3.Length + i + 2) < strText.Length)
                                 {
-                                    //Ïòi+2ºóÈ¡³öm³¤¶ÈµÄ×Ö
+                                    //å‘i+2åå–å‡ºmé•¿åº¦çš„å­—
                                     string strChar = strText.Substring(i + 2, strChar3.Length).Trim();
                                     if (strChar3 == strChar && !yes)
                                     {
@@ -632,7 +632,7 @@ namespace Utilities
                             }
                             #endregion
 
-                            //Èç¹ûÃ»ÓĞÆ¥Åä»¹¿ÉÄÜÓĞÒ»ÖÖÇé¿ö£¬Õâ¸ö´ÊÓïÖ»ÓĞÁ½¸ö×Ö£¬ÒÔÕâÁ½¸ö×Ö¿ªÍ·µÄ´ÊÓï²»´æÔÚ
+                            //å¦‚æœæ²¡æœ‰åŒ¹é…è¿˜å¯èƒ½æœ‰ä¸€ç§æƒ…å†µï¼Œè¿™ä¸ªè¯è¯­åªæœ‰ä¸¤ä¸ªå­—ï¼Œä»¥è¿™ä¸¤ä¸ªå­—å¼€å¤´çš„è¯è¯­ä¸å­˜åœ¨
                             if (!yes && l.Contains("null"))
                             {
                                 if (preFix == 1)
@@ -667,7 +667,7 @@ namespace Utilities
                         #endregion
                         break;
                     default:
-                        #region Î´Öª×Ö·û,¿ÉÄÜÊÇÉúÆ§×Ö,Ò²¿ÉÄÜÊÇ±êµã·ûºÏÖ®Àà
+                        #region æœªçŸ¥å­—ç¬¦,å¯èƒ½æ˜¯ç”Ÿåƒ»å­—,ä¹Ÿå¯èƒ½æ˜¯æ ‡ç‚¹ç¬¦åˆä¹‹ç±»
                         if (word && !yes)
                         {
                             reText += Separator;
@@ -689,7 +689,7 @@ namespace Utilities
                 }
                 if (!yes)
                 {
-                    #region ´¦ÀíĞÕÃûÎÊÌâ
+                    #region å¤„ç†å§“åé—®é¢˜
                     if (preFix == 0)
                     {
                         if (alPrefix.Contains(strChar1 + strChar2))
@@ -776,7 +776,7 @@ namespace Utilities
                 #endregion
             }
 
-            #region ×îºó·ÀÖ¹×îºóÒ»¸ö×ÖµÄ¶ªÊ§
+            #region æœ€åé˜²æ­¢æœ€åä¸€ä¸ªå­—çš„ä¸¢å¤±
             if (length < strText.Length - 1)
             {
                 string strLastChar1 = strText.Substring(strText.Length - 1).Trim();
@@ -792,7 +792,7 @@ namespace Utilities
                     switch (GetCharType(strLastChar1))
                     {
                         case 1:
-                            if (strLastChar1 != "." && strLastChar1 != "£®")
+                            if (strLastChar1 != "." && strLastChar1 != "ï¼")
                                 reText += strLastChar1;
                             else
                                 reText += Separator + strLastChar1;
@@ -824,11 +824,11 @@ namespace Utilities
 
             TimeSpan duration = DateTime.Now - start;
             m_EventTime = duration.TotalMilliseconds;
-            return reText.Replace(" $", ""); //ÕâÀï°üº¬Ò»¸ö×ÖµÄ£¬ÔòÈ¥µô
+            return reText.Replace(" $", ""); //è¿™é‡ŒåŒ…å«ä¸€ä¸ªå­—çš„ï¼Œåˆ™å»æ‰
         }
 
         /// <summary>
-        /// ÖØÔØ·Ö´Ê¹ı³Ì,Ö§³Ö»Ø³µ
+        /// é‡è½½åˆ†è¯è¿‡ç¨‹,æ”¯æŒå›è½¦
         /// </summary>
         public string SegmentText(string strText, bool Enter)
         {
@@ -853,9 +853,9 @@ namespace Utilities
             }
         }
 
-        #region ÅĞ¶Ï×Ö·ûÀàĞÍ
+        #region åˆ¤æ–­å­—ç¬¦ç±»å‹
         /// <summary>
-        /// ÅĞ¶Ï×Ö·ûÀàĞÍ,0ÎªÎ´Öª,1ÎªÊı×Ö,2Îª×ÖÄ¸,3Îªºº×Ö,4Îªºº×ÖÊı×Ö
+        /// åˆ¤æ–­å­—ç¬¦ç±»å‹,0ä¸ºæœªçŸ¥,1ä¸ºæ•°å­—,2ä¸ºå­—æ¯,3ä¸ºæ±‰å­—,4ä¸ºæ±‰å­—æ•°å­—
         /// </summary>
         private int GetCharType(string p_Char)
         {
@@ -867,9 +867,9 @@ namespace Utilities
         }
         #endregion
 
-        #region ¶Ô¼ÓÔØµÄ´ÊµäÅÅĞò²¢ÖØĞÂĞ´Èë
+        #region å¯¹åŠ è½½çš„è¯å…¸æ’åºå¹¶é‡æ–°å†™å…¥
         /// <summary>
-        /// ¶Ô¼ÓÔØµÄ´ÊµäÅÅĞò²¢ÖØĞÂĞ´Èë
+        /// å¯¹åŠ è½½çš„è¯å…¸æ’åºå¹¶é‡æ–°å†™å…¥
         /// </summary>
         public void SortDic()
         {
@@ -877,9 +877,9 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ¶Ô¼ÓÔØµÄ´ÊµäÅÅĞò²¢ÖØĞÂĞ´Èë
+        /// å¯¹åŠ è½½çš„è¯å…¸æ’åºå¹¶é‡æ–°å†™å…¥
         /// </summary>
-        /// <param name="Reload">ÊÇ·ñÖØĞÂ¼ÓÔØ</param>
+        /// <param name="Reload">æ˜¯å¦é‡æ–°åŠ è½½</param>
         public void SortDic(bool Reload)
         {
             DateTime start = DateTime.Now;
@@ -912,9 +912,9 @@ namespace Utilities
         #endregion
 
         /// <summary>
-        /// É¾³ıÁ½ĞĞÍêÈ«ÏàÍ¬µÄ´Ê,ÔİÊ±ÎŞÓÃ!
+        /// åˆ é™¤ä¸¤è¡Œå®Œå…¨ç›¸åŒçš„è¯,æš‚æ—¶æ— ç”¨!
         /// </summary>
-        /// <returns>ÏàÍ¬´ÊÌõ¸öÊı</returns>
+        /// <returns>ç›¸åŒè¯æ¡ä¸ªæ•°</returns>
         public int Optimize()
         {
             int l = 0;

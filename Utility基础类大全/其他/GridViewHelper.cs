@@ -10,13 +10,13 @@ namespace Utilities
 {
     public class GridViewHelper
     {
-        #region Ë½ÓĞ·½·¨
+        #region ç§æœ‰æ–¹æ³•
         /// <summary>
-        /// ½ØÈ¡ÄÚÈİ³¤¶È
+        /// æˆªå–å†…å®¹é•¿åº¦
         /// </summary>
-        /// <param name="o_Str">Ô­×Ö·û´®</param>
-        /// <param name="len">½ØÈ¡³¤¶È</param>
-        /// <returns>½ØÈ¡ºó×Ö·û´®</returns>
+        /// <param name="o_Str">åŸå­—ç¬¦ä¸²</param>
+        /// <param name="len">æˆªå–é•¿åº¦</param>
+        /// <returns>æˆªå–åå­—ç¬¦ä¸²</returns>
         private static string GetStrPartly(string o_Str, int len)
         {
             if (len == 0)
@@ -37,10 +37,10 @@ namespace Utilities
         }
 
         /// <summary>
-        /// »ñÈ¡µ¥Ôª¸ñÄÚÈİ
+        /// è·å–å•å…ƒæ ¼å†…å®¹
         /// </summary>
         /// <param name="cell">TableCell</param>
-        /// <returns>ÄÚÈİ</returns>
+        /// <returns>å†…å®¹</returns>
         private static string GetCellText(TableCell cell)
         {
             string text = cell.Text;
@@ -72,10 +72,10 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ÉèÖÃµ¥Ôª¸ñÄÚÈİ
+        /// è®¾ç½®å•å…ƒæ ¼å†…å®¹
         /// </summary>
         /// <param name="cell">TableCell</param>
-        /// <param name="maxLen">×î´ó³¤¶È</param>
+        /// <param name="maxLen">æœ€å¤§é•¿åº¦</param>
         private static void SetCellText(TableCell cell, int maxLen)
         {
             string text = cell.Text;
@@ -116,11 +116,11 @@ namespace Utilities
         }
         #endregion
 
-        #region ¹«ÓĞ·½·¨
+        #region å…¬æœ‰æ–¹æ³•
         /// <summary>
-        /// ´ÓGridViewµÄÊı¾İÉú³ÉDataTable
+        /// ä»GridViewçš„æ•°æ®ç”ŸæˆDataTable
         /// </summary>
-        /// <param name="gv">GridView¶ÔÏó</param>
+        /// <param name="gv">GridViewå¯¹è±¡</param>
         public static DataTable GridView2DataTable(GridView gv)
         {
             DataTable table = new DataTable();
@@ -175,9 +175,9 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ½«¼¯ºÏÀà×ª»»³ÉDataTable
+        /// å°†é›†åˆç±»è½¬æ¢æˆDataTable
         /// </summary>
-        /// <param name="list">¼¯ºÏ</param>
+        /// <param name="list">é›†åˆ</param>
         public static DataTable ToDataTable(IList list)
         {
             DataTable result = new DataTable();
@@ -205,12 +205,12 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ½«·ºĞÍ¼¯ºÏÀà×ª»»³ÉDataTable
+        /// å°†æ³›å‹é›†åˆç±»è½¬æ¢æˆDataTable
         /// </summary>
-        /// <typeparam name="T">¼¯ºÏÏîÀàĞÍ</typeparam>
-        /// <param name="list">¼¯ºÏ</param>
-        /// <param name="propertyName">ĞèÒª·µ»ØµÄÁĞµÄÁĞÃû</param>
-        /// <returns>Êı¾İ¼¯(±í)</returns>
+        /// <typeparam name="T">é›†åˆé¡¹ç±»å‹</typeparam>
+        /// <param name="list">é›†åˆ</param>
+        /// <param name="propertyName">éœ€è¦è¿”å›çš„åˆ—çš„åˆ—å</param>
+        /// <returns>æ•°æ®é›†(è¡¨)</returns>
         public static DataTable ToDataTable<T>(IList<T> list, params string[] propertyName)
         {
             List<string> propertyNameList = new List<string>();

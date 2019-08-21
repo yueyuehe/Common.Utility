@@ -5,7 +5,7 @@ namespace Utilities
     public class TimeParser
     {
         /// <summary>
-        /// °ÑÃë×ª»»³É·ÖÖÓ
+        /// æŠŠç§’è½¬æ¢æˆåˆ†é’Ÿ
         /// </summary>
         /// <returns></returns>
         public static int SecondToMinute(int Second)
@@ -14,13 +14,13 @@ namespace Utilities
             return Convert.ToInt32(Math.Ceiling(mm));           
         }
 
-        #region ·µ»ØÄ³ÄêÄ³ÔÂ×îºóÒ»Ìì
+        #region è¿”å›æŸå¹´æŸæœˆæœ€åä¸€å¤©
         /// <summary>
-        /// ·µ»ØÄ³ÄêÄ³ÔÂ×îºóÒ»Ìì
+        /// è¿”å›æŸå¹´æŸæœˆæœ€åä¸€å¤©
         /// </summary>
-        /// <param name="year">Äê·İ</param>
-        /// <param name="month">ÔÂ·İ</param>
-        /// <returns>ÈÕ</returns>
+        /// <param name="year">å¹´ä»½</param>
+        /// <param name="month">æœˆä»½</param>
+        /// <returns>æ—¥</returns>
         public static int GetMonthLastDate(int year, int month)
         {
             DateTime lastDay = new DateTime(year, month, new System.Globalization.GregorianCalendar().GetDaysInMonth(year, month));
@@ -29,7 +29,7 @@ namespace Utilities
         }
         #endregion
 
-        #region ·µ»ØÊ±¼ä²î
+        #region è¿”å›æ—¶é—´å·®
         public static string DateDiff(DateTime DateTime1, DateTime DateTime2)
         {
             string dateDiff = null;
@@ -41,17 +41,17 @@ namespace Utilities
                 TimeSpan ts = DateTime2 - DateTime1;
                 if (ts.Days >=1)
                 {
-                    dateDiff = DateTime1.Month.ToString() + "ÔÂ" + DateTime1.Day.ToString() + "ÈÕ";
+                    dateDiff = DateTime1.Month.ToString() + "æœˆ" + DateTime1.Day.ToString() + "æ—¥";
                 }
                 else
                 {
                     if (ts.Hours > 1)
                     {
-                        dateDiff = ts.Hours.ToString() + "Ğ¡Ê±Ç°";
+                        dateDiff = ts.Hours.ToString() + "å°æ—¶å‰";
                     }
                     else
                     {
-                        dateDiff = ts.Minutes.ToString() + "·ÖÖÓÇ°";
+                        dateDiff = ts.Minutes.ToString() + "åˆ†é’Ÿå‰";
                     }
                 }
             }

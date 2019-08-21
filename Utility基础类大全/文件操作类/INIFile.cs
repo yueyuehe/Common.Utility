@@ -6,7 +6,7 @@ using System.Text;
 namespace Common.Utility
 {
     /// <summary>
-    /// INIÎÄ¼ş¶ÁĞ´Àà¡£
+    /// INIæ–‡ä»¶è¯»å†™ç±»ã€‚
     /// </summary>
 	public class INIFile
 	{
@@ -29,7 +29,7 @@ namespace Common.Utility
 
 
 		/// <summary>
-		/// Ğ´INIÎÄ¼ş
+		/// å†™INIæ–‡ä»¶
 		/// </summary>
 		/// <param name="Section"></param>
 		/// <param name="Key"></param>
@@ -40,7 +40,7 @@ namespace Common.Utility
 		}
 
 		/// <summary>
-		/// ¶ÁÈ¡INIÎÄ¼ş
+		/// è¯»å–INIæ–‡ä»¶
 		/// </summary>
 		/// <param name="Section"></param>
 		/// <param name="Key"></param>
@@ -61,14 +61,14 @@ namespace Common.Utility
 
 
 		/// <summary>
-		/// É¾³ıiniÎÄ¼şÏÂËùÓĞ¶ÎÂä
+		/// åˆ é™¤iniæ–‡ä»¶ä¸‹æ‰€æœ‰æ®µè½
 		/// </summary>
 		public void ClearAllSection()
 		{
 			IniWriteValue(null,null,null);
 		}
 		/// <summary>
-		/// É¾³ıiniÎÄ¼şÏÂpersonal¶ÎÂäÏÂµÄËùÓĞ¼ü
+		/// åˆ é™¤iniæ–‡ä»¶ä¸‹personalæ®µè½ä¸‹çš„æ‰€æœ‰é”®
 		/// </summary>
 		/// <param name="Section"></param>
 		public void ClearSection(string Section)

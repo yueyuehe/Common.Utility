@@ -1,4 +1,4 @@
-﻿Global里启动时添加
+Global里启动时添加
 Job.Start();
 
 

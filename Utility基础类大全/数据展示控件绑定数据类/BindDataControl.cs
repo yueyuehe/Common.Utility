@@ -1,4 +1,4 @@
-﻿using System.Web.UI.WebControls;
+using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Data;
 using System.Data.SqlClient;

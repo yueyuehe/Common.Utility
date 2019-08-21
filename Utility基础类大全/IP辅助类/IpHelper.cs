@@ -1,4 +1,4 @@
-﻿
+
 using Org.BouncyCastle.Utilities.Net;
 using System.Net.NetworkInformation;
 using System.Text;

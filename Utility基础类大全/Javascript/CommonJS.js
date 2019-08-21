@@ -1,23 +1,16 @@
-﻿
 /************************ 用户在button以外的页面元素中按回车转换为按tab键************************/
-function OnKeyDownDefault()  
-{  
-    if(window.event.keyCode == 13 && window.event.ctrlKey == false && window.event.altKey == false) 
-    { 
-        if (window.event.srcElement.type !='button' && window.event.srcElement.type !='file' && window.event.srcElement.type !='submit') 
-        { 
+function OnKeyDownDefault() {
+    if (window.event.keyCode == 13 && window.event.ctrlKey == false && window.event.altKey == false) {
+        if (window.event.srcElement.type != 'button' && window.event.srcElement.type != 'file' && window.event.srcElement.type != 'submit') {
             window.event.keyCode = 9;
-        }
-        else
-        { 
+        } else {
             return true;
-        } 
-    } 
+        }
+    }
 }
 
 /************************ 在隐藏控件中保存Select选中的Value ************************/
-function SetHiddenValue(obj , hdnObj)
-{
+function SetHiddenValue(obj, hdnObj) {
     hdnObj.value = obj.options[obj.selectedIndex].value;
 }
 
@@ -27,56 +20,49 @@ function SetHiddenText(obj, hdnObj) {
 }
 
 /************************ 在隐藏控件中保存Radio选中的Text,RadioList中每个Radio均调用此方法 ************************/
-function SetRadioHiddenValue( checkedText, hdnObj)
-{
-    hdnObj.value = checkedText ;
+function SetRadioHiddenValue(checkedText, hdnObj) {
+    hdnObj.value = checkedText;
 }
 
 /************************ 在隐藏控件中保存Select选中的Text ************************/
 var oldValue = '';
-function GetFocusValue(objControl)
-{
+
+function GetFocusValue(objControl) {
     oldValue = objControl.value;
 }
 
 /************************ 去掉原值检查新输入值的JS ************************/
-function RemoveOldValue( objControl, checkValue)
-{
+function RemoveOldValue(objControl, checkValue) {
     var newValue = '';
-    if( objControl.value.search (checkValue) == 0)
-    {
+    if (objControl.value.search(checkValue) == 0) {
         //当在原值基础上输入时,从开始处去掉原值部分,仅检查新输入内容
         newValue = objControl.value.substring(checkValue.length);
-    }
-    else
-    {
+    } else {
         newValue = objControl.value;
     }
     return newValue;
 }
 
 /************************ 生成检查输入值是否重复的脚本函数 ************************/
-function CheckRepate(infields,invals,inQuotes,strBackId) 
-{ 
+function CheckRepate(infields, invals, inQuotes, strBackId) {
     var feildName = 'feildName=';
-    var inputVal = 'values='; 
+    var inputVal = 'values=';
     var haveQuotes = 'quotes=';
     var infieldsAry = infields.split(',');
     var invalsAry = invals.split(',');
     var inQuotesAry = inQuotes.split(',');
-    for(var i=0; i<infieldsAry.length; i++ )
-    { 
-        feildName = feildName+ infieldsAry[i] +','; 
-        inputVal = inputVal  + escape(document.getElementById(invalsAry[i]).value)+ ','; 
-        haveQuotes = haveQuotes+ inQuotesAry[i] +','; 
-    } 
-    feildName=feildName.substr(0, feildName.length-1); 
-    inputVal=inputVal.substr(0, inputVal.length-1); 
-    haveQuotes=haveQuotes.substr(0, haveQuotes.length-1); 
-    var strData = feildName+'&'+inputVal+'&'+haveQuotes;
+    for (var i = 0; i < infieldsAry.length; i++) {
+        feildName = feildName + infieldsAry[i] + ',';
+        inputVal = inputVal + escape(document.getElementById(invalsAry[i]).value) + ',';
+        haveQuotes = haveQuotes + inQuotesAry[i] + ',';
+    }
+    feildName = feildName.substr(0, feildName.length - 1);
+    inputVal = inputVal.substr(0, inputVal.length - 1);
+    haveQuotes = haveQuotes.substr(0, haveQuotes.length - 1);
+    var strData = feildName + '&' + inputVal + '&' + haveQuotes;
     var cbo = new CallBackObject(strBackId);
-    cbo.DoCallBack('',strData );
-} 
+    cbo.DoCallBack('', strData);
+}
 
 /***************************从Cookie中取值****************************************/
 function Get_Cookie(check_name) {
@@ -115,18 +101,18 @@ function Set_Cookie(name, value, expires, path, domain, secure) {
     }
     var expires_date = new Date(today.getTime() + (expires));
     document.cookie = name + "=" + escape(value) +
-		((expires) ? ";expires=" + expires_date.toGMTString() : "") + //expires.toGMTString()
-		((path) ? ";path=" + path : "") +
-		((domain) ? ";domain=" + domain : "") +
-		((secure) ? ";secure" : "");
+        ((expires) ? ";expires=" + expires_date.toGMTString() : "") + //expires.toGMTString()
+        ((path) ? ";path=" + path : "") +
+        ((domain) ? ";domain=" + domain : "") +
+        ((secure) ? ";secure" : "");
 }
 
 /********************删除Cookie*******************************/
 function Delete_Cookie(name, path, domain) {
     if (Get_Cookie(name)) document.cookie = name + "=" +
-			((path) ? ";path=" + path : "") +
-			((domain) ? ";domain=" + domain : "") +
-			";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+        ((path) ? ";path=" + path : "") +
+        ((domain) ? ";domain=" + domain : "") +
+        ";expires=Thu, 01-Jan-1970 00:00:01 GMT";
 }
 
 //功能：去掉字符串两边空格

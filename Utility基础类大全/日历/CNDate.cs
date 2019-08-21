@@ -3,58 +3,58 @@ using System;
 namespace Utilities
 {
     /// <summary>
-    /// Å©ÀúÊôĞÔ
+    /// å†œå†å±æ€§
     /// </summary>
     public class CNDate
     {
         /// <summary>
-        /// Å©ÀúÄê(ÕûĞÍ)
+        /// å†œå†å¹´(æ•´å‹)
         /// </summary>
         public int cnIntYear = 0;
         /// <summary>
-        /// Å©ÀúÔÂ·İ(ÕûĞÍ)
+        /// å†œå†æœˆä»½(æ•´å‹)
         /// </summary>
         public int cnIntMonth = 0;
         /// <summary>
-        /// Å©ÀúÌì(ÕûĞÍ)
+        /// å†œå†å¤©(æ•´å‹)
         /// </summary>
         public int cnIntDay = 0;
         /// <summary>
-        /// Å©ÀúÄê(Ö§¸É)
+        /// å†œå†å¹´(æ”¯å¹²)
         /// </summary>
         public string cnStrYear = "";
         /// <summary>
-        /// Å©ÀúÔÂ·İ(×Ö·û)
+        /// å†œå†æœˆä»½(å­—ç¬¦)
         /// </summary>
         public string cnStrMonth = "";
         /// <summary>
-        /// Å©ÀúÌì(×Ö·û)
+        /// å†œå†å¤©(å­—ç¬¦)
         /// </summary>
         public string cnStrDay = "";
         /// <summary>
-        /// Å©ÀúÊôÏó
+        /// å†œå†å±è±¡
         /// </summary>
         public string cnAnm = "";
         /// <summary>
-        /// ¶şÊ®ËÄ½ÚÆø
+        /// äºŒåå››èŠ‚æ°”
         /// </summary>
         public string cnSolarTerm = "";
         /// <summary>
-        /// ÒõÀú½ÚÈÕ
+        /// é˜´å†èŠ‚æ—¥
         /// </summary>
         public string cnFtvl = "";
         /// <summary>
-        /// ÑôÀú½ÚÈÕ
+        /// é˜³å†èŠ‚æ—¥
         /// </summary>
         public string cnFtvs = "";
     }
 
     /// <summary>
-    /// ¹«Àú×ªÅ©Àú
+    /// å…¬å†è½¬å†œå†
     /// </summary>
     public class ChinaDate
     {
-        #region Ë½ÓĞ·½·¨
+        #region ç§æœ‰æ–¹æ³•
         private static long[] lunarInfo = new long[] { 0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554,
 															   0x056a0, 0x09ad0, 0x055d2, 0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0,
 															   0x14977, 0x04970, 0x0a4b0, 0x0b4b5, 0x06a50, 0x06d40, 0x1ab54, 0x02b60, 0x09570, 0x052f2, 0x04970, 0x06566,
@@ -72,113 +72,113 @@ namespace Utilities
         private static int[] year20 = new int[] { 1, 4, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1 };
         private static int[] year19 = new int[] { 0, 3, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0 };
         private static int[] year2000 = new int[] { 0, 3, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1 };
-        private static String[] nStr1 = new String[] { "", "Õı", "¶ş", "Èı", "ËÄ", "Îå", "Áù", "Æß", "°Ë", "¾Å", "Ê®", "Ê®Ò»", "Ê®¶ş" };
-        private static String[] Gan = new String[] { "¼×", "ÒÒ", "±û", "¶¡", "Îì", "¼º", "¸ı", "ĞÁ", "ÈÉ", "¹ï" };
-        private static String[] Zhi = new String[] { "×Ó", "³ó", "Òú", "Ã®", "³½", "ËÈ", "Îç", "Î´", "Éê", "ÓÏ", "Ğç", "º¥" };
-        private static String[] Animals = new String[] { "Êó", "Å£", "»¢", "ÍÃ", "Áú", "Éß", "Âí", "Ñò", "ºï", "¼¦", "¹·", "Öí" };
-        private static String[] solarTerm = new String[] { "Ğ¡º®", "´óº®", "Á¢´º", "ÓêË®", "¾ªÕİ", "´º·Ö", "ÇåÃ÷", "¹ÈÓê", "Á¢ÏÄ", "Ğ¡Âú", "Ã¢ÖÖ", "ÏÄÖÁ", "Ğ¡Êî", "´óÊî", "Á¢Çï", "´¦Êî", "°×Â¶", "Çï·Ö", "º®Â¶", "Ëª½µ", "Á¢¶¬", "Ğ¡Ñ©", "´óÑ©", "¶¬ÖÁ" };
+        private static String[] nStr1 = new String[] { "", "æ­£", "äºŒ", "ä¸‰", "å››", "äº”", "å…­", "ä¸ƒ", "å…«", "ä¹", "å", "åä¸€", "åäºŒ" };
+        private static String[] Gan = new String[] { "ç”²", "ä¹™", "ä¸™", "ä¸", "æˆŠ", "å·±", "åºš", "è¾›", "å£¬", "ç™¸" };
+        private static String[] Zhi = new String[] { "å­", "ä¸‘", "å¯…", "å¯", "è¾°", "å·³", "åˆ", "æœª", "ç”³", "é…‰", "æˆŒ", "äº¥" };
+        private static String[] Animals = new String[] { "é¼ ", "ç‰›", "è™", "å…”", "é¾™", "è›‡", "é©¬", "ç¾Š", "çŒ´", "é¸¡", "ç‹—", "çŒª" };
+        private static String[] solarTerm = new String[] { "å°å¯’", "å¤§å¯’", "ç«‹æ˜¥", "é›¨æ°´", "æƒŠè›°", "æ˜¥åˆ†", "æ¸…æ˜", "è°·é›¨", "ç«‹å¤", "å°æ»¡", "èŠ’ç§", "å¤è‡³", "å°æš‘", "å¤§æš‘", "ç«‹ç§‹", "å¤„æš‘", "ç™½éœ²", "ç§‹åˆ†", "å¯’éœ²", "éœœé™", "ç«‹å†¬", "å°é›ª", "å¤§é›ª", "å†¬è‡³" };
         private static int[] sTermInfo = { 0, 21208, 42467, 63836, 85337, 107014, 128867, 150921, 173149, 195551, 218072, 240693, 263343, 285989, 308563, 331033, 353350, 375494, 397447, 419210, 440795, 462224, 483532, 504758 };
-        private static String[] lFtv = new String[] { "0101Å©Àú´º½Ú", "0202 ÁúÌ§Í·½Ú", "0115 ÔªÏü½Ú", "0505 ¶ËÎç½Ú", "0707 ÆßÏ¦ÇéÈË½Ú", "0815 ÖĞÇï½Ú", "0909 ÖØÑô½Ú", "1208 À°°Ë½Ú", "1114 Àî¾ıÏÈÉúÉúÈÕ", "1224 Ğ¡Äê", "0100³ıÏ¦" };
-        private static String[] sFtv = new String[] { "0101 ĞÂÄêÔªµ©",
-														 "0202 ÊÀ½çÊªµØÈÕ",
-														 "0207 ¹ú¼ÊÉùÔ®ÄÏ·ÇÈÕ",
-														 "0210 ¹ú¼ÊÆøÏó½Ú",
-														 "0214 ÇéÈË½Ú",
-														 "0301 ¹ú¼Êº£±ªÈÕ",
-														 "0303 È«¹ú°®¶úÈÕ",
-														 "0308 ¹ú¼Ê¸¾Å®½Ú",
-														 "0312 Ö²Ê÷½Ú ËïÖĞÉ½ÊÅÊÀ¼ÍÄîÈÕ",
-														 "0314 ¹ú¼Ê¾¯²ìÈÕ",
-														 "0315 ¹ú¼ÊÏû·ÑÕßÈ¨ÒæÈÕ",
-														 "0317 ÖĞ¹ú¹úÒ½½Ú ¹ú¼Êº½º£ÈÕ",
-														 "0321 ÊÀ½çÉ­ÁÖÈÕ Ïû³ıÖÖ×åÆçÊÓ¹ú¼ÊÈÕ",
-														 "0321 ÊÀ½ç¶ù¸èÈÕ",
-														 "0322 ÊÀ½çË®ÈÕ",
-														 "0323 ÊÀ½çÆøÏóÈÕ",
-														 "0324 ÊÀ½ç·ÀÖÎ½áºË²¡ÈÕ",
-														 "0325 È«¹úÖĞĞ¡Ñ§Éú°²È«½ÌÓıÈÕ",
-														 "0330 °ÍÀÕË¹Ì¹¹úÍÁÈÕ",
-														 "0401 ÓŞÈË½Ú È«¹ú°®¹úÎÀÉúÔË¶¯ÔÂ(ËÄÔÂ) Ë°ÊÕĞû´«ÔÂ(ËÄÔÂ)",
-														 "0407 ÊÀ½çÎÀÉúÈÕ",
-														 "0422 ÊÀ½çµØÇòÈÕ",
-														 "0423 ÊÀ½çÍ¼ÊéºÍ°æÈ¨ÈÕ",
-														 "0424 ÑÇ·ÇĞÂÎÅ¹¤×÷ÕßÈÕ",
-														 "0501 ¹ú¼ÊÀÍ¶¯½Ú",
-														 "0504 ÖĞ¹úÎåËÄÇàÄê½Ú",
-														 "0505 µâÈ±·¦²¡·ÀÖÎÈÕ",
-														 "0508 ÊÀ½çºìÊ®×ÖÈÕ",
-														 "0512 ¹ú¼Ê»¤Ê¿½Ú",
-														 "0515 ¹ú¼Ê¼ÒÍ¥ÈÕ",
-														 "0517 ÊÀ½çµçĞÅÈÕ",
-														 "0518 ¹ú¼Ê²©Îï¹İÈÕ",
-														 "0520 È«¹úÑ§ÉúÓªÑøÈÕ",
-														 "0523 ¹ú¼ÊÅ£ÄÌÈÕ",
-														 "0531 ÊÀ½çÎŞÑÌÈÕ",
-														 "0601 ¹ú¼Ê¶ùÍ¯½Ú",
-														 "0605 ÊÀ½ç»·¾³ÈÕ",
-														 "0606 È«¹ú°®ÑÛÈÕ",
-														 "0617 ·ÀÖÎ»ÄÄ®»¯ºÍ¸ÉºµÈÕ",
-														 "0623 ¹ú¼Ê°ÂÁÖÆ¥¿ËÈÕ",
-														 "0625 È«¹úÍÁµØÈÕ",
-														 "0626 ¹ú¼Ê·´¶¾Æ·ÈÕ",
-														 "0701 ÖĞ¹ú¹²²úµ³½¨µ³ÈÕ ÊÀ½ç½¨ÖşÈÕ",
-														 "0702 ¹ú¼ÊÌåÓı¼ÇÕßÈÕ",
-														 "0707 ÖĞ¹úÈËÃñ¿¹ÈÕÕ½Õù¼ÍÄîÈÕ",
-														 "0711 ÊÀ½çÈË¿ÚÈÕ",
-														 "0730 ·ÇÖŞ¸¾Å®ÈÕ",
-														 "0801 ÖĞ¹ú½¨¾ü½Ú",
-														 "0808 ÖĞ¹úÄĞ×Ó½Ú(°Ö°Ö½Ú)",
-														 "0815 ÈÕ±¾ÕıÊ½Ğû²¼ÎŞÌõ¼şÍ¶½µÈÕ",
-														 "0908 ¹ú¼ÊÉ¨Ã¤ÈÕ ¹ú¼ÊĞÂÎÅ¹¤×÷ÕßÈÕ",
-														 "0910 ½ÌÊ¦½Ú",
-														 "0914 ÊÀ½çÇå½àµØÇòÈÕ",
-														 "0916 ¹ú¼Ê³ôÑõ²ã±£»¤ÈÕ",
-														 "0918 ¾Å¡¤Ò»°ËÊÂ±ä¼ÍÄîÈÕ",
-														 "0920 È«¹ú°®ÑÀÈÕ",
-														 "0927 ÊÀ½çÂÃÓÎÈÕ",
-														 "1001 ¹úÇì½Ú ÊÀ½çÒôÀÖÈÕ ¹ú¼ÊÀÏÈË½Ú",
-														 "1001 ¹ú¼ÊÒôÀÖÈÕ",
-														 "1002 ¹ú¼ÊºÍÆ½ÓëÃñÖ÷×ÔÓÉ¶·ÕùÈÕ",
-														 "1004 ÊÀ½ç¶¯ÎïÈÕ",
-														 "1008 È«¹ú¸ßÑªÑ¹ÈÕ",
-														 "1008 ÊÀ½çÊÓ¾õÈÕ",
-														 "1009 ÊÀ½çÓÊÕşÈÕ Íò¹úÓÊÁªÈÕ",
-														 "1010 ĞÁº¥¸ïÃü¼ÍÄîÈÕ ÊÀ½ç¾«ÉñÎÀÉúÈÕ",
-														 "1013 ÊÀ½ç±£½¡ÈÕ ¹ú¼Ê½ÌÊ¦½Ú",
-														 "1014 ÊÀ½ç±ê×¼ÈÕ",
-														 "1015 ¹ú¼ÊÃ¤ÈË½Ú(°×ÊÖÕÈ½Ú)",
-														 "1016 ÊÀ½çÁ¸Ê³ÈÕ",
-														 "1017 ÊÀ½çÏû³ıÆ¶À§ÈÕ",
-														 "1022 ÊÀ½ç´«Í³Ò½Ò©ÈÕ",
-														 "1024 ÁªºÏ¹úÈÕ ÊÀ½ç·¢Õ¹ĞÅÏ¢ÈÕ",
-														 "1031 ÊÀ½çÇÚ¼óÈÕ",
-														 "1107 Ê®ÔÂÉç»áÖ÷Òå¸ïÃü¼ÍÄîÈÕ",
-														 "1108 ÖĞ¹ú¼ÇÕßÈÕ",
-														 "1109 È«¹úÏû·À°²È«Ğû´«½ÌÓıÈÕ",
-														 "1110 ÊÀ½çÇàÄê½Ú",
-														 "1111 ¹ú¼Ê¿ÆÑ§ÓëºÍÆ½ÖÜ(±¾ÈÕËùÊôµÄÒ»ÖÜ)",
-														 "1112 ËïÖĞÉ½µ®³½¼ÍÄîÈÕ",
-														 "1114 ÊÀ½çÌÇÄò²¡ÈÕ",
-														 "1117 ¹ú¼Ê´óÑ§Éú½Ú ÊÀ½çÑ§Éú½Ú",
-														 "1121 ÊÀ½çÎÊºòÈÕ ÊÀ½çµçÊÓÈÕ",
-														 "1129 ¹ú¼ÊÉùÔ®°ÍÀÕË¹Ì¹ÈËÃñ¹ú¼ÊÈÕ",
-														 "1201 ÊÀ½ç°¬×Ì²¡ÈÕ",
-														 "1203 ÊÀ½ç²Ğ¼²ÈËÈÕ",
-														 "1205 ¹ú¼Ê¾­¼ÃºÍÉç»á·¢Õ¹Ö¾Ô¸ÈËÔ±ÈÕ",
-														 "1208 ¹ú¼Ê¶ùÍ¯µçÊÓÈÕ",
-														 "1209 ÊÀ½ç×ãÇòÈÕ",
-														 "1210 ÊÀ½çÈËÈ¨ÈÕ",
-														 "1212 Î÷°²ÊÂ±ä¼ÍÄîÈÕ",
-														 "1213 ÄÏ¾©´óÍÀÉ±(1937Äê)¼ÍÄîÈÕ£¡½ô¼ÇÑªÀáÊ·£¡",
-														 "1221 ¹ú¼ÊÀºÇòÈÕ",
-														 "1224 Æ½°²Ò¹",
-														 "1225 Ê¥µ®½Ú",
-														 "1226 Ã«Ö÷Ï¯µ®³½",
-														 "1229 ¹ú¼ÊÉúÎï¶àÑùĞÔÈÕ" };
+        private static String[] lFtv = new String[] { "0101å†œå†æ˜¥èŠ‚", "0202 é¾™æŠ¬å¤´èŠ‚", "0115 å…ƒå®µèŠ‚", "0505 ç«¯åˆèŠ‚", "0707 ä¸ƒå¤•æƒ…äººèŠ‚", "0815 ä¸­ç§‹èŠ‚", "0909 é‡é˜³èŠ‚", "1208 è…Šå…«èŠ‚", "1114 æå›å…ˆç”Ÿç”Ÿæ—¥", "1224 å°å¹´", "0100é™¤å¤•" };
+        private static String[] sFtv = new String[] { "0101 æ–°å¹´å…ƒæ—¦",
+														 "0202 ä¸–ç•Œæ¹¿åœ°æ—¥",
+														 "0207 å›½é™…å£°æ´å—éæ—¥",
+														 "0210 å›½é™…æ°”è±¡èŠ‚",
+														 "0214 æƒ…äººèŠ‚",
+														 "0301 å›½é™…æµ·è±¹æ—¥",
+														 "0303 å…¨å›½çˆ±è€³æ—¥",
+														 "0308 å›½é™…å¦‡å¥³èŠ‚",
+														 "0312 æ¤æ ‘èŠ‚ å­™ä¸­å±±é€ä¸–çºªå¿µæ—¥",
+														 "0314 å›½é™…è­¦å¯Ÿæ—¥",
+														 "0315 å›½é™…æ¶ˆè´¹è€…æƒç›Šæ—¥",
+														 "0317 ä¸­å›½å›½åŒ»èŠ‚ å›½é™…èˆªæµ·æ—¥",
+														 "0321 ä¸–ç•Œæ£®æ—æ—¥ æ¶ˆé™¤ç§æ—æ­§è§†å›½é™…æ—¥",
+														 "0321 ä¸–ç•Œå„¿æ­Œæ—¥",
+														 "0322 ä¸–ç•Œæ°´æ—¥",
+														 "0323 ä¸–ç•Œæ°”è±¡æ—¥",
+														 "0324 ä¸–ç•Œé˜²æ²»ç»“æ ¸ç—…æ—¥",
+														 "0325 å…¨å›½ä¸­å°å­¦ç”Ÿå®‰å…¨æ•™è‚²æ—¥",
+														 "0330 å·´å‹’æ–¯å¦å›½åœŸæ—¥",
+														 "0401 æ„šäººèŠ‚ å…¨å›½çˆ±å›½å«ç”Ÿè¿åŠ¨æœˆ(å››æœˆ) ç¨æ”¶å®£ä¼ æœˆ(å››æœˆ)",
+														 "0407 ä¸–ç•Œå«ç”Ÿæ—¥",
+														 "0422 ä¸–ç•Œåœ°çƒæ—¥",
+														 "0423 ä¸–ç•Œå›¾ä¹¦å’Œç‰ˆæƒæ—¥",
+														 "0424 äºšéæ–°é—»å·¥ä½œè€…æ—¥",
+														 "0501 å›½é™…åŠ³åŠ¨èŠ‚",
+														 "0504 ä¸­å›½äº”å››é’å¹´èŠ‚",
+														 "0505 ç¢˜ç¼ºä¹ç—…é˜²æ²»æ—¥",
+														 "0508 ä¸–ç•Œçº¢åå­—æ—¥",
+														 "0512 å›½é™…æŠ¤å£«èŠ‚",
+														 "0515 å›½é™…å®¶åº­æ—¥",
+														 "0517 ä¸–ç•Œç”µä¿¡æ—¥",
+														 "0518 å›½é™…åšç‰©é¦†æ—¥",
+														 "0520 å…¨å›½å­¦ç”Ÿè¥å…»æ—¥",
+														 "0523 å›½é™…ç‰›å¥¶æ—¥",
+														 "0531 ä¸–ç•Œæ— çƒŸæ—¥",
+														 "0601 å›½é™…å„¿ç«¥èŠ‚",
+														 "0605 ä¸–ç•Œç¯å¢ƒæ—¥",
+														 "0606 å…¨å›½çˆ±çœ¼æ—¥",
+														 "0617 é˜²æ²»è’æ¼ åŒ–å’Œå¹²æ—±æ—¥",
+														 "0623 å›½é™…å¥¥æ—åŒ¹å…‹æ—¥",
+														 "0625 å…¨å›½åœŸåœ°æ—¥",
+														 "0626 å›½é™…åæ¯’å“æ—¥",
+														 "0701 ä¸­å›½å…±äº§å…šå»ºå…šæ—¥ ä¸–ç•Œå»ºç­‘æ—¥",
+														 "0702 å›½é™…ä½“è‚²è®°è€…æ—¥",
+														 "0707 ä¸­å›½äººæ°‘æŠ—æ—¥æˆ˜äº‰çºªå¿µæ—¥",
+														 "0711 ä¸–ç•Œäººå£æ—¥",
+														 "0730 éæ´²å¦‡å¥³æ—¥",
+														 "0801 ä¸­å›½å»ºå†›èŠ‚",
+														 "0808 ä¸­å›½ç”·å­èŠ‚(çˆ¸çˆ¸èŠ‚)",
+														 "0815 æ—¥æœ¬æ­£å¼å®£å¸ƒæ— æ¡ä»¶æŠ•é™æ—¥",
+														 "0908 å›½é™…æ‰«ç›²æ—¥ å›½é™…æ–°é—»å·¥ä½œè€…æ—¥",
+														 "0910 æ•™å¸ˆèŠ‚",
+														 "0914 ä¸–ç•Œæ¸…æ´åœ°çƒæ—¥",
+														 "0916 å›½é™…è‡­æ°§å±‚ä¿æŠ¤æ—¥",
+														 "0918 ä¹Â·ä¸€å…«äº‹å˜çºªå¿µæ—¥",
+														 "0920 å…¨å›½çˆ±ç‰™æ—¥",
+														 "0927 ä¸–ç•Œæ—…æ¸¸æ—¥",
+														 "1001 å›½åº†èŠ‚ ä¸–ç•ŒéŸ³ä¹æ—¥ å›½é™…è€äººèŠ‚",
+														 "1001 å›½é™…éŸ³ä¹æ—¥",
+														 "1002 å›½é™…å’Œå¹³ä¸æ°‘ä¸»è‡ªç”±æ–—äº‰æ—¥",
+														 "1004 ä¸–ç•ŒåŠ¨ç‰©æ—¥",
+														 "1008 å…¨å›½é«˜è¡€å‹æ—¥",
+														 "1008 ä¸–ç•Œè§†è§‰æ—¥",
+														 "1009 ä¸–ç•Œé‚®æ”¿æ—¥ ä¸‡å›½é‚®è”æ—¥",
+														 "1010 è¾›äº¥é©å‘½çºªå¿µæ—¥ ä¸–ç•Œç²¾ç¥å«ç”Ÿæ—¥",
+														 "1013 ä¸–ç•Œä¿å¥æ—¥ å›½é™…æ•™å¸ˆèŠ‚",
+														 "1014 ä¸–ç•Œæ ‡å‡†æ—¥",
+														 "1015 å›½é™…ç›²äººèŠ‚(ç™½æ‰‹æ–èŠ‚)",
+														 "1016 ä¸–ç•Œç²®é£Ÿæ—¥",
+														 "1017 ä¸–ç•Œæ¶ˆé™¤è´«å›°æ—¥",
+														 "1022 ä¸–ç•Œä¼ ç»ŸåŒ»è¯æ—¥",
+														 "1024 è”åˆå›½æ—¥ ä¸–ç•Œå‘å±•ä¿¡æ¯æ—¥",
+														 "1031 ä¸–ç•Œå‹¤ä¿­æ—¥",
+														 "1107 åæœˆç¤¾ä¼šä¸»ä¹‰é©å‘½çºªå¿µæ—¥",
+														 "1108 ä¸­å›½è®°è€…æ—¥",
+														 "1109 å…¨å›½æ¶ˆé˜²å®‰å…¨å®£ä¼ æ•™è‚²æ—¥",
+														 "1110 ä¸–ç•Œé’å¹´èŠ‚",
+														 "1111 å›½é™…ç§‘å­¦ä¸å’Œå¹³å‘¨(æœ¬æ—¥æ‰€å±çš„ä¸€å‘¨)",
+														 "1112 å­™ä¸­å±±è¯è¾°çºªå¿µæ—¥",
+														 "1114 ä¸–ç•Œç³–å°¿ç—…æ—¥",
+														 "1117 å›½é™…å¤§å­¦ç”ŸèŠ‚ ä¸–ç•Œå­¦ç”ŸèŠ‚",
+														 "1121 ä¸–ç•Œé—®å€™æ—¥ ä¸–ç•Œç”µè§†æ—¥",
+														 "1129 å›½é™…å£°æ´å·´å‹’æ–¯å¦äººæ°‘å›½é™…æ—¥",
+														 "1201 ä¸–ç•Œè‰¾æ»‹ç—…æ—¥",
+														 "1203 ä¸–ç•Œæ®‹ç–¾äººæ—¥",
+														 "1205 å›½é™…ç»æµå’Œç¤¾ä¼šå‘å±•å¿—æ„¿äººå‘˜æ—¥",
+														 "1208 å›½é™…å„¿ç«¥ç”µè§†æ—¥",
+														 "1209 ä¸–ç•Œè¶³çƒæ—¥",
+														 "1210 ä¸–ç•Œäººæƒæ—¥",
+														 "1212 è¥¿å®‰äº‹å˜çºªå¿µæ—¥",
+														 "1213 å—äº¬å¤§å± æ€(1937å¹´)çºªå¿µæ—¥ï¼ç´§è®°è¡€æ³ªå²ï¼",
+														 "1221 å›½é™…ç¯®çƒæ—¥",
+														 "1224 å¹³å®‰å¤œ",
+														 "1225 åœ£è¯èŠ‚",
+														 "1226 æ¯›ä¸»å¸­è¯è¾°",
+														 "1229 å›½é™…ç”Ÿç‰©å¤šæ ·æ€§æ—¥" };
 
 
         /// <summary>
-        /// ´«»ØÅ©ÀúyÄêµÄ×ÜÌìÊı
+        /// ä¼ å›å†œå†yå¹´çš„æ€»å¤©æ•°
         /// </summary>
         private static int lYearDays(int y)
         {
@@ -192,7 +192,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«»ØÅ©ÀúyÄêÈòÔÂµÄÌìÊı
+        /// ä¼ å›å†œå†yå¹´é—°æœˆçš„å¤©æ•°
         /// </summary>
         private static int leapDays(int y)
         {
@@ -208,7 +208,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«»ØÅ©ÀúyÄêÈòÄÄ¸öÔÂ 1-12 , Ã»Èò´«»Ø 0
+        /// ä¼ å›å†œå†yå¹´é—°å“ªä¸ªæœˆ 1-12 , æ²¡é—°ä¼ å› 0
         /// </summary>
         private static int leapMonth(int y)
         {
@@ -216,7 +216,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«»ØÅ©ÀúyÄêmÔÂµÄ×ÜÌìÊı
+        /// ä¼ å›å†œå†yå¹´mæœˆçš„æ€»å¤©æ•°
         /// </summary>
         private static int monthDays(int y, int m)
         {
@@ -227,7 +227,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«»ØÅ©ÀúyÄêµÄÉúĞ¤
+        /// ä¼ å›å†œå†yå¹´çš„ç”Ÿè‚–
         /// </summary>
         private static String AnimalsYear(int y)
         {
@@ -235,7 +235,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«ÈëÔÂÈÕµÄoffset ´«»Ø¸ÉÖ§,0=¼××Ó
+        /// ä¼ å…¥æœˆæ—¥çš„offset ä¼ å›å¹²æ”¯,0=ç”²å­
         /// </summary>
         private static String cyclicalm(int num)
         {
@@ -243,7 +243,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«Èëoffset ´«»Ø¸ÉÖ§, 0=¼××Ó
+        /// ä¼ å…¥offset ä¼ å›å¹²æ”¯, 0=ç”²å­
         /// </summary>
         private static String cyclical(int y)
         {
@@ -252,7 +252,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«³öÅ©Àú.year0 .month1 .day2 .yearCyl3 .monCyl4 .dayCyl5 .isLeap6
+        /// ä¼ å‡ºå†œå†.year0 .month1 .day2 .yearCyl3 .monCyl4 .dayCyl5 .isLeap6
         /// </summary>
         private long[] Lunar(int y, int m)
         {
@@ -285,12 +285,12 @@ namespace Utilities
             }
             nongDate[0] = i;
             nongDate[3] = i - 1864;
-            leap = leapMonth(i); // ÈòÄÄ¸öÔÂ
+            leap = leapMonth(i); // é—°å“ªä¸ªæœˆ
             nongDate[6] = 0;
 
             for (i = 1; i < 13 && offset > 0; i++)
             {
-                // ÈòÔÂ
+                // é—°æœˆ
                 if (leap > 0 && i == (leap + 1) && nongDate[6] == 0)
                 {
                     --i;
@@ -302,7 +302,7 @@ namespace Utilities
                     temp = monthDays((int)nongDate[0], i);
                 }
 
-                // ½â³ıÈòÔÂ
+                // è§£é™¤é—°æœˆ
                 if (nongDate[6] == 1 && i == (leap + 1))
                     nongDate[6] = 0;
                 offset -= temp;
@@ -335,7 +335,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ´«³öyÄêmÔÂdÈÕ¶ÔÓ¦µÄÅ©Àú.year0 .month1 .day2 .yearCyl3 .monCyl4 .dayCyl5 .isLeap6
+        /// ä¼ å‡ºyå¹´mæœˆdæ—¥å¯¹åº”çš„å†œå†.year0 .month1 .day2 .yearCyl3 .monCyl4 .dayCyl5 .isLeap6
         /// </summary>
         private static long[] calElement(int y, int m, int d)
         {
@@ -366,12 +366,12 @@ namespace Utilities
             }
             nongDate[0] = i;
             nongDate[3] = i - 1864;
-            leap = leapMonth(i); // ÈòÄÄ¸öÔÂ
+            leap = leapMonth(i); // é—°å“ªä¸ªæœˆ
             nongDate[6] = 0;
 
             for (i = 1; i < 13 && offset > 0; i++)
             {
-                // ÈòÔÂ
+                // é—°æœˆ
                 if (leap > 0 && i == (leap + 1) && nongDate[6] == 0)
                 {
                     --i;
@@ -383,7 +383,7 @@ namespace Utilities
                     temp = monthDays((int)nongDate[0], i);
                 }
 
-                // ½â³ıÈòÔÂ
+                // è§£é™¤é—°æœˆ
                 if (nongDate[6] == 1 && i == (leap + 1))
                     nongDate[6] = 0;
                 offset -= temp;
@@ -419,49 +419,49 @@ namespace Utilities
         {
             String a = "";
             if (day == 10)
-                return "³õÊ®";
+                return "åˆå";
             if (day == 20)
-                return "¶şÊ®";
+                return "äºŒå";
             if (day == 30)
-                return "ÈıÊ®";
+                return "ä¸‰å";
             int two = (int)((day) / 10);
             if (two == 0)
-                a = "³õ";
+                a = "åˆ";
             if (two == 1)
-                a = "Ê®";
+                a = "å";
             if (two == 2)
-                a = "Ø¥";
+                a = "å»¿";
             if (two == 3)
-                a = "Èı";
+                a = "ä¸‰";
             int one = (int)(day % 10);
             switch (one)
             {
                 case 1:
-                    a += "Ò»";
+                    a += "ä¸€";
                     break;
                 case 2:
-                    a += "¶ş";
+                    a += "äºŒ";
                     break;
                 case 3:
-                    a += "Èı";
+                    a += "ä¸‰";
                     break;
                 case 4:
-                    a += "ËÄ";
+                    a += "å››";
                     break;
                 case 5:
-                    a += "Îå";
+                    a += "äº”";
                     break;
                 case 6:
-                    a += "Áù";
+                    a += "å…­";
                     break;
                 case 7:
-                    a += "Æß";
+                    a += "ä¸ƒ";
                     break;
                 case 8:
-                    a += "°Ë";
+                    a += "å…«";
                     break;
                 case 9:
-                    a += "¾Å";
+                    a += "ä¹";
                     break;
             }
             return a;
@@ -483,9 +483,9 @@ namespace Utilities
         }
         #endregion
 
-        #region ¹«ÓĞ·½·¨
+        #region å…¬æœ‰æ–¹æ³•
         /// <summary>
-        /// ´«»Ø¹«ÀúyÄêmÔÂµÄ×ÜÌìÊı
+        /// ä¼ å›å…¬å†yå¹´mæœˆçš„æ€»å¤©æ•°
         /// </summary>
         public static int GetDaysByMonth(int y, int m)
         {
@@ -494,10 +494,10 @@ namespace Utilities
         }
 
         /// <summary>
-        /// ¸ù¾İÈÕÆÚÖµ»ñµÃÖÜÒ»µÄÈÕÆÚ
+        /// æ ¹æ®æ—¥æœŸå€¼è·å¾—å‘¨ä¸€çš„æ—¥æœŸ
         /// </summary>
-        /// <param name="dt">ÊäÈëÈÕÆÚ</param>
-        /// <returns>ÖÜÒ»µÄÈÕÆÚ</returns>
+        /// <param name="dt">è¾“å…¥æ—¥æœŸ</param>
+        /// <returns>å‘¨ä¸€çš„æ—¥æœŸ</returns>
         public static DateTime GetMondayDateByDate(DateTime dt)
         {
             double d = 0;
@@ -515,7 +515,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// »ñÈ¡Å©Àú
+        /// è·å–å†œå†
         /// </summary>
         public static CNDate getChinaDate(DateTime dt)
         {
@@ -567,43 +567,43 @@ namespace Utilities
             date = dt.Day;
             l = calElement(year, month, date);
             lmd = FormatDate((int)l[1], (int)l[2]);
-            if (lmd.Equals("0101")) cd.cnFtvl = "³ıÏ¦";
+            if (lmd.Equals("0101")) cd.cnFtvl = "é™¤å¤•";
             return cd;
         }
         #endregion
     }
 
     /// <summary>
-    /// ÖĞ¹úÈÕÀú
+    /// ä¸­å›½æ—¥å†
     /// </summary>
     //-------------------------------------------------------------------------------
-    //µ÷ÓÃ:
+    //è°ƒç”¨:
     //ChineseCalendar c = new ChineseCalendar(new DateTime(1990, 01, 15));
     //StringBuilder dayInfo = new StringBuilder();
-    //dayInfo.Append("ÑôÀú£º" + c.DateString + "\r\n");
-    //dayInfo.Append("Å©Àú£º" + c.ChineseDateString + "\r\n");
-    //dayInfo.Append("ĞÇÆÚ£º" + c.WeekDayStr);
-    //dayInfo.Append("Ê±³½£º" + c.ChineseHour + "\r\n");
-    //dayInfo.Append("ÊôÏà£º" + c.AnimalString + "\r\n");
-    //dayInfo.Append("½ÚÆø£º" + c.ChineseTwentyFourDay + "\r\n");
-    //dayInfo.Append("Ç°Ò»¸ö½ÚÆø£º" + c.ChineseTwentyFourPrevDay + "\r\n");
-    //dayInfo.Append("ÏÂÒ»¸ö½ÚÆø£º" + c.ChineseTwentyFourNextDay + "\r\n");
-    //dayInfo.Append("½ÚÈÕ£º" + c.DateHoliday + "\r\n");
-    //dayInfo.Append("¸ÉÖ§£º" + c.GanZhiDateString + "\r\n");
-    //dayInfo.Append("ĞÇËŞ£º" + c.ChineseConstellation + "\r\n");
-    //dayInfo.Append("ĞÇ×ù£º" + c.Constellation + "\r\n");
+    //dayInfo.Append("é˜³å†ï¼š" + c.DateString + "\r\n");
+    //dayInfo.Append("å†œå†ï¼š" + c.ChineseDateString + "\r\n");
+    //dayInfo.Append("æ˜ŸæœŸï¼š" + c.WeekDayStr);
+    //dayInfo.Append("æ—¶è¾°ï¼š" + c.ChineseHour + "\r\n");
+    //dayInfo.Append("å±ç›¸ï¼š" + c.AnimalString + "\r\n");
+    //dayInfo.Append("èŠ‚æ°”ï¼š" + c.ChineseTwentyFourDay + "\r\n");
+    //dayInfo.Append("å‰ä¸€ä¸ªèŠ‚æ°”ï¼š" + c.ChineseTwentyFourPrevDay + "\r\n");
+    //dayInfo.Append("ä¸‹ä¸€ä¸ªèŠ‚æ°”ï¼š" + c.ChineseTwentyFourNextDay + "\r\n");
+    //dayInfo.Append("èŠ‚æ—¥ï¼š" + c.DateHoliday + "\r\n");
+    //dayInfo.Append("å¹²æ”¯ï¼š" + c.GanZhiDateString + "\r\n");
+    //dayInfo.Append("æ˜Ÿå®¿ï¼š" + c.ChineseConstellation + "\r\n");
+    //dayInfo.Append("æ˜Ÿåº§ï¼š" + c.Constellation + "\r\n");
     //-------------------------------------------------------------------------------
     public class ChineseCalendar
     {
-        #region ÄÚ²¿½á¹¹
+        #region å†…éƒ¨ç»“æ„
         /// <summary>
-        /// ÑôÀú
+        /// é˜³å†
         /// </summary>
         private struct SolarHolidayStruct
         {
             public int Month;
             public int Day;
-            public int Recess; //¼ÙÆÚ³¤¶È
+            public int Recess; //å‡æœŸé•¿åº¦
             public string HolidayName;
             public SolarHolidayStruct(int month, int day, int recess, string name)
             {
@@ -615,7 +615,7 @@ namespace Utilities
         }
 
         /// <summary>
-        /// Å©Àú
+        /// å†œå†
         /// </summary>
         private struct LunarHolidayStruct
         {
@@ -650,38 +650,38 @@ namespace Utilities
         }
         #endregion
 
-        #region ÄÚ²¿±äÁ¿
+        #region å†…éƒ¨å˜é‡
         private DateTime _date;
         private DateTime _datetime;
         private int _cYear;
         private int _cMonth;
         private int _cDay;
-        private bool _cIsLeapMonth; //µ±ÔÂÊÇ·ñÈòÔÂ
-        private bool _cIsLeapYear;  //µ±ÄêÊÇ·ñÓĞÈòÔÂ
+        private bool _cIsLeapMonth; //å½“æœˆæ˜¯å¦é—°æœˆ
+        private bool _cIsLeapYear;  //å½“å¹´æ˜¯å¦æœ‰é—°æœˆ
         #endregion
 
-        #region »ù´¡Êı¾İ
-        #region »ù±¾³£Á¿
+        #region åŸºç¡€æ•°æ®
+        #region åŸºæœ¬å¸¸é‡
         private const int MinYear = 1900;
         private const int MaxYear = 2050;
         private static DateTime MinDay = new DateTime(1900, 1, 30);
         private static DateTime MaxDay = new DateTime(2049, 12, 31);
-        private const int GanZhiStartYear = 1864; //¸ÉÖ§¼ÆËãÆğÊ¼Äê
-        private static DateTime GanZhiStartDay = new DateTime(1899, 12, 22);//ÆğÊ¼ÈÕ
-        private const string HZNum = "ÁãÒ»¶şÈıËÄÎåÁùÆß°Ë¾Å";
-        private const int AnimalStartYear = 1900; //1900ÄêÎªÊóÄê
-        private static DateTime ChineseConstellationReferDay = new DateTime(2007, 9, 13);//28ĞÇËŞ²Î¿¼Öµ,±¾ÈÕÎª½Ç
+        private const int GanZhiStartYear = 1864; //å¹²æ”¯è®¡ç®—èµ·å§‹å¹´
+        private static DateTime GanZhiStartDay = new DateTime(1899, 12, 22);//èµ·å§‹æ—¥
+        private const string HZNum = "é›¶ä¸€äºŒä¸‰å››äº”å…­ä¸ƒå…«ä¹";
+        private const int AnimalStartYear = 1900; //1900å¹´ä¸ºé¼ å¹´
+        private static DateTime ChineseConstellationReferDay = new DateTime(2007, 9, 13);//28æ˜Ÿå®¿å‚è€ƒå€¼,æœ¬æ—¥ä¸ºè§’
         #endregion
 
-        #region ÒõÀúÊı¾İ
+        #region é˜´å†æ•°æ®
         /// <summary>
-        /// À´Ô´ÓÚÍøÉÏµÄÅ©ÀúÊı¾İ
+        /// æ¥æºäºç½‘ä¸Šçš„å†œå†æ•°æ®
         /// </summary>
         /// <remarks>
-        /// Êı¾İ½á¹¹ÈçÏÂ£¬¹²Ê¹ÓÃ17Î»Êı¾İ
-        /// µÚ17Î»£º±íÊ¾ÈòÔÂÌìÊı£¬0±íÊ¾29Ìì   1±íÊ¾30Ìì
-        /// µÚ16Î»-µÚ5Î»£¨¹²12Î»£©±íÊ¾12¸öÔÂ£¬ÆäÖĞµÚ16Î»±íÊ¾µÚÒ»ÔÂ£¬Èç¹û¸ÃÔÂÎª30ÌìÔòÎª1£¬29ÌìÎª0
-        /// µÚ4Î»-µÚ1Î»£¨¹²4Î»£©±íÊ¾ÈòÔÂÊÇÄÄ¸öÔÂ£¬Èç¹ûµ±ÄêÃ»ÓĞÈòÔÂ£¬ÔòÖÃ0
+        /// æ•°æ®ç»“æ„å¦‚ä¸‹ï¼Œå…±ä½¿ç”¨17ä½æ•°æ®
+        /// ç¬¬17ä½ï¼šè¡¨ç¤ºé—°æœˆå¤©æ•°ï¼Œ0è¡¨ç¤º29å¤©   1è¡¨ç¤º30å¤©
+        /// ç¬¬16ä½-ç¬¬5ä½ï¼ˆå…±12ä½ï¼‰è¡¨ç¤º12ä¸ªæœˆï¼Œå…¶ä¸­ç¬¬16ä½è¡¨ç¤ºç¬¬ä¸€æœˆï¼Œå¦‚æœè¯¥æœˆä¸º30å¤©åˆ™ä¸º1ï¼Œ29å¤©ä¸º0
+        /// ç¬¬4ä½-ç¬¬1ä½ï¼ˆå…±4ä½ï¼‰è¡¨ç¤ºé—°æœˆæ˜¯å“ªä¸ªæœˆï¼Œå¦‚æœå½“å¹´æ²¡æœ‰é—°æœˆï¼Œåˆ™ç½®0
         ///</remarks>
         private static int[] LunarDateArray = new int[]{
                 0x04BD8,0x04AE0,0x0A570,0x054D5,0x0D260,0x0D950,0x16554,0x056A0,0x09AD0,0x055D2,
@@ -704,146 +704,146 @@ namespace Utilities
 
         #endregion
 
-        #region ĞÇ×ùÃû³Æ
+        #region æ˜Ÿåº§åç§°
         private static string[] _constellationName = 
                 { 
-                    "°×Ñò×ù", "½ğÅ£×ù", "Ë«×Ó×ù", 
-                    "¾ŞĞ·×ù", "Ê¨×Ó×ù", "´¦Å®×ù", 
-                    "Ìì³Ó×ù", "ÌìĞ«×ù", "ÉäÊÖ×ù", 
-                    "Ä¦ôÉ×ù", "Ë®Æ¿×ù", "Ë«Óã×ù"
+                    "ç™½ç¾Šåº§", "é‡‘ç‰›åº§", "åŒå­åº§", 
+                    "å·¨èŸ¹åº§", "ç‹®å­åº§", "å¤„å¥³åº§", 
+                    "å¤©ç§¤åº§", "å¤©èåº§", "å°„æ‰‹åº§", 
+                    "æ‘©ç¾¯åº§", "æ°´ç“¶åº§", "åŒé±¼åº§"
                 };
         #endregion
 
-        #region ¶şÊ®ËÄ½ÚÆø
+        #region äºŒåå››èŠ‚æ°”
         private static string[] _lunarHolidayName = 
                     { 
-                    "Ğ¡º®", "´óº®", "Á¢´º", "ÓêË®", 
-                    "¾ªÕİ", "´º·Ö", "ÇåÃ÷", "¹ÈÓê", 
-                    "Á¢ÏÄ", "Ğ¡Âú", "Ã¢ÖÖ", "ÏÄÖÁ", 
-                    "Ğ¡Êî", "´óÊî", "Á¢Çï", "´¦Êî", 
-                    "°×Â¶", "Çï·Ö", "º®Â¶", "Ëª½µ", 
-                    "Á¢¶¬", "Ğ¡Ñ©", "´óÑ©", "¶¬ÖÁ"
+                    "å°å¯’", "å¤§å¯’", "ç«‹æ˜¥", "é›¨æ°´", 
+                    "æƒŠè›°", "æ˜¥åˆ†", "æ¸…æ˜", "è°·é›¨", 
+                    "ç«‹å¤", "å°æ»¡", "èŠ’ç§", "å¤è‡³", 
+                    "å°æš‘", "å¤§æš‘", "ç«‹ç§‹", "å¤„æš‘", 
+                    "ç™½éœ²", "ç§‹åˆ†", "å¯’éœ²", "éœœé™", 
+                    "ç«‹å†¬", "å°é›ª", "å¤§é›ª", "å†¬è‡³"
                     };
         #endregion
 
-        #region ¶şÊ®°ËĞÇËŞ
+        #region äºŒåå…«æ˜Ÿå®¿
         private static string[] _chineseConstellationName =
             {
-                  //ËÄ        Îå      Áù         ÈÕ        Ò»      ¶ş      Èı  
-                "½ÇÄ¾òÔ","¿º½ğÁú","Å®ÍÁòğ","·¿ÈÕÍÃ","ĞÄÔÂºü","Î²»ğ»¢","»şË®±ª",
-                "¶·Ä¾â³","Å£½ğÅ£","ØµÍÁºÑ","ĞéÈÕÊó","Î£ÔÂÑà","ÊÒ»ğÖí","±ÚË®ª",
-                "¿üÄ¾ÀÇ","Â¦½ğ¹·","Î¸ÍÁåé","êÄÈÕ¼¦","±ÏÔÂÎÚ","õş»ğºï","²ÎË®Ô³",
-                "¾®Ä¾áí","¹í½ğÑò","ÁøÍÁâ¯","ĞÇÈÕÂí","ÕÅÔÂÂ¹","Òí»ğÉß","éôË®ò¾" 
+                  //å››        äº”      å…­         æ—¥        ä¸€      äºŒ      ä¸‰  
+                "è§’æœ¨è›Ÿ","äº¢é‡‘é¾™","å¥³åœŸè ","æˆ¿æ—¥å…”","å¿ƒæœˆç‹","å°¾ç«è™","ç®•æ°´è±¹",
+                "æ–—æœ¨ç¬","ç‰›é‡‘ç‰›","æ°åœŸè²‰","è™šæ—¥é¼ ","å±æœˆç‡•","å®¤ç«çŒª","å£æ°´ç",
+                "å¥æœ¨ç‹¼","å¨„é‡‘ç‹—","èƒƒåœŸå½˜","æ˜´æ—¥é¸¡","æ¯•æœˆä¹Œ","è§œç«çŒ´","å‚æ°´çŒ¿",
+                "äº•æœ¨çŠ´","é¬¼é‡‘ç¾Š","æŸ³åœŸç","æ˜Ÿæ—¥é©¬","å¼ æœˆé¹¿","ç¿¼ç«è›‡","è½¸æ°´èš“" 
             };
         #endregion
 
-        #region ½ÚÆøÊı¾İ
-        private static string[] SolarTerm = new string[] { "Ğ¡º®", "´óº®", "Á¢´º", "ÓêË®", "¾ªÕİ", "´º·Ö", "ÇåÃ÷", "¹ÈÓê", "Á¢ÏÄ", "Ğ¡Âú", "Ã¢ÖÖ", "ÏÄÖÁ", "Ğ¡Êî", "´óÊî", "Á¢Çï", "´¦Êî", "°×Â¶", "Çï·Ö", "º®Â¶", "Ëª½µ", "Á¢¶¬", "Ğ¡Ñ©", "´óÑ©", "¶¬ÖÁ" };
+        #region èŠ‚æ°”æ•°æ®
+        private static string[] SolarTerm = new string[] { "å°å¯’", "å¤§å¯’", "ç«‹æ˜¥", "é›¨æ°´", "æƒŠè›°", "æ˜¥åˆ†", "æ¸…æ˜", "è°·é›¨", "ç«‹å¤", "å°æ»¡", "èŠ’ç§", "å¤è‡³", "å°æš‘", "å¤§æš‘", "ç«‹ç§‹", "å¤„æš‘", "ç™½éœ²", "ç§‹åˆ†", "å¯’éœ²", "éœœé™", "ç«‹å†¬", "å°é›ª", "å¤§é›ª", "å†¬è‡³" };
         private static int[] sTermInfo = new int[] { 0, 21208, 42467, 63836, 85337, 107014, 128867, 150921, 173149, 195551, 218072, 240693, 263343, 285989, 308563, 331033, 353350, 375494, 397447, 419210, 440795, 462224, 483532, 504758 };
         #endregion
 
-        #region Å©ÀúÏà¹ØÊı¾İ
-        private static string ganStr = "¼×ÒÒ±û¶¡Îì¼º¸ıĞÁÈÉ¹ï";
-        private static string zhiStr = "×Ó³óÒúÃ®³½ËÈÎçÎ´ÉêÓÏĞçº¥";
-        private static string animalStr = "ÊóÅ£»¢ÍÃÁúÉßÂíÑòºï¼¦¹·Öí";
-        private static string nStr1 = "ÈÕÒ»¶şÈıËÄÎåÁùÆß°Ë¾Å";
-        private static string nStr2 = "³õÊ®Ø¥Ø¦";
+        #region å†œå†ç›¸å…³æ•°æ®
+        private static string ganStr = "ç”²ä¹™ä¸™ä¸æˆŠå·±åºšè¾›å£¬ç™¸";
+        private static string zhiStr = "å­ä¸‘å¯…å¯è¾°å·³åˆæœªç”³é…‰æˆŒäº¥";
+        private static string animalStr = "é¼ ç‰›è™å…”é¾™è›‡é©¬ç¾ŠçŒ´é¸¡ç‹—çŒª";
+        private static string nStr1 = "æ—¥ä¸€äºŒä¸‰å››äº”å…­ä¸ƒå…«ä¹";
+        private static string nStr2 = "åˆåå»¿å…";
         private static string[] _monthString =
                 {
-                    "³ö´í","ÕıÔÂ","¶şÔÂ","ÈıÔÂ","ËÄÔÂ","ÎåÔÂ","ÁùÔÂ","ÆßÔÂ","°ËÔÂ","¾ÅÔÂ","Ê®ÔÂ","Ê®Ò»ÔÂ","À°ÔÂ"
+                    "å‡ºé”™","æ­£æœˆ","äºŒæœˆ","ä¸‰æœˆ","å››æœˆ","äº”æœˆ","å…­æœˆ","ä¸ƒæœˆ","å…«æœˆ","ä¹æœˆ","åæœˆ","åä¸€æœˆ","è…Šæœˆ"
                 };
         #endregion
 
-        #region °´¹«Àú¼ÆËãµÄ½ÚÈÕ
+        #region æŒ‰å…¬å†è®¡ç®—çš„èŠ‚æ—¥
         private static SolarHolidayStruct[] sHolidayInfo = new SolarHolidayStruct[]{
-            new SolarHolidayStruct(1, 1, 1, "Ôªµ©"),
-            new SolarHolidayStruct(2, 2, 0, "ÊÀ½çÊªµØÈÕ"),
-            new SolarHolidayStruct(2, 10, 0, "¹ú¼ÊÆøÏó½Ú"),
-            new SolarHolidayStruct(2, 14, 0, "ÇéÈË½Ú"),
-            new SolarHolidayStruct(3, 1, 0, "¹ú¼Êº£±ªÈÕ"),
-            new SolarHolidayStruct(3, 5, 0, "Ñ§À×·æ¼ÍÄîÈÕ"),
-            new SolarHolidayStruct(3, 8, 0, "¸¾Å®½Ú"), 
-            new SolarHolidayStruct(3, 12, 0, "Ö²Ê÷½Ú ËïÖĞÉ½ÊÅÊÀ¼ÍÄîÈÕ"), 
-            new SolarHolidayStruct(3, 14, 0, "¹ú¼Ê¾¯²ìÈÕ"),
-            new SolarHolidayStruct(3, 15, 0, "Ïû·ÑÕßÈ¨ÒæÈÕ"),
-            new SolarHolidayStruct(3, 17, 0, "ÖĞ¹ú¹úÒ½½Ú ¹ú¼Êº½º£ÈÕ"),
-            new SolarHolidayStruct(3, 21, 0, "ÊÀ½çÉ­ÁÖÈÕ Ïû³ıÖÖ×åÆçÊÓ¹ú¼ÊÈÕ ÊÀ½ç¶ù¸èÈÕ"),
-            new SolarHolidayStruct(3, 22, 0, "ÊÀ½çË®ÈÕ"),
-            new SolarHolidayStruct(3, 24, 0, "ÊÀ½ç·ÀÖÎ½áºË²¡ÈÕ"),
-            new SolarHolidayStruct(4, 1, 0, "ÓŞÈË½Ú"),
-            new SolarHolidayStruct(4, 7, 0, "ÊÀ½çÎÀÉúÈÕ"),
-            new SolarHolidayStruct(4, 22, 0, "ÊÀ½çµØÇòÈÕ"),
-            new SolarHolidayStruct(5, 1, 1, "ÀÍ¶¯½Ú"), 
-            new SolarHolidayStruct(5, 2, 1, "ÀÍ¶¯½Ú¼ÙÈÕ"),
-            new SolarHolidayStruct(5, 3, 1, "ÀÍ¶¯½Ú¼ÙÈÕ"),
-            new SolarHolidayStruct(5, 4, 0, "ÇàÄê½Ú"), 
-            new SolarHolidayStruct(5, 8, 0, "ÊÀ½çºìÊ®×ÖÈÕ"),
-            new SolarHolidayStruct(5, 12, 0, "¹ú¼Ê»¤Ê¿½Ú"), 
-            new SolarHolidayStruct(5, 31, 0, "ÊÀ½çÎŞÑÌÈÕ"), 
-            new SolarHolidayStruct(6, 1, 0, "¹ú¼Ê¶ùÍ¯½Ú"), 
-            new SolarHolidayStruct(6, 5, 0, "ÊÀ½ç»·¾³±£»¤ÈÕ"),
-            new SolarHolidayStruct(6, 26, 0, "¹ú¼Ê½û¶¾ÈÕ"),
-            new SolarHolidayStruct(7, 1, 0, "½¨µ³½Ú Ïã¸Û»Ø¹é¼ÍÄî ÊÀ½ç½¨ÖşÈÕ"),
-            new SolarHolidayStruct(7, 11, 0, "ÊÀ½çÈË¿ÚÈÕ"),
-            new SolarHolidayStruct(8, 1, 0, "½¨¾ü½Ú"), 
-            new SolarHolidayStruct(8, 8, 0, "ÖĞ¹úÄĞ×Ó½Ú ¸¸Ç×½Ú"),
-            new SolarHolidayStruct(8, 15, 0, "¿¹ÈÕÕ½ÕùÊ¤Àû¼ÍÄî"),
-            new SolarHolidayStruct(9, 9, 0, "Ã«Ö÷Ï¯ÊÅÊÀ¼ÍÄî"), 
-            new SolarHolidayStruct(9, 10, 0, "½ÌÊ¦½Ú"), 
-            new SolarHolidayStruct(9, 18, 0, "¾Å¡¤Ò»°ËÊÂ±ä¼ÍÄîÈÕ"),
-            new SolarHolidayStruct(9, 20, 0, "¹ú¼Ê°®ÑÀÈÕ"),
-            new SolarHolidayStruct(9, 27, 0, "ÊÀ½çÂÃÓÎÈÕ"),
-            new SolarHolidayStruct(9, 28, 0, "¿××Óµ®³½"),
-            new SolarHolidayStruct(10, 1, 1, "¹úÇì½Ú ¹ú¼ÊÒôÀÖÈÕ"),
-            new SolarHolidayStruct(10, 2, 1, "¹úÇì½Ú¼ÙÈÕ"),
-            new SolarHolidayStruct(10, 3, 1, "¹úÇì½Ú¼ÙÈÕ"),
-            new SolarHolidayStruct(10, 6, 0, "ÀÏÈË½Ú"), 
-            new SolarHolidayStruct(10, 24, 0, "ÁªºÏ¹úÈÕ"),
-            new SolarHolidayStruct(11, 10, 0, "ÊÀ½çÇàÄê½Ú"),
-            new SolarHolidayStruct(11, 12, 0, "ËïÖĞÉ½µ®³½¼ÍÄî"), 
-            new SolarHolidayStruct(12, 1, 0, "ÊÀ½ç°¬×Ì²¡ÈÕ"), 
-            new SolarHolidayStruct(12, 3, 0, "ÊÀ½ç²Ğ¼²ÈËÈÕ"), 
-            new SolarHolidayStruct(12, 20, 0, "°ÄÃÅ»Ø¹é¼ÍÄî"), 
-            new SolarHolidayStruct(12, 24, 0, "Æ½°²Ò¹"), 
-            new SolarHolidayStruct(12, 25, 0, "Ê¥µ®½Ú"), 
-            new SolarHolidayStruct(12, 26, 0, "Ã«Ö÷Ï¯µ®³½¼ÍÄî")
+            new SolarHolidayStruct(1, 1, 1, "å…ƒæ—¦"),
+            new SolarHolidayStruct(2, 2, 0, "ä¸–ç•Œæ¹¿åœ°æ—¥"),
+            new SolarHolidayStruct(2, 10, 0, "å›½é™…æ°”è±¡èŠ‚"),
+            new SolarHolidayStruct(2, 14, 0, "æƒ…äººèŠ‚"),
+            new SolarHolidayStruct(3, 1, 0, "å›½é™…æµ·è±¹æ—¥"),
+            new SolarHolidayStruct(3, 5, 0, "å­¦é›·é”‹çºªå¿µæ—¥"),
+            new SolarHolidayStruct(3, 8, 0, "å¦‡å¥³èŠ‚"), 
+            new SolarHolidayStruct(3, 12, 0, "æ¤æ ‘èŠ‚ å­™ä¸­å±±é€ä¸–çºªå¿µæ—¥"), 
+            new SolarHolidayStruct(3, 14, 0, "å›½é™…è­¦å¯Ÿæ—¥"),
+            new SolarHolidayStruct(3, 15, 0, "æ¶ˆè´¹è€…æƒç›Šæ—¥"),
+            new SolarHolidayStruct(3, 17, 0, "ä¸­å›½å›½åŒ»èŠ‚ å›½é™…èˆªæµ·æ—¥"),
+            new SolarHolidayStruct(3, 21, 0, "ä¸–ç•Œæ£®æ—æ—¥ æ¶ˆé™¤ç§æ—æ­§è§†å›½é™…æ—¥ ä¸–ç•Œå„¿æ­Œæ—¥"),
+            new SolarHolidayStruct(3, 22, 0, "ä¸–ç•Œæ°´æ—¥"),
+            new SolarHolidayStruct(3, 24, 0, "ä¸–ç•Œé˜²æ²»ç»“æ ¸ç—…æ—¥"),
+            new SolarHolidayStruct(4, 1, 0, "æ„šäººèŠ‚"),
+            new SolarHolidayStruct(4, 7, 0, "ä¸–ç•Œå«ç”Ÿæ—¥"),
+            new SolarHolidayStruct(4, 22, 0, "ä¸–ç•Œåœ°çƒæ—¥"),
+            new SolarHolidayStruct(5, 1, 1, "åŠ³åŠ¨èŠ‚"), 
+            new SolarHolidayStruct(5, 2, 1, "åŠ³åŠ¨èŠ‚å‡æ—¥"),
+            new SolarHolidayStruct(5, 3, 1, "åŠ³åŠ¨èŠ‚å‡æ—¥"),
+            new SolarHolidayStruct(5, 4, 0, "é’å¹´èŠ‚"), 
+            new SolarHolidayStruct(5, 8, 0, "ä¸–ç•Œçº¢åå­—æ—¥"),
+            new SolarHolidayStruct(5, 12, 0, "å›½é™…æŠ¤å£«èŠ‚"), 
+            new SolarHolidayStruct(5, 31, 0, "ä¸–ç•Œæ— çƒŸæ—¥"), 
+            new SolarHolidayStruct(6, 1, 0, "å›½é™…å„¿ç«¥èŠ‚"), 
+            new SolarHolidayStruct(6, 5, 0, "ä¸–ç•Œç¯å¢ƒä¿æŠ¤æ—¥"),
+            new SolarHolidayStruct(6, 26, 0, "å›½é™…ç¦æ¯’æ—¥"),
+            new SolarHolidayStruct(7, 1, 0, "å»ºå…šèŠ‚ é¦™æ¸¯å›å½’çºªå¿µ ä¸–ç•Œå»ºç­‘æ—¥"),
+            new SolarHolidayStruct(7, 11, 0, "ä¸–ç•Œäººå£æ—¥"),
+            new SolarHolidayStruct(8, 1, 0, "å»ºå†›èŠ‚"), 
+            new SolarHolidayStruct(8, 8, 0, "ä¸­å›½ç”·å­èŠ‚ çˆ¶äº²èŠ‚"),
+            new SolarHolidayStruct(8, 15, 0, "æŠ—æ—¥æˆ˜äº‰èƒœåˆ©çºªå¿µ"),
+            new SolarHolidayStruct(9, 9, 0, "æ¯›ä¸»å¸­é€ä¸–çºªå¿µ"), 
+            new SolarHolidayStruct(9, 10, 0, "æ•™å¸ˆèŠ‚"), 
+            new SolarHolidayStruct(9, 18, 0, "ä¹Â·ä¸€å…«äº‹å˜çºªå¿µæ—¥"),
+            new SolarHolidayStruct(9, 20, 0, "å›½é™…çˆ±ç‰™æ—¥"),
+            new SolarHolidayStruct(9, 27, 0, "ä¸–ç•Œæ—…æ¸¸æ—¥"),
+            new SolarHolidayStruct(9, 28, 0, "å­”å­è¯è¾°"),
+            new SolarHolidayStruct(10, 1, 1, "å›½åº†èŠ‚ å›½é™…éŸ³ä¹æ—¥"),
+            new SolarHolidayStruct(10, 2, 1, "å›½åº†èŠ‚å‡æ—¥"),
+            new SolarHolidayStruct(10, 3, 1, "å›½åº†èŠ‚å‡æ—¥"),
+            new SolarHolidayStruct(10, 6, 0, "è€äººèŠ‚"), 
+            new SolarHolidayStruct(10, 24, 0, "è”åˆå›½æ—¥"),
+            new SolarHolidayStruct(11, 10, 0, "ä¸–ç•Œé’å¹´èŠ‚"),
+            new SolarHolidayStruct(11, 12, 0, "å­™ä¸­å±±è¯è¾°çºªå¿µ"), 
+            new SolarHolidayStruct(12, 1, 0, "ä¸–ç•Œè‰¾æ»‹ç—…æ—¥"), 
+            new SolarHolidayStruct(12, 3, 0, "ä¸–ç•Œæ®‹ç–¾äººæ—¥"), 
+            new SolarHolidayStruct(12, 20, 0, "æ¾³é—¨å›å½’çºªå¿µ"), 
+            new SolarHolidayStruct(12, 24, 0, "å¹³å®‰å¤œ"), 
+            new SolarHolidayStruct(12, 25, 0, "åœ£è¯èŠ‚"), 
+            new SolarHolidayStruct(12, 26, 0, "æ¯›ä¸»å¸­è¯è¾°çºªå¿µ")
            };
         #endregion
 
-        #region °´Å©Àú¼ÆËãµÄ½ÚÈÕ
+        #region æŒ‰å†œå†è®¡ç®—çš„èŠ‚æ—¥
         private static LunarHolidayStruct[] lHolidayInfo = new LunarHolidayStruct[]{
-            new LunarHolidayStruct(1, 1, 1, "´º½Ú"), 
-            new LunarHolidayStruct(1, 15, 0, "ÔªÏü½Ú"), 
-            new LunarHolidayStruct(5, 5, 0, "¶ËÎç½Ú"), 
-            new LunarHolidayStruct(7, 7, 0, "ÆßÏ¦ÇéÈË½Ú"),
-            new LunarHolidayStruct(7, 15, 0, "ÖĞÔª½Ú ÓÛÀ¼Åè½Ú"), 
-            new LunarHolidayStruct(8, 15, 0, "ÖĞÇï½Ú"), 
-            new LunarHolidayStruct(9, 9, 0, "ÖØÑô½Ú"), 
-            new LunarHolidayStruct(12, 8, 0, "À°°Ë½Ú"),
-            new LunarHolidayStruct(12, 23, 0, "±±·½Ğ¡Äê(É¨·¿)"),
-            new LunarHolidayStruct(12, 24, 0, "ÄÏ·½Ğ¡Äê(µ§³¾)"),
-            //new LunarHolidayStruct(12, 30, 0, "³ıÏ¦")  //×¢Òâ³ıÏ¦ĞèÒªÆäËü·½·¨½øĞĞ¼ÆËã
+            new LunarHolidayStruct(1, 1, 1, "æ˜¥èŠ‚"), 
+            new LunarHolidayStruct(1, 15, 0, "å…ƒå®µèŠ‚"), 
+            new LunarHolidayStruct(5, 5, 0, "ç«¯åˆèŠ‚"), 
+            new LunarHolidayStruct(7, 7, 0, "ä¸ƒå¤•æƒ…äººèŠ‚"),
+            new LunarHolidayStruct(7, 15, 0, "ä¸­å…ƒèŠ‚ ç›‚å…°ç›†èŠ‚"), 
+            new LunarHolidayStruct(8, 15, 0, "ä¸­ç§‹èŠ‚"), 
+            new LunarHolidayStruct(9, 9, 0, "é‡é˜³èŠ‚"), 
+            new LunarHolidayStruct(12, 8, 0, "è…Šå…«èŠ‚"),
+            new LunarHolidayStruct(12, 23, 0, "åŒ—æ–¹å°å¹´(æ‰«æˆ¿)"),
+            new LunarHolidayStruct(12, 24, 0, "å—æ–¹å°å¹´(æ¸å°˜)"),
+            //new LunarHolidayStruct(12, 30, 0, "é™¤å¤•")  //æ³¨æ„é™¤å¤•éœ€è¦å…¶å®ƒæ–¹æ³•è¿›è¡Œè®¡ç®—
         };
         #endregion
 
-        #region °´Ä³ÔÂµÚ¼¸¸öĞÇÆÚ¼¸
+        #region æŒ‰æŸæœˆç¬¬å‡ ä¸ªæ˜ŸæœŸå‡ 
         private static WeekHolidayStruct[] wHolidayInfo = new WeekHolidayStruct[]{
-            new WeekHolidayStruct(5, 2, 1, "Ä¸Ç×½Ú"), 
-            new WeekHolidayStruct(5, 3, 1, "È«¹úÖú²ĞÈÕ"), 
-            new WeekHolidayStruct(6, 3, 1, "¸¸Ç×½Ú"), 
-            new WeekHolidayStruct(9, 3, 3, "¹ú¼ÊºÍÆ½ÈÕ"), 
-            new WeekHolidayStruct(9, 4, 1, "¹ú¼ÊÁûÈË½Ú"), 
-            new WeekHolidayStruct(10, 1, 2, "¹ú¼Ê×¡·¿ÈÕ"), 
-            new WeekHolidayStruct(10, 1, 4, "¹ú¼Ê¼õÇá×ÔÈ»ÔÖº¦ÈÕ"),
-            new WeekHolidayStruct(11, 4, 5, "¸Ğ¶÷½Ú")
+            new WeekHolidayStruct(5, 2, 1, "æ¯äº²èŠ‚"), 
+            new WeekHolidayStruct(5, 3, 1, "å…¨å›½åŠ©æ®‹æ—¥"), 
+            new WeekHolidayStruct(6, 3, 1, "çˆ¶äº²èŠ‚"), 
+            new WeekHolidayStruct(9, 3, 3, "å›½é™…å’Œå¹³æ—¥"), 
+            new WeekHolidayStruct(9, 4, 1, "å›½é™…è‹äººèŠ‚"), 
+            new WeekHolidayStruct(10, 1, 2, "å›½é™…ä½æˆ¿æ—¥"), 
+            new WeekHolidayStruct(10, 1, 4, "å›½é™…å‡è½»è‡ªç„¶ç¾å®³æ—¥"),
+            new WeekHolidayStruct(11, 4, 5, "æ„Ÿæ©èŠ‚")
         };
         #endregion
         #endregion
 
-        #region ¹¹Ôìº¯Êı
-        #region ¹«ÀúÈÕÆÚ³õÊ¼»¯
+        #region æ„é€ å‡½æ•°
+        #region å…¬å†æ—¥æœŸåˆå§‹åŒ–
         /// <summary>
-        /// ÓÃÒ»¸ö±ê×¼µÄ¹«ÀúÈÕÆÚÀ´³õÊ¹»¯
+        /// ç”¨ä¸€ä¸ªæ ‡å‡†çš„å…¬å†æ—¥æœŸæ¥åˆä½¿åŒ–
         /// </summary>
         public ChineseCalendar(DateTime dt)
         {
@@ -857,17 +857,17 @@ namespace Utilities
             _date = dt.Date;
             _datetime = dt;
 
-            //Å©ÀúÈÕÆÚ¼ÆËã²¿·Ö
+            //å†œå†æ—¥æœŸè®¡ç®—éƒ¨åˆ†
             leap = 0;
             temp = 0;
 
-            //¼ÆËãÁ½ÌìµÄ»ù±¾²î¾à
+            //è®¡ç®—ä¸¤å¤©çš„åŸºæœ¬å·®è·
             TimeSpan ts = _date - ChineseCalendar.MinDay;
             offset = ts.Days;
 
             for (i = MinYear; i <= MaxYear; i++)
             {
-                //Çóµ±ÄêÅ©ÀúÄêÌìÊı
+                //æ±‚å½“å¹´å†œå†å¹´å¤©æ•°
                 temp = GetChineseYearDays(i);
                 if (offset - temp < 1)
                     break;
@@ -878,10 +878,10 @@ namespace Utilities
             }
             _cYear = i;
 
-            //¼ÆËã¸ÃÄêÈòÄÄ¸öÔÂ
+            //è®¡ç®—è¯¥å¹´é—°å“ªä¸ªæœˆ
             leap = GetChineseLeapMonth(_cYear);
 
-            //Éè¶¨µ±ÄêÊÇ·ñÓĞÈòÔÂ
+            //è®¾å®šå½“å¹´æ˜¯å¦æœ‰é—°æœˆ
             if (leap > 0)
             {
                 _cIsLeapYear = true;
@@ -894,17 +894,17 @@ namespace Utilities
             _cIsLeapMonth = false;
             for (i = 1; i <= 12; i++)
             {
-                //ÈòÔÂ
+                //é—°æœˆ
                 if ((leap > 0) && (i == leap + 1) && (_cIsLeapMonth == false))
                 {
                     _cIsLeapMonth = true;
                     i = i - 1;
-                    temp = GetChineseLeapMonthDays(_cYear); //¼ÆËãÈòÔÂÌìÊı
+                    temp = GetChineseLeapMonthDays(_cYear); //è®¡ç®—é—°æœˆå¤©æ•°
                 }
                 else
                 {
                     _cIsLeapMonth = false;
-                    temp = GetChineseMonthDays(_cYear, i);  //¼ÆËã·ÇÈòÔÂÌìÊı
+                    temp = GetChineseMonthDays(_cYear, i);  //è®¡ç®—éé—°æœˆå¤©æ•°
                 }
 
                 offset = offset - temp;
@@ -917,14 +917,14 @@ namespace Utilities
         }
         #endregion
 
-        #region Å©ÀúÈÕÆÚ³õÊ¼»¯
+        #region å†œå†æ—¥æœŸåˆå§‹åŒ–
         /// <summary>
-        /// ÓÃÅ©ÀúµÄÈÕÆÚÀ´³õÊ¹»¯
+        /// ç”¨å†œå†çš„æ—¥æœŸæ¥åˆä½¿åŒ–
         /// </summary>
-        /// <param name="cy">Å©ÀúÄê</param>
-        /// <param name="cm">Å©ÀúÔÂ</param>
-        /// <param name="cd">Å©ÀúÈÕ</param>
-        /// <param name="LeapFlag">ÈòÔÂ±êÖ¾</param>
+        /// <param name="cy">å†œå†å¹´</param>
+        /// <param name="cm">å†œå†æœˆ</param>
+        /// <param name="cd">å†œå†æ—¥</param>
+        /// <param name="LeapFlag">é—°æœˆæ ‡å¿—</param>
         public ChineseCalendar(int cy, int cm, int cd, bool leapMonthFlag)
         {
             int i, leap, Temp, offset;
@@ -939,12 +939,12 @@ namespace Utilities
 
             for (i = MinYear; i < cy; i++)
             {
-                //Çóµ±ÄêÅ©ÀúÄêÌìÊı
+                //æ±‚å½“å¹´å†œå†å¹´å¤©æ•°
                 Temp = GetChineseYearDays(i);
                 offset = offset + Temp;
             }
 
-            //¼ÆËã¸ÃÄêÓ¦¸ÃÈòÄÄ¸öÔÂ
+            //è®¡ç®—è¯¥å¹´åº”è¯¥é—°å“ªä¸ªæœˆ
             leap = GetChineseLeapMonth(cy);
             if (leap != 0)
             {
@@ -957,69 +957,69 @@ namespace Utilities
 
             if (cm != leap)
             {
-                //µ±Ç°ÈÕÆÚ²¢·ÇÈòÔÂ
+                //å½“å‰æ—¥æœŸå¹¶éé—°æœˆ
                 _cIsLeapMonth = false;
             }
             else
             {
-                //Ê¹ÓÃÓÃ»§ÊäÈëµÄÊÇ·ñÈòÔÂÔÂ·İ
+                //ä½¿ç”¨ç”¨æˆ·è¾“å…¥çš„æ˜¯å¦é—°æœˆæœˆä»½
                 _cIsLeapMonth = leapMonthFlag;
             }
 
-            //µ±ÄêÃ»ÓĞÈòÔÂ||¼ÆËãÔÂ·İĞ¡ÓÚÈòÔÂ
+            //å½“å¹´æ²¡æœ‰é—°æœˆ||è®¡ç®—æœˆä»½å°äºé—°æœˆ
             if ((_cIsLeapYear == false) || (cm < leap))
             {
                 for (i = 1; i < cm; i++)
                 {
-                    Temp = GetChineseMonthDays(cy, i);//¼ÆËã·ÇÈòÔÂÌìÊı
+                    Temp = GetChineseMonthDays(cy, i);//è®¡ç®—éé—°æœˆå¤©æ•°
                     offset = offset + Temp;
                 }
 
-                //¼ì²éÈÕÆÚÊÇ·ñ´óÓÚ×î´óÌì
+                //æ£€æŸ¥æ—¥æœŸæ˜¯å¦å¤§äºæœ€å¤§å¤©
                 if (cd > GetChineseMonthDays(cy, cm))
                 {
-                    throw new Exception("²»ºÏ·¨µÄÅ©ÀúÈÕÆÚ");
+                    throw new Exception("ä¸åˆæ³•çš„å†œå†æ—¥æœŸ");
                 }
-                //¼ÓÉÏµ±ÔÂµÄÌìÊı
+                //åŠ ä¸Šå½“æœˆçš„å¤©æ•°
                 offset = offset + cd;
             }
 
-            //ÊÇÈòÄê£¬ÇÒ¼ÆËãÔÂ·İ´óÓÚ»òµÈÓÚÈòÔÂ
+            //æ˜¯é—°å¹´ï¼Œä¸”è®¡ç®—æœˆä»½å¤§äºæˆ–ç­‰äºé—°æœˆ
             else
             {
                 for (i = 1; i < cm; i++)
                 {
-                    //¼ÆËã·ÇÈòÔÂÌìÊı
+                    //è®¡ç®—éé—°æœˆå¤©æ•°
                     Temp = GetChineseMonthDays(cy, i);
                     offset = offset + Temp;
                 }
 
-                //¼ÆËãÔÂ´óÓÚÈòÔÂ
+                //è®¡ç®—æœˆå¤§äºé—°æœˆ
                 if (cm > leap)
                 {
-                    Temp = GetChineseLeapMonthDays(cy);   //¼ÆËãÈòÔÂÌìÊı
-                    offset = offset + Temp;               //¼ÓÉÏÈòÔÂÌìÊı
+                    Temp = GetChineseLeapMonthDays(cy);   //è®¡ç®—é—°æœˆå¤©æ•°
+                    offset = offset + Temp;               //åŠ ä¸Šé—°æœˆå¤©æ•°
 
                     if (cd > GetChineseMonthDays(cy, cm))
                     {
-                        throw new Exception("²»ºÏ·¨µÄÅ©ÀúÈÕÆÚ");
+                        throw new Exception("ä¸åˆæ³•çš„å†œå†æ—¥æœŸ");
                     }
                     offset = offset + cd;
                 }
 
-                //¼ÆËãÔÂµÈÓÚÈòÔÂ
+                //è®¡ç®—æœˆç­‰äºé—°æœˆ
                 else
                 {
-                    //Èç¹ûĞèÒª¼ÆËãµÄÊÇÈòÔÂ£¬ÔòÓ¦Ê×ÏÈ¼ÓÉÏÓëÈòÔÂ¶ÔÓ¦µÄÆÕÍ¨ÔÂµÄÌìÊı
-                    if (this._cIsLeapMonth == true)         //¼ÆËãÔÂÎªÈòÔÂ
+                    //å¦‚æœéœ€è¦è®¡ç®—çš„æ˜¯é—°æœˆï¼Œåˆ™åº”é¦–å…ˆåŠ ä¸Šä¸é—°æœˆå¯¹åº”çš„æ™®é€šæœˆçš„å¤©æ•°
+                    if (this._cIsLeapMonth == true)         //è®¡ç®—æœˆä¸ºé—°æœˆ
                     {
-                        Temp = GetChineseMonthDays(cy, cm); //¼ÆËã·ÇÈòÔÂÌìÊı
+                        Temp = GetChineseMonthDays(cy, cm); //è®¡ç®—éé—°æœˆå¤©æ•°
                         offset = offset + Temp;
                     }
 
                     if (cd > GetChineseLeapMonthDays(cy))
                     {
-                        throw new Exception("²»ºÏ·¨µÄÅ©ÀúÈÕÆÚ");
+                        throw new Exception("ä¸åˆæ³•çš„å†œå†æ—¥æœŸ");
                     }
                     offset = offset + cd;
                 }
@@ -1029,10 +1029,10 @@ namespace Utilities
         #endregion
         #endregion
 
-        #region Ë½ÓĞº¯Êı
+        #region ç§æœ‰å‡½æ•°
         #region GetChineseMonthDays
         /// <summary>
-        /// //´«»ØÅ©ÀúyÄêmÔÂµÄ×ÜÌìÊı
+        /// //ä¼ å›å†œå†yå¹´mæœˆçš„æ€»å¤©æ•°
         /// </summary>
         private int GetChineseMonthDays(int year, int month)
         {
@@ -1049,7 +1049,7 @@ namespace Utilities
 
         #region GetChineseLeapMonth
         /// <summary>
-        /// ´«»ØÅ©Àú yÄêÈòÄÄ¸öÔÂ 1-12 , Ã»Èò´«»Ø 0
+        /// ä¼ å›å†œå† yå¹´é—°å“ªä¸ªæœˆ 1-12 , æ²¡é—°ä¼ å› 0
         /// </summary>
         private int GetChineseLeapMonth(int year)
         {
@@ -1059,7 +1059,7 @@ namespace Utilities
 
         #region GetChineseLeapMonthDays
         /// <summary>
-        /// ´«»ØÅ©ÀúyÄêÈòÔÂµÄÌìÊı
+        /// ä¼ å›å†œå†yå¹´é—°æœˆçš„å¤©æ•°
         /// </summary>
         private int GetChineseLeapMonthDays(int year)
         {
@@ -1083,17 +1083,17 @@ namespace Utilities
 
         #region GetChineseYearDays
         /// <summary>
-        /// È¡Å©ÀúÄêÒ»ÄêµÄÌìÊı
+        /// å–å†œå†å¹´ä¸€å¹´çš„å¤©æ•°
         /// </summary>
         private int GetChineseYearDays(int year)
         {
             int i, f, sumDay, info;
 
-            sumDay = 348; //29Ìì*12¸öÔÂ
+            sumDay = 348; //29å¤©*12ä¸ªæœˆ
             i = 0x8000;
             info = LunarDateArray[year - MinYear] & 0x0FFFF;
 
-            //¼ÆËã12¸öÔÂÖĞÓĞ¶àÉÙÌìÎª30Ìì
+            //è®¡ç®—12ä¸ªæœˆä¸­æœ‰å¤šå°‘å¤©ä¸º30å¤©
             for (int m = 0; m < 12; m++)
             {
                 f = info & i;
@@ -1109,7 +1109,7 @@ namespace Utilities
 
         #region GetChineseHour
         /// <summary>
-        /// »ñµÃµ±Ç°Ê±¼äµÄÊ±³½
+        /// è·å¾—å½“å‰æ—¶é—´çš„æ—¶è¾°
         /// </summary> 
         private string GetChineseHour(DateTime dt)
         {
@@ -1118,23 +1118,23 @@ namespace Utilities
             string ganHour, zhiHour;
             string tmpGan;
 
-            //¼ÆËãÊ±³½µÄµØÖ§
-            _hour = dt.Hour;    //»ñµÃµ±Ç°Ê±¼äĞ¡Ê±
-            _minute = dt.Minute;  //»ñµÃµ±Ç°Ê±¼ä·ÖÖÓ
+            //è®¡ç®—æ—¶è¾°çš„åœ°æ”¯
+            _hour = dt.Hour;    //è·å¾—å½“å‰æ—¶é—´å°æ—¶
+            _minute = dt.Minute;  //è·å¾—å½“å‰æ—¶é—´åˆ†é’Ÿ
 
             if (_minute != 0) _hour += 1;
             offset = _hour / 2;
             if (offset >= 12) offset = 0;
             //zhiHour = zhiStr[offset].ToString();
 
-            //¼ÆËãÌì¸É
+            //è®¡ç®—å¤©å¹²
             TimeSpan ts = this._date - GanZhiStartDay;
             i = ts.Days % 60;
 
-            //ganStr[i % 10] ÎªÈÕµÄÌì¸É,(n*2-1) %10µÃ³öµØÖ§¶ÔÓ¦,n´Ó1¿ªÊ¼
+            //ganStr[i % 10] ä¸ºæ—¥çš„å¤©å¹²,(n*2-1) %10å¾—å‡ºåœ°æ”¯å¯¹åº”,nä»1å¼€å§‹
             indexGan = ((i % 10 + 1) * 2 - 1) % 10 - 1;
 
-            tmpGan = ganStr.Substring(indexGan) + ganStr.Substring(0, indexGan + 2);//´ÕÆë12Î»
+            tmpGan = ganStr.Substring(indexGan) + ganStr.Substring(0, indexGan + 2);//å‡‘é½12ä½
             //ganHour = ganStr[((i % 10 + 1) * 2 - 1) % 10 - 1].ToString();
 
             return tmpGan[offset].ToString() + zhiStr[offset].ToString();
@@ -1143,46 +1143,46 @@ namespace Utilities
 
         #region CheckDateLimit
         /// <summary>
-        /// ¼ì²é¹«ÀúÈÕÆÚÊÇ·ñ·ûºÏÒªÇó
+        /// æ£€æŸ¥å…¬å†æ—¥æœŸæ˜¯å¦ç¬¦åˆè¦æ±‚
         /// </summary>
         private void CheckDateLimit(DateTime dt)
         {
             if ((dt < MinDay) || (dt > MaxDay))
             {
-                throw new Exception("³¬³ö¿É×ª»»µÄÈÕÆÚ");
+                throw new Exception("è¶…å‡ºå¯è½¬æ¢çš„æ—¥æœŸ");
             }
         }
         #endregion
 
         #region CheckChineseDateLimit
         /// <summary>
-        /// ¼ì²éÅ©ÀúÈÕÆÚÊÇ·ñºÏÀí
+        /// æ£€æŸ¥å†œå†æ—¥æœŸæ˜¯å¦åˆç†
         /// </summary>
         private void CheckChineseDateLimit(int year, int month, int day, bool leapMonth)
         {
             if ((year < MinYear) || (year > MaxYear))
             {
-                throw new Exception("·Ç·¨Å©ÀúÈÕÆÚ");
+                throw new Exception("éæ³•å†œå†æ—¥æœŸ");
             }
             if ((month < 1) || (month > 12))
             {
-                throw new Exception("·Ç·¨Å©ÀúÈÕÆÚ");
+                throw new Exception("éæ³•å†œå†æ—¥æœŸ");
             }
-            if ((day < 1) || (day > 30)) //ÖĞ¹úµÄÔÂ×î¶à30Ìì
+            if ((day < 1) || (day > 30)) //ä¸­å›½çš„æœˆæœ€å¤š30å¤©
             {
-                throw new Exception("·Ç·¨Å©ÀúÈÕÆÚ");
+                throw new Exception("éæ³•å†œå†æ—¥æœŸ");
             }
-            int leap = GetChineseLeapMonth(year);// ¼ÆËã¸ÃÄêÓ¦¸ÃÈòÄÄ¸öÔÂ
+            int leap = GetChineseLeapMonth(year);// è®¡ç®—è¯¥å¹´åº”è¯¥é—°å“ªä¸ªæœˆ
             if ((leapMonth == true) && (month != leap))
             {
-                throw new Exception("·Ç·¨Å©ÀúÈÕÆÚ");
+                throw new Exception("éæ³•å†œå†æ—¥æœŸ");
             }
         }
         #endregion
 
         #region ConvertNumToChineseNum
         /// <summary>
-        /// ½«0-9×ª³Éºº×ÖĞÎÊ½
+        /// å°†0-9è½¬æˆæ±‰å­—å½¢å¼
         /// </summary>
         private string ConvertNumToChineseNum(char n)
         {
@@ -1217,7 +1217,7 @@ namespace Utilities
 
         #region BitTest32
         /// <summary>
-        /// ²âÊÔÄ³Î»ÊÇ·ñÎªÕæ
+        /// æµ‹è¯•æŸä½æ˜¯å¦ä¸ºçœŸ
         /// </summary>
         private bool BitTest32(int num, int bitpostion)
         {
@@ -1239,7 +1239,7 @@ namespace Utilities
 
         #region ConvertDayOfWeek
         /// <summary>
-        /// ½«ĞÇÆÚ¼¸×ª³ÉÊı×Ö±íÊ¾
+        /// å°†æ˜ŸæœŸå‡ è½¬æˆæ•°å­—è¡¨ç¤º
         /// </summary>
         private int ConvertDayOfWeek(DayOfWeek dayOfWeek)
         {
@@ -1267,19 +1267,19 @@ namespace Utilities
 
         #region CompareWeekDayHoliday
         /// <summary>
-        /// ±È½Ïµ±ÌìÊÇ²»ÊÇÖ¸¶¨µÄµÚÖÜ¼¸
+        /// æ¯”è¾ƒå½“å¤©æ˜¯ä¸æ˜¯æŒ‡å®šçš„ç¬¬å‘¨å‡ 
         /// </summary>
         private bool CompareWeekDayHoliday(DateTime date, int month, int week, int day)
         {
             bool ret = false;
 
-            if (date.Month == month) //ÔÂ·İÏàÍ¬
+            if (date.Month == month) //æœˆä»½ç›¸åŒ
             {
-                if (ConvertDayOfWeek(date.DayOfWeek) == day) //ĞÇÆÚ¼¸ÏàÍ¬
+                if (ConvertDayOfWeek(date.DayOfWeek) == day) //æ˜ŸæœŸå‡ ç›¸åŒ
                 {
-                    DateTime firstDay = new DateTime(date.Year, date.Month, 1);//Éú³Éµ±ÔÂµÚÒ»Ìì
+                    DateTime firstDay = new DateTime(date.Year, date.Month, 1);//ç”Ÿæˆå½“æœˆç¬¬ä¸€å¤©
                     int i = ConvertDayOfWeek(firstDay.DayOfWeek);
-                    int firWeekDays = 7 - ConvertDayOfWeek(firstDay.DayOfWeek) + 1; //¼ÆËãµÚÒ»ÖÜÊ£ÓàÌìÊı
+                    int firWeekDays = 7 - ConvertDayOfWeek(firstDay.DayOfWeek) + 1; //è®¡ç®—ç¬¬ä¸€å‘¨å‰©ä½™å¤©æ•°
 
                     if (i > day)
                     {
@@ -1303,18 +1303,18 @@ namespace Utilities
         #endregion
         #endregion
 
-        #region  ÊôĞÔ
-        #region ½ÚÈÕ
+        #region  å±æ€§
+        #region èŠ‚æ—¥
         #region newCalendarHoliday
         /// <summary>
-        /// ¼ÆËãÖĞ¹úÅ©Àú½ÚÈÕ
+        /// è®¡ç®—ä¸­å›½å†œå†èŠ‚æ—¥
         /// </summary>
         public string newCalendarHoliday
         {
             get
             {
                 string tempStr = "";
-                if (this._cIsLeapMonth == false) //ÈòÔÂ²»¼ÆËã½ÚÈÕ
+                if (this._cIsLeapMonth == false) //é—°æœˆä¸è®¡ç®—èŠ‚æ—¥
                 {
                     foreach (LunarHolidayStruct lh in lHolidayInfo)
                     {
@@ -1327,13 +1327,13 @@ namespace Utilities
                         }
                     }
 
-                    //¶Ô³ıÏ¦½øĞĞÌØ±ğ´¦Àí
+                    //å¯¹é™¤å¤•è¿›è¡Œç‰¹åˆ«å¤„ç†
                     if (this._cMonth == 12)
                     {
-                        int i = GetChineseMonthDays(this._cYear, 12); //¼ÆËãµ±ÄêÅ©Àú12ÔÂµÄ×ÜÌìÊı
-                        if (this._cDay == i) //Èç¹ûÎª×îºóÒ»Ìì
+                        int i = GetChineseMonthDays(this._cYear, 12); //è®¡ç®—å½“å¹´å†œå†12æœˆçš„æ€»å¤©æ•°
+                        if (this._cDay == i) //å¦‚æœä¸ºæœ€åä¸€å¤©
                         {
-                            tempStr = "³ıÏ¦";
+                            tempStr = "é™¤å¤•";
                         }
                     }
                 }
@@ -1344,7 +1344,7 @@ namespace Utilities
 
         #region WeekDayHoliday
         /// <summary>
-        /// °´Ä³ÔÂµÚ¼¸ÖÜµÚ¼¸ÈÕ¼ÆËãµÄ½ÚÈÕ
+        /// æŒ‰æŸæœˆç¬¬å‡ å‘¨ç¬¬å‡ æ—¥è®¡ç®—çš„èŠ‚æ—¥
         /// </summary>
         public string WeekDayHoliday
         {
@@ -1366,7 +1366,7 @@ namespace Utilities
 
         #region DateHoliday
         /// <summary>
-        /// °´¹«ÀúÈÕ¼ÆËãµÄ½ÚÈÕ
+        /// æŒ‰å…¬å†æ—¥è®¡ç®—çš„èŠ‚æ—¥
         /// </summary>
         public string DateHoliday
         {
@@ -1388,10 +1388,10 @@ namespace Utilities
         #endregion
         #endregion
 
-        #region ¹«ÀúÈÕÆÚ
+        #region å…¬å†æ—¥æœŸ
         #region Date
         /// <summary>
-        /// È¡¶ÔÓ¦µÄ¹«ÀúÈÕÆÚ
+        /// å–å¯¹åº”çš„å…¬å†æ—¥æœŸ
         /// </summary>
         public DateTime Date
         {
@@ -1402,7 +1402,7 @@ namespace Utilities
 
         #region WeekDay
         /// <summary>
-        /// È¡ĞÇÆÚ¼¸
+        /// å–æ˜ŸæœŸå‡ 
         /// </summary>
         public DayOfWeek WeekDay
         {
@@ -1412,7 +1412,7 @@ namespace Utilities
 
         #region WeekDayStr
         /// <summary>
-        /// ÖÜ¼¸µÄ×Ö·û
+        /// å‘¨å‡ çš„å­—ç¬¦
         /// </summary>
         public string WeekDayStr
         {
@@ -1421,19 +1421,19 @@ namespace Utilities
                 switch (_date.DayOfWeek)
                 {
                     case DayOfWeek.Sunday:
-                        return "ĞÇÆÚÈÕ";
+                        return "æ˜ŸæœŸæ—¥";
                     case DayOfWeek.Monday:
-                        return "ĞÇÆÚÒ»";
+                        return "æ˜ŸæœŸä¸€";
                     case DayOfWeek.Tuesday:
-                        return "ĞÇÆÚ¶ş";
+                        return "æ˜ŸæœŸäºŒ";
                     case DayOfWeek.Wednesday:
-                        return "ĞÇÆÚÈı";
+                        return "æ˜ŸæœŸä¸‰";
                     case DayOfWeek.Thursday:
-                        return "ĞÇÆÚËÄ";
+                        return "æ˜ŸæœŸå››";
                     case DayOfWeek.Friday:
-                        return "ĞÇÆÚÎå";
+                        return "æ˜ŸæœŸäº”";
                     default:
-                        return "ĞÇÆÚÁù";
+                        return "æ˜ŸæœŸå…­";
                 }
             }
         }
@@ -1441,20 +1441,20 @@ namespace Utilities
 
         #region DateString
         /// <summary>
-        /// ¹«ÀúÈÕÆÚÖĞÎÄ±íÊ¾·¨ ÈçÒ»¾Å¾ÅÆßÄêÆßÔÂÒ»ÈÕ
+        /// å…¬å†æ—¥æœŸä¸­æ–‡è¡¨ç¤ºæ³• å¦‚ä¸€ä¹ä¹ä¸ƒå¹´ä¸ƒæœˆä¸€æ—¥
         /// </summary>
         public string DateString
         {
             get
             {
-                return "¹«Ôª" + this._date.ToLongDateString();
+                return "å…¬å…ƒ" + this._date.ToLongDateString();
             }
         }
         #endregion
 
         #region IsLeapYear
         /// <summary>
-        /// µ±Ç°ÊÇ·ñ¹«ÀúÈòÄê
+        /// å½“å‰æ˜¯å¦å…¬å†é—°å¹´
         /// </summary>
         public bool IsLeapYear
         {
@@ -1467,7 +1467,7 @@ namespace Utilities
 
         #region ChineseConstellation
         /// <summary>
-        /// 28ĞÇËŞ¼ÆËã
+        /// 28æ˜Ÿå®¿è®¡ç®—
         /// </summary>
         public string ChineseConstellation
         {
@@ -1486,7 +1486,7 @@ namespace Utilities
 
         #region ChineseHour
         /// <summary>
-        /// Ê±³½
+        /// æ—¶è¾°
         /// </summary>
         public string ChineseHour
         {
@@ -1499,10 +1499,10 @@ namespace Utilities
 
         #endregion
 
-        #region Å©ÀúÈÕÆÚ
+        #region å†œå†æ—¥æœŸ
         #region IsChineseLeapMonth
         /// <summary>
-        /// ÊÇ·ñÈòÔÂ
+        /// æ˜¯å¦é—°æœˆ
         /// </summary>
         public bool IsChineseLeapMonth
         {
@@ -1512,7 +1512,7 @@ namespace Utilities
 
         #region IsChineseLeapYear
         /// <summary>
-        /// µ±ÄêÊÇ·ñÓĞÈòÔÂ
+        /// å½“å¹´æ˜¯å¦æœ‰é—°æœˆ
         /// </summary>
         public bool IsChineseLeapYear
         {
@@ -1525,7 +1525,7 @@ namespace Utilities
 
         #region ChineseDay
         /// <summary>
-        /// Å©ÀúÈÕ
+        /// å†œå†æ—¥
         /// </summary>
         public int ChineseDay
         {
@@ -1535,7 +1535,7 @@ namespace Utilities
 
         #region ChineseDayString
         /// <summary>
-        /// Å©ÀúÈÕÖĞÎÄ±íÊ¾
+        /// å†œå†æ—¥ä¸­æ–‡è¡¨ç¤º
         /// </summary>
         public string ChineseDayString
         {
@@ -1546,11 +1546,11 @@ namespace Utilities
                     case 0:
                         return "";
                     case 10:
-                        return "³õÊ®";
+                        return "åˆå";
                     case 20:
-                        return "¶şÊ®";
+                        return "äºŒå";
                     case 30:
-                        return "ÈıÊ®";
+                        return "ä¸‰å";
                     default:
                         return nStr2[(int)(_cDay / 10)].ToString() + nStr1[_cDay % 10].ToString();
 
@@ -1561,7 +1561,7 @@ namespace Utilities
 
         #region ChineseMonth
         /// <summary>
-        /// Å©ÀúµÄÔÂ·İ
+        /// å†œå†çš„æœˆä»½
         /// </summary>
         public int ChineseMonth
         {
@@ -1571,7 +1571,7 @@ namespace Utilities
 
         #region ChineseMonthString
         /// <summary>
-        /// Å©ÀúÔÂ·İ×Ö·û´®
+        /// å†œå†æœˆä»½å­—ç¬¦ä¸²
         /// </summary>
         public string ChineseMonthString
         {
@@ -1584,7 +1584,7 @@ namespace Utilities
 
         #region ChineseYear
         /// <summary>
-        /// È¡Å©ÀúÄê·İ
+        /// å–å†œå†å¹´ä»½
         /// </summary>
         public int ChineseYear
         {
@@ -1594,7 +1594,7 @@ namespace Utilities
 
         #region ChineseYearString
         /// <summary>
-        /// È¡Å©ÀúÄê×Ö·û´®Èç£¬Ò»¾Å¾ÅÆßÄê
+        /// å–å†œå†å¹´å­—ç¬¦ä¸²å¦‚ï¼Œä¸€ä¹ä¹ä¸ƒå¹´
         /// </summary>
         public string ChineseYearString
         {
@@ -1606,14 +1606,14 @@ namespace Utilities
                 {
                     tempStr += ConvertNumToChineseNum(num[i]);
                 }
-                return tempStr + "Äê";
+                return tempStr + "å¹´";
             }
         }
         #endregion
 
         #region ChineseDateString
         /// <summary>
-        /// È¡Å©ÀúÈÕÆÚ±íÊ¾·¨£ºÅ©ÀúÒ»¾Å¾ÅÆßÄêÕıÔÂ³õÎå
+        /// å–å†œå†æ—¥æœŸè¡¨ç¤ºæ³•ï¼šå†œå†ä¸€ä¹ä¹ä¸ƒå¹´æ­£æœˆåˆäº”
         /// </summary>
         public string ChineseDateString
         {
@@ -1621,11 +1621,11 @@ namespace Utilities
             {
                 if (this._cIsLeapMonth == true)
                 {
-                    return "Å©Àú" + ChineseYearString + "Èò" + ChineseMonthString + ChineseDayString;
+                    return "å†œå†" + ChineseYearString + "é—°" + ChineseMonthString + ChineseDayString;
                 }
                 else
                 {
-                    return "Å©Àú" + ChineseYearString + ChineseMonthString + ChineseDayString;
+                    return "å†œå†" + ChineseYearString + ChineseMonthString + ChineseDayString;
                 }
             }
         }
@@ -1633,15 +1633,15 @@ namespace Utilities
 
         #region ChineseTwentyFourDay
         /// <summary>
-        /// ¶¨Æø·¨¼ÆËã¶şÊ®ËÄ½ÚÆø,¶şÊ®ËÄ½ÚÆøÊÇ°´µØÇò¹«×ªÀ´¼ÆËãµÄ£¬²¢·ÇÊÇÒõÀú¼ÆËãµÄ
+        /// å®šæ°”æ³•è®¡ç®—äºŒåå››èŠ‚æ°”,äºŒåå››èŠ‚æ°”æ˜¯æŒ‰åœ°çƒå…¬è½¬æ¥è®¡ç®—çš„ï¼Œå¹¶éæ˜¯é˜´å†è®¡ç®—çš„
         /// </summary>
         /// <remarks>
-        /// ½ÚÆøµÄ¶¨·¨ÓĞÁ½ÖÖ¡£¹Å´úÀú·¨²ÉÓÃµÄ³ÆÎª"ºãÆø"£¬¼´°´Ê±¼ä°ÑÒ»ÄêµÈ·ÖÎª24·İ£¬
-        /// Ã¿Ò»½ÚÆøÆ½¾ùµÃ15ÌìÓĞÓà£¬ËùÒÔÓÖ³Æ"Æ½Æø"¡£ÏÖ´úÅ©Àú²ÉÓÃµÄ³ÆÎª"¶¨Æø"£¬¼´
-        /// °´µØÇòÔÚ¹ìµÀÉÏµÄÎ»ÖÃÎª±ê×¼£¬Ò»ÖÜ360¡ã£¬Á½½ÚÆøÖ®¼äÏà¸ô15¡ã¡£ÓÉÓÚ¶¬ÖÁÊ±µØ
-        /// ÇòÎ»ÓÚ½üÈÕµã¸½½ü£¬ÔË¶¯ËÙ¶È½Ï¿ì£¬Òò¶øÌ«ÑôÔÚ»ÆµÀÉÏÒÆ¶¯15¡ãµÄÊ±¼ä²»µ½15Ìì¡£
-        /// ÏÄÖÁÇ°ºóµÄÇé¿öÕıºÃÏà·´£¬Ì«ÑôÔÚ»ÆµÀÉÏÒÆ¶¯½ÏÂı£¬Ò»¸ö½ÚÆø´ï16ÌìÖ®¶à¡£²ÉÓÃ
-        /// ¶¨ÆøÊ±¿ÉÒÔ±£Ö¤´º¡¢ÇïÁ½·Ö±ØÈ»ÔÚÖçÒ¹Æ½·ÖµÄÄÇÁ½Ìì¡£
+        /// èŠ‚æ°”çš„å®šæ³•æœ‰ä¸¤ç§ã€‚å¤ä»£å†æ³•é‡‡ç”¨çš„ç§°ä¸º"æ’æ°”"ï¼Œå³æŒ‰æ—¶é—´æŠŠä¸€å¹´ç­‰åˆ†ä¸º24ä»½ï¼Œ
+        /// æ¯ä¸€èŠ‚æ°”å¹³å‡å¾—15å¤©æœ‰ä½™ï¼Œæ‰€ä»¥åˆç§°"å¹³æ°”"ã€‚ç°ä»£å†œå†é‡‡ç”¨çš„ç§°ä¸º"å®šæ°”"ï¼Œå³
+        /// æŒ‰åœ°çƒåœ¨è½¨é“ä¸Šçš„ä½ç½®ä¸ºæ ‡å‡†ï¼Œä¸€å‘¨360Â°ï¼Œä¸¤èŠ‚æ°”ä¹‹é—´ç›¸éš”15Â°ã€‚ç”±äºå†¬è‡³æ—¶åœ°
+        /// çƒä½äºè¿‘æ—¥ç‚¹é™„è¿‘ï¼Œè¿åŠ¨é€Ÿåº¦è¾ƒå¿«ï¼Œå› è€Œå¤ªé˜³åœ¨é»„é“ä¸Šç§»åŠ¨15Â°çš„æ—¶é—´ä¸åˆ°15å¤©ã€‚
+        /// å¤è‡³å‰åçš„æƒ…å†µæ­£å¥½ç›¸åï¼Œå¤ªé˜³åœ¨é»„é“ä¸Šç§»åŠ¨è¾ƒæ…¢ï¼Œä¸€ä¸ªèŠ‚æ°”è¾¾16å¤©ä¹‹å¤šã€‚é‡‡ç”¨
+        /// å®šæ°”æ—¶å¯ä»¥ä¿è¯æ˜¥ã€ç§‹ä¸¤åˆ†å¿…ç„¶åœ¨æ˜¼å¤œå¹³åˆ†çš„é‚£ä¸¤å¤©ã€‚
         /// </remarks>
         public string ChineseTwentyFourDay
         {
@@ -1659,7 +1659,7 @@ namespace Utilities
                 {
                     num = 525948.76 * (y - 1900) + sTermInfo[i - 1];
 
-                    newDate = baseDateAndTime.AddMinutes(num);//°´·ÖÖÓ¼ÆËã
+                    newDate = baseDateAndTime.AddMinutes(num);//æŒ‰åˆ†é’Ÿè®¡ç®—
                     if (newDate.DayOfYear == _date.DayOfYear)
                     {
                         tempStr = SolarTerm[i - 1];
@@ -1670,7 +1670,7 @@ namespace Utilities
             }
         }
 
-        //µ±Ç°ÈÕÆÚÇ°Ò»¸ö×î½ü½ÚÆø
+        //å½“å‰æ—¥æœŸå‰ä¸€ä¸ªæœ€è¿‘èŠ‚æ°”
         public string ChineseTwentyFourPrevDay
         {
             get
@@ -1687,7 +1687,7 @@ namespace Utilities
                 {
                     num = 525948.76 * (y - 1900) + sTermInfo[i - 1];
 
-                    newDate = baseDateAndTime.AddMinutes(num);//°´·ÖÖÓ¼ÆËã
+                    newDate = baseDateAndTime.AddMinutes(num);//æŒ‰åˆ†é’Ÿè®¡ç®—
 
                     if (newDate.DayOfYear < _date.DayOfYear)
                     {
@@ -1701,7 +1701,7 @@ namespace Utilities
 
         }
 
-        //µ±Ç°ÈÕÆÚºóÒ»¸ö×î½ü½ÚÆø
+        //å½“å‰æ—¥æœŸåä¸€ä¸ªæœ€è¿‘èŠ‚æ°”
         public string ChineseTwentyFourNextDay
         {
             get
@@ -1718,7 +1718,7 @@ namespace Utilities
                 {
                     num = 525948.76 * (y - 1900) + sTermInfo[i - 1];
 
-                    newDate = baseDateAndTime.AddMinutes(num);//°´·ÖÖÓ¼ÆËã
+                    newDate = baseDateAndTime.AddMinutes(num);//æŒ‰åˆ†é’Ÿè®¡ç®—
 
                     if (newDate.DayOfYear > _date.DayOfYear)
                     {
@@ -1733,9 +1733,9 @@ namespace Utilities
         #endregion
         #endregion
 
-        #region ĞÇ×ù
+        #region æ˜Ÿåº§
         /// <summary>
-        /// ¼ÆËãÖ¸¶¨ÈÕÆÚµÄĞÇ×ùĞòºÅ 
+        /// è®¡ç®—æŒ‡å®šæ—¥æœŸçš„æ˜Ÿåº§åºå· 
         /// </summary>
         public string Constellation
         {
@@ -1767,11 +1767,11 @@ namespace Utilities
         }
         #endregion
 
-        #region ÊôÏà
+        #region å±ç›¸
         #region Animal
         /// <summary>
-        /// ¼ÆËãÊôÏàµÄË÷Òı£¬×¢ÒâËäÈ»ÊôÏàÊÇÒÔÅ©ÀúÄêÀ´Çø±ğµÄ£¬µ«ÊÇÄ¿Ç°ÔÚÊµ¼ÊÊ¹ÓÃÖĞÊÇ°´¹«ÀúÀ´¼ÆËãµÄ
-        /// ÊóÄêÎª1,ÆäËüÀàÍÆ
+        /// è®¡ç®—å±ç›¸çš„ç´¢å¼•ï¼Œæ³¨æ„è™½ç„¶å±ç›¸æ˜¯ä»¥å†œå†å¹´æ¥åŒºåˆ«çš„ï¼Œä½†æ˜¯ç›®å‰åœ¨å®é™…ä½¿ç”¨ä¸­æ˜¯æŒ‰å…¬å†æ¥è®¡ç®—çš„
+        /// é¼ å¹´ä¸º1,å…¶å®ƒç±»æ¨
         /// </summary>
         public int Animal
         {
@@ -1785,32 +1785,32 @@ namespace Utilities
 
         #region AnimalString
         /// <summary>
-        /// È¡ÊôÏà×Ö·û´®
+        /// å–å±ç›¸å­—ç¬¦ä¸²
         /// </summary>
         public string AnimalString
         {
             get
             {
-                int offset = _date.Year - AnimalStartYear; //ÑôÀú¼ÆËã
-                //int offset = this._cYear - AnimalStartYear;¡¡Å©Àú¼ÆËã
+                int offset = _date.Year - AnimalStartYear; //é˜³å†è®¡ç®—
+                //int offset = this._cYear - AnimalStartYear;ã€€å†œå†è®¡ç®—
                 return animalStr[offset % 12].ToString();
             }
         }
         #endregion
         #endregion
 
-        #region Ìì¸ÉµØÖ§
+        #region å¤©å¹²åœ°æ”¯
         #region GanZhiYearString
         /// <summary>
-        /// È¡Å©ÀúÄêµÄ¸ÉÖ§±íÊ¾·¨Èç ÒÒ³óÄê
+        /// å–å†œå†å¹´çš„å¹²æ”¯è¡¨ç¤ºæ³•å¦‚ ä¹™ä¸‘å¹´
         /// </summary>
         public string GanZhiYearString
         {
             get
             {
                 string tempStr;
-                int i = (this._cYear - GanZhiStartYear) % 60; //¼ÆËã¸ÉÖ§
-                tempStr = ganStr[i % 10].ToString() + zhiStr[i % 12].ToString() + "Äê";
+                int i = (this._cYear - GanZhiStartYear) % 60; //è®¡ç®—å¹²æ”¯
+                tempStr = ganStr[i % 10].ToString() + zhiStr[i % 12].ToString() + "å¹´";
                 return tempStr;
             }
         }
@@ -1818,13 +1818,13 @@ namespace Utilities
 
         #region GanZhiMonthString
         /// <summary>
-        /// È¡¸ÉÖ§µÄÔÂ±íÊ¾×Ö·û´®£¬×¢ÒâÅ©ÀúµÄÈòÔÂ²»¼Ç¸ÉÖ§
+        /// å–å¹²æ”¯çš„æœˆè¡¨ç¤ºå­—ç¬¦ä¸²ï¼Œæ³¨æ„å†œå†çš„é—°æœˆä¸è®°å¹²æ”¯
         /// </summary>
         public string GanZhiMonthString
         {
             get
             {
-                //Ã¿¸öÔÂµÄµØÖ§×ÜÊÇ¹Ì¶¨µÄ,¶øÇÒ×ÜÊÇ´ÓÒúÔÂ¿ªÊ¼
+                //æ¯ä¸ªæœˆçš„åœ°æ”¯æ€»æ˜¯å›ºå®šçš„,è€Œä¸”æ€»æ˜¯ä»å¯…æœˆå¼€å§‹
                 int zhiIndex;
                 string zhi;
                 if (this._cMonth > 10)
@@ -1837,55 +1837,55 @@ namespace Utilities
                 }
                 zhi = zhiStr[zhiIndex - 1].ToString();
 
-                //¸ù¾İµ±ÄêµÄ¸ÉÖ§ÄêµÄ¸ÉÀ´¼ÆËãÔÂ¸ÉµÄµÚÒ»¸ö
+                //æ ¹æ®å½“å¹´çš„å¹²æ”¯å¹´çš„å¹²æ¥è®¡ç®—æœˆå¹²çš„ç¬¬ä¸€ä¸ª
                 int ganIndex = 1;
                 string gan;
-                int i = (this._cYear - GanZhiStartYear) % 60; //¼ÆËã¸ÉÖ§
+                int i = (this._cYear - GanZhiStartYear) % 60; //è®¡ç®—å¹²æ”¯
                 switch (i % 10)
                 {
                     #region ...
-                    case 0: //¼×
+                    case 0: //ç”²
                         ganIndex = 3;
                         break;
-                    case 1: //ÒÒ
+                    case 1: //ä¹™
                         ganIndex = 5;
                         break;
-                    case 2: //±û
+                    case 2: //ä¸™
                         ganIndex = 7;
                         break;
-                    case 3: //¶¡
+                    case 3: //ä¸
                         ganIndex = 9;
                         break;
-                    case 4: //Îì
+                    case 4: //æˆŠ
                         ganIndex = 1;
                         break;
-                    case 5: //¼º
+                    case 5: //å·±
                         ganIndex = 3;
                         break;
-                    case 6: //¸ı
+                    case 6: //åºš
                         ganIndex = 5;
                         break;
-                    case 7: //ĞÁ
+                    case 7: //è¾›
                         ganIndex = 7;
                         break;
-                    case 8: //ÈÉ
+                    case 8: //å£¬
                         ganIndex = 9;
                         break;
-                    case 9: //¹ï
+                    case 9: //ç™¸
                         ganIndex = 1;
                         break;
                     #endregion
                 }
                 gan = ganStr[(ganIndex + this._cMonth - 2) % 10].ToString();
 
-                return gan + zhi + "ÔÂ";
+                return gan + zhi + "æœˆ";
             }
         }
         #endregion
 
         #region GanZhiDayString
         /// <summary>
-        /// È¡¸ÉÖ§ÈÕ±íÊ¾·¨
+        /// å–å¹²æ”¯æ—¥è¡¨ç¤ºæ³•
         /// </summary>
         public string GanZhiDayString
         {
@@ -1895,14 +1895,14 @@ namespace Utilities
                 TimeSpan ts = this._date - GanZhiStartDay;
                 offset = ts.Days;
                 i = offset % 60;
-                return ganStr[i % 10].ToString() + zhiStr[i % 12].ToString() + "ÈÕ";
+                return ganStr[i % 10].ToString() + zhiStr[i % 12].ToString() + "æ—¥";
             }
         }
         #endregion
 
         #region GanZhiDateString
         /// <summary>
-        /// È¡µ±Ç°ÈÕÆÚµÄ¸ÉÖ§±íÊ¾·¨Èç ¼××ÓÄêÒÒ³óÔÂ±û¸ıÈÕ
+        /// å–å½“å‰æ—¥æœŸçš„å¹²æ”¯è¡¨ç¤ºæ³•å¦‚ ç”²å­å¹´ä¹™ä¸‘æœˆä¸™åºšæ—¥
         /// </summary>
         public string GanZhiDateString
         {

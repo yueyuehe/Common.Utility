@@ -74,13 +74,13 @@ namespace Utilities
 
             //    msg.AddRecipient(s, OpenSmtp.Mail.AddressType.To);
 
-            //    //ÉèÖÃÓÊ¼şÕıÎÄ,²¢Ö¸¶¨¸ñÊ½Îª html ¸ñÊ½
+            //    //è®¾ç½®é‚®ä»¶æ­£æ–‡,å¹¶æŒ‡å®šæ ¼å¼ä¸º html æ ¼å¼
             //    msg.HtmlBody = body;
-            //    //ÉèÖÃÓÊ¼ş±êÌâ
+            //    //è®¾ç½®é‚®ä»¶æ ‡é¢˜
             //    msg.Subject = subject;
-            //    //Ö¸¶¨ÓÊ¼şÕıÎÄµÄ±àÂë
+            //    //æŒ‡å®šé‚®ä»¶æ­£æ–‡çš„ç¼–ç 
             //    msg.Charset = "gb2312";
-            //    //·¢ËÍÓÊ¼ş
+            //    //å‘é€é‚®ä»¶
             //    smtp.SendMail(msg);
             //}
         }

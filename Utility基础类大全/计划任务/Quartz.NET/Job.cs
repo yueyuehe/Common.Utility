@@ -1,4 +1,4 @@
-﻿using Quartz;
+using Quartz;
 using Quartz.Impl;
 using Quartz.Simpl;
 using Quartz.Xml;

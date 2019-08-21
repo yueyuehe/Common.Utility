@@ -9,12 +9,12 @@ namespace Utilities
 {
     /// <summary>
     ///	BUBaseAppMessage
-    /// Í¨ÓÃÏûÏ¢¿ØÖÆ»ùÀà
+    /// é€šç”¨æ¶ˆæ¯æ§åˆ¶åŸºç±»
     /// 
-    /// ĞŞ¸Ä¼ÍÂ¼
-    ///		2007.05.17 °æ±¾£º1.0	JiRiGaLa ½¨Á¢£¬ÎªÁËÌá¸ßĞ§ÂÊ·Ö¿ª½¨Á¢ÁËÀà¡£
+    /// ä¿®æ”¹çºªå½•
+    ///		2007.05.17 ç‰ˆæœ¬ï¼š1.0	JiRiGaLa å»ºç«‹ï¼Œä¸ºäº†æé«˜æ•ˆç‡åˆ†å¼€å»ºç«‹äº†ç±»ã€‚
     ///	
-    /// °æ±¾£º3.1
+    /// ç‰ˆæœ¬ï¼š3.1
     ///
     /// <author>
     ///		<name>JiRiGaLa</name>
@@ -24,321 +24,321 @@ namespace Utilities
     public class AppMessage
     {
         /// <summary>
-        /// ÌáÊ¾ĞÅÏ¢.
+        /// æç¤ºä¿¡æ¯.
         /// </summary>
-        public static string MSG0000 = "ÌáÊ¾ĞÅÏ¢";
+        public static string MSG0000 = "æç¤ºä¿¡æ¯";
 
         /// <summary>
-        /// ·¢ÉúÎ´Öª´íÎó.
+        /// å‘ç”ŸæœªçŸ¥é”™è¯¯.
         /// </summary>
-        public static string MSG0001 = "·¢ÉúÎ´Öª´íÎó¡£";
+        public static string MSG0001 = "å‘ç”ŸæœªçŸ¥é”™è¯¯ã€‚";
 
         /// <summary>
-        /// Êı¾İ¿âÁª½Ó²»Õı³£.
+        /// æ•°æ®åº“è”æ¥ä¸æ­£å¸¸.
         /// </summary>
-        public static string MSG0002 = "Êı¾İ¿âÁª½Ó²»Õı³£¡£";
+        public static string MSG0002 = "æ•°æ®åº“è”æ¥ä¸æ­£å¸¸ã€‚";
 
         /// <summary>
-        /// WebServiceÁª½Ó²»Õı³£.
+        /// WebServiceè”æ¥ä¸æ­£å¸¸.
         /// </summary>
-        public static string MSG0003 = "WebService Áª½Ó²»Õı³£¡£";
+        public static string MSG0003 = "WebService è”æ¥ä¸æ­£å¸¸ã€‚";
 
         /// <summary>
-        /// ÈÎºÎÊı¾İÎ´±»ĞŞ¸Ä.
+        /// ä»»ä½•æ•°æ®æœªè¢«ä¿®æ”¹.
         /// </summary>
-        public static string MSG0004 = "ÈÎºÎÊı¾İÎ´±»ĞŞ¸Ä¡£";
+        public static string MSG0004 = "ä»»ä½•æ•°æ®æœªè¢«ä¿®æ”¹ã€‚";
 
         /// <summary>
-        /// ¼ÇÂ¼Î´ÕÒµ½,¿ÉÄÜÒÑ±»ÆäËûÈËÉ¾³ı.
+        /// è®°å½•æœªæ‰¾åˆ°,å¯èƒ½å·²è¢«å…¶ä»–äººåˆ é™¤.
         /// </summary>
-        public static string MSG0005 = "¼ÇÂ¼Î´ÕÒµ½£¬¿ÉÄÜÒÑ±»ÆäËûÈËÉ¾³ı¡£";
+        public static string MSG0005 = "è®°å½•æœªæ‰¾åˆ°ï¼Œå¯èƒ½å·²è¢«å…¶ä»–äººåˆ é™¤ã€‚";
 
         /// <summary>
-        /// Êı¾İÒÑ±»ÆäËûÈËĞŞ¸Ä,Çë°´F5¼ü,ÖØĞÂË¢ĞÂ»ñµÃÊı¾İ.
+        /// æ•°æ®å·²è¢«å…¶ä»–äººä¿®æ”¹,è¯·æŒ‰F5é”®,é‡æ–°åˆ·æ–°è·å¾—æ•°æ®.
         /// </summary>
-        public static string MSG0006 = "Êı¾İÒÑ±»ÆäËûÈËĞŞ¸Ä,Çë°´F5¼ü,ÖØĞÂË¢ĞÂ»ñµÃÊı¾İ¡£";
+        public static string MSG0006 = "æ•°æ®å·²è¢«å…¶ä»–äººä¿®æ”¹,è¯·æŒ‰F5é”®,é‡æ–°åˆ·æ–°è·å¾—æ•°æ®ã€‚";
 
         /// <summary>
-        /// '{O}'²»ÔÊĞíÎª¿Õ,ÇëÊäÈë.
+        /// '{O}'ä¸å…è®¸ä¸ºç©º,è¯·è¾“å…¥.
         /// </summary>
-        public static string MSG0007 = "{0} ²»ÔÊĞíÎª¿Õ£¬ÇëÊäÈë¡£";
+        public static string MSG0007 = "{0} ä¸å…è®¸ä¸ºç©ºï¼Œè¯·è¾“å…¥ã€‚";
 
         /// <summary>
-        /// {0} ÒÑ´æÔÚ,²»¿ÉÒÔÖØ¸´.
+        /// {0} å·²å­˜åœ¨,ä¸å¯ä»¥é‡å¤.
         /// </summary>
-        public static string MSG0008 = "{0} ÒÑ´æÔÚ£¬²»¿ÉÒÔÖØ¸´¡£";
+        public static string MSG0008 = "{0} å·²å­˜åœ¨ï¼Œä¸å¯ä»¥é‡å¤ã€‚";
 
         /// <summary>
-        /// ĞÂÔö³É¹¦.
+        /// æ–°å¢æˆåŠŸ.
         /// </summary>
-        public static string MSG0009 = "ĞÂÔö³É¹¦¡£";
+        public static string MSG0009 = "æ–°å¢æˆåŠŸã€‚";
 
         /// <summary>
-        /// ¸üĞÂ³É¹¦.
+        /// æ›´æ–°æˆåŠŸ.
         /// </summary>
-        public static string MSG0010 = "¸üĞÂ³É¹¦¡£";
+        public static string MSG0010 = "æ›´æ–°æˆåŠŸã€‚";
 
         /// <summary>
-        /// ±£´æ³É¹¦.
+        /// ä¿å­˜æˆåŠŸ.
         /// </summary>
-        public static string MSG0011 = "±£´æ³É¹¦¡£";
+        public static string MSG0011 = "ä¿å­˜æˆåŠŸã€‚";
 
         /// <summary>
-        /// ÅúÁ¿±£´æ³É¹¦.
+        /// æ‰¹é‡ä¿å­˜æˆåŠŸ.
         /// </summary>
-        public static string MSG0012 = "ÅúÁ¿±£´æ³É¹¦¡£";
+        public static string MSG0012 = "æ‰¹é‡ä¿å­˜æˆåŠŸã€‚";
 
         /// <summary>
-        /// É¾³ı³É¹¦.
+        /// åˆ é™¤æˆåŠŸ.
         /// </summary>
-        public static string MSG0013 = "É¾³ı³É¹¦¡£";
+        public static string MSG0013 = "åˆ é™¤æˆåŠŸã€‚";
 
         /// <summary>
-        /// ÅúÁ¿É¾³ı³É¹¦.
+        /// æ‰¹é‡åˆ é™¤æˆåŠŸ.
         /// </summary>
-        public static string MSG0014 = "ÅúÁ¿É¾³ı³É¹¦¡£";
+        public static string MSG0014 = "æ‰¹é‡åˆ é™¤æˆåŠŸã€‚";
 
         /// <summary>
-        /// ÄúÈ·ÈÏÉ¾³ıÂğ?
+        /// æ‚¨ç¡®è®¤åˆ é™¤å—?
         /// </summary>
-        public static string MSG0015 = "ÄúÈ·ÈÏÉ¾³ıÂğ£¿";
+        public static string MSG0015 = "æ‚¨ç¡®è®¤åˆ é™¤å—ï¼Ÿ";
 
         /// <summary>
-        /// ÄúÈ·ÈÏÉ¾³ı '{0}'Âğ?
+        /// æ‚¨ç¡®è®¤åˆ é™¤ '{0}'å—?
         /// </summary>
-        public static string MSG0016 = "ÄúÈ·ÈÏÉ¾³ı {0} Âğ£¿";
+        public static string MSG0016 = "æ‚¨ç¡®è®¤åˆ é™¤ {0} å—ï¼Ÿ";
 
         /// <summary>
-        /// µ±Ç°¼ÇÂ¼²»ÔÊĞí±»É¾³ı.
+        /// å½“å‰è®°å½•ä¸å…è®¸è¢«åˆ é™¤.
         /// </summary>
-        public static string MSG0017 = "µ±Ç°¼ÇÂ¼²»ÔÊĞí±»É¾³ı¡£";
+        public static string MSG0017 = "å½“å‰è®°å½•ä¸å…è®¸è¢«åˆ é™¤ã€‚";
 
         /// <summary>
-        /// µ±Ç°¼ÇÂ¼ '{0}' ²»ÔÊĞí±»É¾³ı.
+        /// å½“å‰è®°å½• '{0}' ä¸å…è®¸è¢«åˆ é™¤.
         /// </summary>
-        public static string MSG0018 = "µ±Ç°¼ÇÂ¼ {0} ²»ÔÊĞí±»É¾³ı¡£";
+        public static string MSG0018 = "å½“å‰è®°å½• {0} ä¸å…è®¸è¢«åˆ é™¤ã€‚";
 
         /// <summary>
-        /// µ±Ç°¼ÇÂ¼²»ÔÊĞí±»±à¼­,Çë°´F5¼ü,ÖØĞÂ»ñÈ¡Êı¾İ×îĞÂÊı¾İ.
+        /// å½“å‰è®°å½•ä¸å…è®¸è¢«ç¼–è¾‘,è¯·æŒ‰F5é”®,é‡æ–°è·å–æ•°æ®æœ€æ–°æ•°æ®.
         /// </summary>
-        public static string MSG0019 = "µ±Ç°¼ÇÂ¼²»ÔÊĞí±»±à¼­£¬Çë°´F5¼ü,ÖØĞÂ»ñÈ¡Êı¾İ×îĞÂÊı¾İ¡£";
+        public static string MSG0019 = "å½“å‰è®°å½•ä¸å…è®¸è¢«ç¼–è¾‘ï¼Œè¯·æŒ‰F5é”®,é‡æ–°è·å–æ•°æ®æœ€æ–°æ•°æ®ã€‚";
 
         /// <summary>
-        /// µ±Ç°¼ÇÂ¼ '{0}' ²»ÔÊĞí±»±à¼­,Çë°´F5¼ü,ÖØĞÂ»ñÈ¡Êı¾İ×îĞÂÊı¾İ.
+        /// å½“å‰è®°å½• '{0}' ä¸å…è®¸è¢«ç¼–è¾‘,è¯·æŒ‰F5é”®,é‡æ–°è·å–æ•°æ®æœ€æ–°æ•°æ®.
         /// </summary>
-        public static string MSG0020 = "µ±Ç°¼ÇÂ¼ {0} ²»ÔÊĞí±»±à¼­£¬Çë°´F5¼ü£¬ÖØĞÂ»ñÈ¡Êı¾İ×îĞÂÊı¾İ¡£";
+        public static string MSG0020 = "å½“å‰è®°å½• {0} ä¸å…è®¸è¢«ç¼–è¾‘ï¼Œè¯·æŒ‰F5é”®ï¼Œé‡æ–°è·å–æ•°æ®æœ€æ–°æ•°æ®ã€‚";
 
         /// <summary>
-        /// µ±Ç°¼ÇÂ¼ÒÑÊÇµÚÒ»Ìõ¼ÇÂ¼.
+        /// å½“å‰è®°å½•å·²æ˜¯ç¬¬ä¸€æ¡è®°å½•.
         /// </summary>
-        public static string MSG0021 = "µ±Ç°¼ÇÂ¼ÒÑÊÇµÚÒ»Ìõ¼ÇÂ¼¡£";
+        public static string MSG0021 = "å½“å‰è®°å½•å·²æ˜¯ç¬¬ä¸€æ¡è®°å½•ã€‚";
 
         /// <summary>
-        /// µ±Ç°¼ÇÂ¼ÒÑÊÇ×îºóÒ»Ìõ¼ÇÂ¼.
+        /// å½“å‰è®°å½•å·²æ˜¯æœ€åä¸€æ¡è®°å½•.
         /// </summary>
-        public static string MSG0022 = "µ±Ç°¼ÇÂ¼ÒÑÊÇ×îºóÒ»Ìõ¼ÇÂ¼¡£";
+        public static string MSG0022 = "å½“å‰è®°å½•å·²æ˜¯æœ€åä¸€æ¡è®°å½•ã€‚";
 
         /// <summary>
-        /// ÇëÖÁÉÙÑ¡ÔñÒ»Ïî.
+        /// è¯·è‡³å°‘é€‰æ‹©ä¸€é¡¹.
         /// </summary>
-        public static string MSG0023 = "ÇëÑ¡ÔñÒ»Ìõ¼ÇÂ¼¡£";
+        public static string MSG0023 = "è¯·é€‰æ‹©ä¸€æ¡è®°å½•ã€‚";
 
         /// <summary>
-        /// ÇëÖÁÉÙÑ¡ÔñÒ»Ïî '{0}'.
+        /// è¯·è‡³å°‘é€‰æ‹©ä¸€é¡¹ '{0}'.
         /// </summary>
-        public static string MSG0024 = "ÇëÖÁÉÙÑ¡ÔñÒ»Ìõ¼ÇÂ¼¡£";
+        public static string MSG0024 = "è¯·è‡³å°‘é€‰æ‹©ä¸€æ¡è®°å½•ã€‚";
 
         /// <summary>
-        /// '{0}'²»ÄÜ´óÓÚ'{1}'.
+        /// '{0}'ä¸èƒ½å¤§äº'{1}'.
         /// </summary>
-        public static string MSG0025 = "{0} ²»ÄÜ´óÓÚ{1}¡£";
+        public static string MSG0025 = "{0} ä¸èƒ½å¤§äº{1}ã€‚";
 
         /// <summary>
-        /// '{0}'²»ÄÜĞ¡ÓÚ'{1}'.
+        /// '{0}'ä¸èƒ½å°äº'{1}'.
         /// </summary>
-        public static string MSG0026 = "{0} ²»ÄÜĞ¡ÓÚ {1}¡£";
+        public static string MSG0026 = "{0} ä¸èƒ½å°äº {1}ã€‚";
 
         /// <summary>
-        /// '{0}'²»ÄÜµÈÓÚ'{1}'.
+        /// '{0}'ä¸èƒ½ç­‰äº'{1}'.
         /// </summary>
-        public static string MSG0027 = "{0} ²»ÄÜµÈÓÚ {1}¡£";
+        public static string MSG0027 = "{0} ä¸èƒ½ç­‰äº {1}ã€‚";
 
         /// <summary>
-        /// ÊäÈëµÄ'{0}'²»ÊÇÓĞĞ§µÄÈÕÆÚ.
+        /// è¾“å…¥çš„'{0}'ä¸æ˜¯æœ‰æ•ˆçš„æ—¥æœŸ.
         /// </summary>
-        public static string MSG0028 = "ÊäÈëµÄ {0} ²»ÊÇÓĞĞ§µÄÈÕÆÚ¡£";
+        public static string MSG0028 = "è¾“å…¥çš„ {0} ä¸æ˜¯æœ‰æ•ˆçš„æ—¥æœŸã€‚";
 
         /// <summary>
-        /// ÊäÈëµÄ'{0}'²»ÊÇÓĞĞ§µÄ×Ö·û.
+        /// è¾“å…¥çš„'{0}'ä¸æ˜¯æœ‰æ•ˆçš„å­—ç¬¦.
         /// </summary>
-        public static string MSG0029 = "ÊäÈëµÄ {0} ²»ÊÇÓĞĞ§µÄ×Ö·û¡£";
+        public static string MSG0029 = "è¾“å…¥çš„ {0} ä¸æ˜¯æœ‰æ•ˆçš„å­—ç¬¦ã€‚";
 
         /// <summary>
-        /// ÊäÈëµÄ'{0}'²»ÊÇÓĞĞ§µÄÊı×Ö.
+        /// è¾“å…¥çš„'{0}'ä¸æ˜¯æœ‰æ•ˆçš„æ•°å­—.
         /// </summary>
-        public static string MSG0030 = "ÊäÈëµÄ {0} ²»ÊÇÓĞĞ§µÄÊı×Ö¡£";
+        public static string MSG0030 = "è¾“å…¥çš„ {0} ä¸æ˜¯æœ‰æ•ˆçš„æ•°å­—ã€‚";
 
         /// <summary>
-        /// ÊäÈëµÄ'{0}'²»ÊÇÓĞĞ§µÄ½ğ¶î.
+        /// è¾“å…¥çš„'{0}'ä¸æ˜¯æœ‰æ•ˆçš„é‡‘é¢.
         /// </summary>
-        public static string MSG0031 = "ÊäÈëµÄ {0} ²»ÊÇÓĞĞ§µÄ½ğ¶î¡£";
+        public static string MSG0031 = "è¾“å…¥çš„ {0} ä¸æ˜¯æœ‰æ•ˆçš„é‡‘é¢ã€‚";
 
         /// <summary>
-        /// '{0}'Ãû²»ÄÜ°üº¬£º\ / : * ? " < > |
+        /// '{0}'åä¸èƒ½åŒ…å«ï¼š\ / : * ? " < > |
         /// </summary>
-        public static string MSG0032 = "{0} Ãû°üº¬·Ç·¨×Ö·û¡£";
+        public static string MSG0032 = "{0} ååŒ…å«éæ³•å­—ç¬¦ã€‚";
 
         /// <summary>
-        /// Êı¾İÒÑ¾­±»ÒıÓÃ,ÓĞ¹ØÁªÊı¾İÔÚ
+        /// æ•°æ®å·²ç»è¢«å¼•ç”¨,æœ‰å…³è”æ•°æ®åœ¨
         /// </summary>
-        public static string MSG0033 = "Êı¾İÒÑ¾­±»ÒıÓÃ£¬ÓĞ¹ØÁªÊı¾İÔÚ¡£";
+        public static string MSG0033 = "æ•°æ®å·²ç»è¢«å¼•ç”¨ï¼Œæœ‰å…³è”æ•°æ®åœ¨ã€‚";
 
         /// <summary>
-        /// Êı¾İÒÑ¾­±»ÒıÓÃ,ÓĞ¹ØÁªÊı¾İÔÚ.ÊÇ·ñÇ¿ÖÆÉ¾³ıÊı¾İ?
+        /// æ•°æ®å·²ç»è¢«å¼•ç”¨,æœ‰å…³è”æ•°æ®åœ¨.æ˜¯å¦å¼ºåˆ¶åˆ é™¤æ•°æ®?
         /// </summary>
-        public static string MSG0034 = "Êı¾İÒÑ¾­±»ÒıÓÃ£¬ÓĞ¹ØÁªÊı¾İÔÚ£¬ÊÇ·ñÇ¿ÖÆÉ¾³ıÊı¾İ£¿";
+        public static string MSG0034 = "æ•°æ®å·²ç»è¢«å¼•ç”¨ï¼Œæœ‰å…³è”æ•°æ®åœ¨ï¼Œæ˜¯å¦å¼ºåˆ¶åˆ é™¤æ•°æ®ï¼Ÿ";
 
         /// <summary>
-        /// {0} ÓĞ×Ó½Úµã²»ÔÊĞí±»É¾³ı.
+        /// {0} æœ‰å­èŠ‚ç‚¹ä¸å…è®¸è¢«åˆ é™¤.
         /// </summary>
-        public static string MSG0035 = "{0} ÓĞ×Ó½Úµã²»ÔÊĞí±»É¾³ı£¬ÓĞ×Ó½Úµã»¹Î´±»É¾³ı¡£";
+        public static string MSG0035 = "{0} æœ‰å­èŠ‚ç‚¹ä¸å…è®¸è¢«åˆ é™¤ï¼Œæœ‰å­èŠ‚ç‚¹è¿˜æœªè¢«åˆ é™¤ã€‚";
 
         /// <summary>
-        /// {0} ²»ÄÜÒÆ¶¯µ½ {1}.
+        /// {0} ä¸èƒ½ç§»åŠ¨åˆ° {1}.
         /// </summary>
-        public static string MSG0036 = "{0} ²»ÄÜÒÆ¶¯µ½ {1}¡£";
+        public static string MSG0036 = "{0} ä¸èƒ½ç§»åŠ¨åˆ° {1}ã€‚";
 
         /// <summary>
-        /// {0} ÏÂµÄ×Ó½Úµã²»ÄÜÒÆ¶¯µ½ {1}.
+        /// {0} ä¸‹çš„å­èŠ‚ç‚¹ä¸èƒ½ç§»åŠ¨åˆ° {1}.
         /// </summary>
-        public static string MSG0037 = "{0} ÏÂµÄ×Ó½Úµã²»ÄÜÒÆ¶¯µ½ {1}¡£";
+        public static string MSG0037 = "{0} ä¸‹çš„å­èŠ‚ç‚¹ä¸èƒ½ç§»åŠ¨åˆ° {1}ã€‚";
 
         /// <summary>
-        /// È·ÈÏÒÆ¶¯ {0} µ½ {1} Âğ?
+        /// ç¡®è®¤ç§»åŠ¨ {0} åˆ° {1} å—?
         /// </summary>
-        public static string MSG0038 = "È·ÈÏÒÆ¶¯ {0} µ½ {1} Âğ£¿";
+        public static string MSG0038 = "ç¡®è®¤ç§»åŠ¨ {0} åˆ° {1} å—ï¼Ÿ";
 
         /// <summary>
-        /// '{0}'²»µÈÓÚ'{1}'.
+        /// '{0}'ä¸ç­‰äº'{1}'.
         /// </summary>
-        public static string MSG0039 = "{0} ²»µÈÓÚ {1}¡£";
+        public static string MSG0039 = "{0} ä¸ç­‰äº {1}ã€‚";
 
         /// <summary>
-        /// {0} ´íÎó.
+        /// {0} é”™è¯¯.
         /// </summary>
-        public static string MSG0040 = "{0} ´íÎó¡£";
+        public static string MSG0040 = "{0} é”™è¯¯ã€‚";
 
         /// <summary>
-        /// È·ÈÏÉóºËÍ¨¹ıÂğ?.
+        /// ç¡®è®¤å®¡æ ¸é€šè¿‡å—?.
         /// </summary>
-        public static string MSG0041 = "È·ÈÏÉóºËÍ¨¹ıÂğ£¿";
+        public static string MSG0041 = "ç¡®è®¤å®¡æ ¸é€šè¿‡å—ï¼Ÿ";
 
         /// <summary>
-        /// È·ÈÏ²µ»ØÂğ?.
+        /// ç¡®è®¤é©³å›å—?.
         /// </summary>
-        public static string MSG0042 = "È·ÈÏÉóºË²µ»ØÂğ£¿";
+        public static string MSG0042 = "ç¡®è®¤å®¡æ ¸é©³å›å—ï¼Ÿ";
 
         /// <summary>
-        /// ³É¹¦Ëø¶¨Êı¾İ.
+        /// æˆåŠŸé”å®šæ•°æ®.
         /// </summary>
-        public static string MSG0043 = "²»ÄÜËø¶¨Êı¾İ¡£";
+        public static string MSG0043 = "ä¸èƒ½é”å®šæ•°æ®ã€‚";
 
         /// <summary>
-        /// ²»ÄÜËø¶¨Êı¾İ.
+        /// ä¸èƒ½é”å®šæ•°æ®.
         /// </summary>
-        public static string MSG0044 = "³É¹¦Ëø¶¨Êı¾İ¡£";
+        public static string MSG0044 = "æˆåŠŸé”å®šæ•°æ®ã€‚";
 
         /// <summary>
-        /// Êı¾İ±»ĞŞ¸ÄÌáÊ¾
+        /// æ•°æ®è¢«ä¿®æ”¹æç¤º
         /// </summary>
-        public static string MSG0045 = "Êı¾İÒÑ¾­¸Ä±ä£¬Ïë±£´æÊı¾İÂğ£¿";
+        public static string MSG0045 = "æ•°æ®å·²ç»æ”¹å˜ï¼Œæƒ³ä¿å­˜æ•°æ®å—ï¼Ÿ";
 
         /// <summary>
-        /// ×î½ü {0} ´ÎÄÚÃÜÂë²»ÄÜÖØ¸´¡£
+        /// æœ€è¿‘ {0} æ¬¡å†…å¯†ç ä¸èƒ½é‡å¤ã€‚
         /// </summary>
-        public static string MSG0046 = "×î½ü {0} ´ÎÄÚÃÜÂë²»ÄÜÖØ¸´¡£";
+        public static string MSG0046 = "æœ€è¿‘ {0} æ¬¡å†…å¯†ç ä¸èƒ½é‡å¤ã€‚";
 
         /// <summary>
-        /// ÃÜÂëÒÑ¹ıÆÚ£¬ÕË»§±»Ëø¶¨£¬ÇëÁªÏµÏµÍ³¹ÜÀíÔ±¡£
+        /// å¯†ç å·²è¿‡æœŸï¼Œè´¦æˆ·è¢«é”å®šï¼Œè¯·è”ç³»ç³»ç»Ÿç®¡ç†å‘˜ã€‚
         /// </summary>
-        public static string MSG0047 = "ÃÜÂëÒÑ¹ıÆÚ£¬ÕË»§±»Ëø¶¨£¬ÇëÁªÏµÏµÍ³¹ÜÀíÔ±¡£";
+        public static string MSG0047 = "å¯†ç å·²è¿‡æœŸï¼Œè´¦æˆ·è¢«é”å®šï¼Œè¯·è”ç³»ç³»ç»Ÿç®¡ç†å‘˜ã€‚";
 
         /// <summary>
-        /// Êı¾İÒÑ¾­¸Ä±ä£¬²»±£´æÊı¾İ£¿
+        /// æ•°æ®å·²ç»æ”¹å˜ï¼Œä¸ä¿å­˜æ•°æ®ï¼Ÿ
         /// </summary>
-        public static string MSG0065 = "Êı¾İÒÑ¾­¸Ä±ä£¬²»±£´æÊı¾İ£¿";
+        public static string MSG0065 = "æ•°æ®å·²ç»æ”¹å˜ï¼Œä¸ä¿å­˜æ•°æ®ï¼Ÿ";
 
-        public static string MSG0048 = "¾Ü¾øµÇÂ¼£¬ÓÃ»§ÒÑ¾­ÔÚÏßÉÏ¡£";
-        public static string MSG0049 = "¾Ü¾øµÇÂ¼£¬Íø¿¨MacµØÖ·²»·ûÏŞÖÆÌõ¼ş¡£";
-        public static string MSG0050 = "¾Ü¾øµÇÂ¼£¬IPµØÖ·²»·ûÏŞÖÆÌõ¼ş";
-        public static string MSG0051 = "ÒÑµ½ÔÚÏßÓÃ»§×î´óÊıÁ¿ÏŞÖÆ¡£";
+        public static string MSG0048 = "æ‹’ç»ç™»å½•ï¼Œç”¨æˆ·å·²ç»åœ¨çº¿ä¸Šã€‚";
+        public static string MSG0049 = "æ‹’ç»ç™»å½•ï¼Œç½‘å¡Macåœ°å€ä¸ç¬¦é™åˆ¶æ¡ä»¶ã€‚";
+        public static string MSG0050 = "æ‹’ç»ç™»å½•ï¼ŒIPåœ°å€ä¸ç¬¦é™åˆ¶æ¡ä»¶";
+        public static string MSG0051 = "å·²åˆ°åœ¨çº¿ç”¨æˆ·æœ€å¤§æ•°é‡é™åˆ¶ã€‚";
 
 
-        public static string MSG0060 = "ÇëÏÈ´´½¨¸ÃÖ°Ô±µÄµÇÂ¼ÏµÍ³µÄÓÃ»§ĞÅÏ¢¡£";
+        public static string MSG0060 = "è¯·å…ˆåˆ›å»ºè¯¥èŒå‘˜çš„ç™»å½•ç³»ç»Ÿçš„ç”¨æˆ·ä¿¡æ¯ã€‚";
 
         /// <summary>
-        /// ÄúÈ·ÈÏÒÆ³ıÂğ?
+        /// æ‚¨ç¡®è®¤ç§»é™¤å—?
         /// </summary>
-        public static string MSG0075 = "ÄúÈ·ÈÏÒÆ³ıÂğ£¿";
+        public static string MSG0075 = "æ‚¨ç¡®è®¤ç§»é™¤å—ï¼Ÿ";
 
         /// <summary>
-        /// ÄúÈ·ÈÏÒÆ³ı '{0}'Âğ?
+        /// æ‚¨ç¡®è®¤ç§»é™¤ '{0}'å—?
         /// </summary>
-        public static string MSG0076 = "ÄúÈ·ÈÏÒÆ³ı {0} Âğ£¿";
+        public static string MSG0076 = "æ‚¨ç¡®è®¤ç§»é™¤ {0} å—ï¼Ÿ";
 
-        public static string MSG0700 = "ÒÑ¾­³É¹¦Á¬½Óµ½Ä¿±êÊı¾İ¡£";
+        public static string MSG0700 = "å·²ç»æˆåŠŸè¿æ¥åˆ°ç›®æ ‡æ•°æ®ã€‚";
 
-        public static string MSG9800 = "Öµ";
-        public static string MSG9900 = "¹«Ë¾";
-        public static string MSG9901 = "²¿ÃÅ";
-        public static string MSG9956 = "Î´ÕÒµ½Âú×ãÌõ¼şµÄ¼ÇÂ¼¡£";
-        public static string MSG9957 = "ÓÃ»§Ãû";
-        public static string MSG9958 = "Êı¾İÑéÖ¤´íÎó¡£";
-        public static string MSG9959 = "ĞÂÃÜÂë";
-        public static string MSG9960 = "È·ÈÏÃÜÂë";
-        public static string MSG9961 = "Ô­ÃÜÂë";
-        public static string MSG9962 = "ĞŞ¸Ä {0} ³É¹¦¡£";
-        public static string MSG9963 = "ÉèÖÃ {0} ³É¹¦¡£";
-        public static string MSG9964 = "ÃÜÂë";
-        public static string MSG9965 = "µÇÂ¼³É¹¦¡£";
-        public static string MSG9966 = "ÓÃ»§Ã»ÓĞÕÒµ½£¬Çë×¢Òâ´óĞ¡Ğ´¡£";
-        public static string MSG9967 = "ÃÜÂë´íÎó£¬Çë×¢Òâ´óĞ¡Ğ´¡£";
-        public static string MSG9968 = "µÇÂ¼±»¾Ü¾ø£¬ÇëÓë¹ÜÀíÔ±ÁªÏµ¡£";
-        public static string MSG9969 = "»ù´¡±àÂë";
-        public static string MSG9970 = "Ö°Ô±";
-        public static string MSG9971 = "×éÖ¯»ú¹¹";
-        public static string MSG9972 = "½ÇÉ«";
-        public static string MSG9973 = "Ä£¿é";
-        public static string MSG9974 = "ÎÄ¼ş¼Ğ";
-        public static string MSG9975 = "È¨ÏŞ";
-        public static string MSG9976 = "´úÂë";
-        public static string MSG9977 = "±àºÅ";
-        public static string MSG9978 = "Ãû³Æ";
-        public static string MSG9979 = "¸¸½Úµã´úÂë";
-        public static string MSG9980 = "¸¸½ÚµãÃû³Æ";
-        public static string MSG9981 = "¹¦ÄÜ·ÖÀà´úÂë";
-        public static string MSG9982 = "Î¨Ò»Ê¶±ğ´úÂë";
-        public static string MSG9983 = "Ö÷Ìâ";
-        public static string MSG9984 = "ÄÚÈİ";
-        public static string MSG9985 = "×´Ì¬Âë";
-        public static string MSG9986 = "´ÎÊı";
-        public static string MSG9987 = "ÓĞĞ§";
-        public static string MSG9988 = "±¸×¢";
-        public static string MSG9989 = "ÅÅĞòÂë";
-        public static string MSG9990 = "´´½¨Õß´úÂë";
-        public static string MSG9991 = "´´½¨Ê±¼ä";
-        public static string MSG9992 = "×îºóĞŞ¸ÄÕß´úÂë";
-        public static string MSG9993 = "×îºóĞŞ¸ÄÊ±¼ä";
-        public static string MSG9994 = "ÅÅĞò";
-        public static string MSG9995 = "´úÂë";
-        public static string MSG9996 = "Ë÷Òı";
-        public static string MSG9997 = "×Ö¶Î";
-        public static string MSG9998 = "±í";
-        public static string MSG9999 = "Êı¾İ¿â";
+        public static string MSG9800 = "å€¼";
+        public static string MSG9900 = "å…¬å¸";
+        public static string MSG9901 = "éƒ¨é—¨";
+        public static string MSG9956 = "æœªæ‰¾åˆ°æ»¡è¶³æ¡ä»¶çš„è®°å½•ã€‚";
+        public static string MSG9957 = "ç”¨æˆ·å";
+        public static string MSG9958 = "æ•°æ®éªŒè¯é”™è¯¯ã€‚";
+        public static string MSG9959 = "æ–°å¯†ç ";
+        public static string MSG9960 = "ç¡®è®¤å¯†ç ";
+        public static string MSG9961 = "åŸå¯†ç ";
+        public static string MSG9962 = "ä¿®æ”¹ {0} æˆåŠŸã€‚";
+        public static string MSG9963 = "è®¾ç½® {0} æˆåŠŸã€‚";
+        public static string MSG9964 = "å¯†ç ";
+        public static string MSG9965 = "ç™»å½•æˆåŠŸã€‚";
+        public static string MSG9966 = "ç”¨æˆ·æ²¡æœ‰æ‰¾åˆ°ï¼Œè¯·æ³¨æ„å¤§å°å†™ã€‚";
+        public static string MSG9967 = "å¯†ç é”™è¯¯ï¼Œè¯·æ³¨æ„å¤§å°å†™ã€‚";
+        public static string MSG9968 = "ç™»å½•è¢«æ‹’ç»ï¼Œè¯·ä¸ç®¡ç†å‘˜è”ç³»ã€‚";
+        public static string MSG9969 = "åŸºç¡€ç¼–ç ";
+        public static string MSG9970 = "èŒå‘˜";
+        public static string MSG9971 = "ç»„ç»‡æœºæ„";
+        public static string MSG9972 = "è§’è‰²";
+        public static string MSG9973 = "æ¨¡å—";
+        public static string MSG9974 = "æ–‡ä»¶å¤¹";
+        public static string MSG9975 = "æƒé™";
+        public static string MSG9976 = "ä»£ç ";
+        public static string MSG9977 = "ç¼–å·";
+        public static string MSG9978 = "åç§°";
+        public static string MSG9979 = "çˆ¶èŠ‚ç‚¹ä»£ç ";
+        public static string MSG9980 = "çˆ¶èŠ‚ç‚¹åç§°";
+        public static string MSG9981 = "åŠŸèƒ½åˆ†ç±»ä»£ç ";
+        public static string MSG9982 = "å”¯ä¸€è¯†åˆ«ä»£ç ";
+        public static string MSG9983 = "ä¸»é¢˜";
+        public static string MSG9984 = "å†…å®¹";
+        public static string MSG9985 = "çŠ¶æ€ç ";
+        public static string MSG9986 = "æ¬¡æ•°";
+        public static string MSG9987 = "æœ‰æ•ˆ";
+        public static string MSG9988 = "å¤‡æ³¨";
+        public static string MSG9989 = "æ’åºç ";
+        public static string MSG9990 = "åˆ›å»ºè€…ä»£ç ";
+        public static string MSG9991 = "åˆ›å»ºæ—¶é—´";
+        public static string MSG9992 = "æœ€åä¿®æ”¹è€…ä»£ç ";
+        public static string MSG9993 = "æœ€åä¿®æ”¹æ—¶é—´";
+        public static string MSG9994 = "æ’åº";
+        public static string MSG9995 = "ä»£ç ";
+        public static string MSG9996 = "ç´¢å¼•";
+        public static string MSG9997 = "å­—æ®µ";
+        public static string MSG9998 = "è¡¨";
+        public static string MSG9999 = "æ•°æ®åº“";
 
-        #region public static int GetLanguageResource() ´Óµ±Ç°Ö¸¶¨µÄÓïÑÔ°ü¶ÁÈ¡ĞÅÏ¢
+        #region public static int GetLanguageResource() ä»å½“å‰æŒ‡å®šçš„è¯­è¨€åŒ…è¯»å–ä¿¡æ¯
         /// <summary>
-        /// ´Óµ±Ç°Ö¸¶¨µÄÓïÑÔ°ü¶ÁÈ¡ĞÅÏ¢
+        /// ä»å½“å‰æŒ‡å®šçš„è¯­è¨€åŒ…è¯»å–ä¿¡æ¯
         /// </summary>
         /// <returns></returns>
         //public static int GetLanguageResource()
@@ -348,25 +348,25 @@ namespace Utilities
         //}
         #endregion
 
-        #region public static string Format(string value, params string[] messages) ¸ñÊ½»¯Ò»¸ö×ÊÔ´×Ö·û´®
+        #region public static string Format(string value, params string[] messages) æ ¼å¼åŒ–ä¸€ä¸ªèµ„æºå­—ç¬¦ä¸²
         /// <summary>
-        /// ¸ñÊ½»¯Ò»¸ö×ÊÔ´×Ö·û´®
+        /// æ ¼å¼åŒ–ä¸€ä¸ªèµ„æºå­—ç¬¦ä¸²
         /// </summary>
-        /// <param name="value">Ä¿±ê×Ö·û´®</param>
-        /// <param name="messages">´«ÈëµÄĞÅÏ¢</param>
-        /// <returns>×Ö·û´®</returns>
+        /// <param name="value">ç›®æ ‡å­—ç¬¦ä¸²</param>
+        /// <param name="messages">ä¼ å…¥çš„ä¿¡æ¯</param>
+        /// <returns>å­—ç¬¦ä¸²</returns>
         public static string Format(string value, params string[] messages)
         {
             return String.Format(CultureInfo.CurrentCulture, value, messages);
         }
         #endregion
 
-        #region public static string GetMessage(string id) ¶ÁÈ¡Ò»¸ö×ÊÔ´¶¨Òå
+        #region public static string GetMessage(string id) è¯»å–ä¸€ä¸ªèµ„æºå®šä¹‰
         /// <summary>
-        /// ¶ÁÈ¡Ò»¸ö×ÊÔ´¶¨Òå
+        /// è¯»å–ä¸€ä¸ªèµ„æºå®šä¹‰
         /// </summary>
-        /// <param name="id">×ÊÔ´´úÂë</param>
-        /// <returns>×Ö·û´®</returns>
+        /// <param name="id">èµ„æºä»£ç </param>
+        /// <returns>å­—ç¬¦ä¸²</returns>
         public static string GetMessage(string id)
         {
             string returnValue = string.Empty;
@@ -377,11 +377,11 @@ namespace Utilities
 
         #region public static string GetMessage(string id, params string[] messages)
         /// <summary>
-        /// ¶ÁÈ¡Ò»¸ö×ÊÔ´¶¨Òå
+        /// è¯»å–ä¸€ä¸ªèµ„æºå®šä¹‰
         /// </summary>
-        /// <param name="id">×ÊÔ´´úÂë</param>
-        /// <param name="messages">´«ÈëµÄĞÅÏ¢</param>
-        /// <returns>×Ö·û´®</returns>
+        /// <param name="id">èµ„æºä»£ç </param>
+        /// <param name="messages">ä¼ å…¥çš„ä¿¡æ¯</param>
+        /// <returns>å­—ç¬¦ä¸²</returns>
         public static string GetMessage(string id, params string[] messages)
         {
             string returnValue = string.Empty;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing.Printing;
 using System.IO;
 using System.Reflection;

@@ -6,13 +6,13 @@ using System.Collections.Specialized;
 namespace Utilities
 {
     /// <summary>
-    /// URLµÄ²Ù×÷Àà
+    /// URLçš„æ“ä½œç±»
     /// </summary>
     public class UrlOper
     {
         static System.Text.Encoding encoding = System.Text.Encoding.UTF8;
 
-        #region URLµÄ64Î»±àÂë
+        #region URLçš„64ä½ç¼–ç 
         public static string Base64Encrypt(string sourthUrl)
         {
             string eurl = HttpUtility.UrlEncode(sourthUrl);
@@ -21,7 +21,7 @@ namespace Utilities
         }
         #endregion
 
-        #region URLµÄ64Î»½âÂë
+        #region URLçš„64ä½è§£ç 
         public static string Base64Decrypt(string eStr)
         {        
             if (!IsBase64(eStr))
@@ -34,7 +34,7 @@ namespace Utilities
             return sourthUrl;
         }
         /// <summary>
-        /// ÊÇ·ñÊÇBase64×Ö·û´®
+        /// æ˜¯å¦æ˜¯Base64å­—ç¬¦ä¸²
         /// </summary>
         /// <param name="eStr"></param>
         /// <returns></returns>
@@ -53,7 +53,7 @@ namespace Utilities
         #endregion
 
         /// <summary>
-        /// Ìí¼ÓURL²ÎÊı
+        /// æ·»åŠ URLå‚æ•°
         /// </summary>
         public static string AddParam(string url, string paramName, string value)
         {
@@ -70,7 +70,7 @@ namespace Utilities
             }
         }
         /// <summary>
-        /// ¸üĞÂURL²ÎÊı
+        /// æ›´æ–°URLå‚æ•°
         /// </summary>
         public static string UpdateParam(string url, string paramName, string value)
         {
@@ -88,17 +88,17 @@ namespace Utilities
             return url;
         }
 
-        #region ·ÖÎöURLËùÊôµÄÓò
+        #region åˆ†æURLæ‰€å±çš„åŸŸ
         public static void GetDomain(string fromUrl, out string domain, out string subDomain)
         {
             domain = "";
             subDomain = "";
             try
             {
-                if (fromUrl.IndexOf("µÄÃûÆ¬") > -1)
+                if (fromUrl.IndexOf("çš„åç‰‡") > -1)
                 {
                     subDomain = fromUrl;
-                    domain = "ÃûÆ¬";
+                    domain = "åç‰‡";
                     return;
                 }
 
@@ -111,7 +111,7 @@ namespace Utilities
                 {
                     if (u.IsFile)
                     {
-                        subDomain = domain = "¿Í»§¶Ë±¾µØÎÄ¼şÂ·¾¶";
+                        subDomain = domain = "å®¢æˆ·ç«¯æœ¬åœ°æ–‡ä»¶è·¯å¾„";
 
                     }
                     else
@@ -127,8 +127,8 @@ namespace Utilities
                         subDomain = Authority.Replace("comhttp", "com"); 
                         if (ss.Length < 2)
                         {
-                            domain = "²»Ã÷Â·¾¶";
-                            subDomain = "²»Ã÷Â·¾¶";
+                            domain = "ä¸æ˜è·¯å¾„";
+                            subDomain = "ä¸æ˜è·¯å¾„";
                         }
                     }
                 }
@@ -136,26 +136,26 @@ namespace Utilities
                 {
                     if (u.IsFile)
                     {
-                        subDomain = domain = "¿Í»§¶Ë±¾µØÎÄ¼şÂ·¾¶";
+                        subDomain = domain = "å®¢æˆ·ç«¯æœ¬åœ°æ–‡ä»¶è·¯å¾„";
                     }
                     else
                     {
-                        subDomain = domain = "²»Ã÷Â·¾¶";
+                        subDomain = domain = "ä¸æ˜è·¯å¾„";
                     }
                 }
             }
             catch
             {
-                subDomain = domain = "²»Ã÷Â·¾¶";
+                subDomain = domain = "ä¸æ˜è·¯å¾„";
             }
         }
 
         /// <summary>
-        /// ·ÖÎö url ×Ö·û´®ÖĞµÄ²ÎÊıĞÅÏ¢
+        /// åˆ†æ url å­—ç¬¦ä¸²ä¸­çš„å‚æ•°ä¿¡æ¯
         /// </summary>
-        /// <param name="url">ÊäÈëµÄ URL</param>
-        /// <param name="baseUrl">Êä³ö URL µÄ»ù´¡²¿·Ö</param>
-        /// <param name="nvc">Êä³ö·ÖÎöºóµÃµ½µÄ (²ÎÊıÃû,²ÎÊıÖµ) µÄ¼¯ºÏ</param>
+        /// <param name="url">è¾“å…¥çš„ URL</param>
+        /// <param name="baseUrl">è¾“å‡º URL çš„åŸºç¡€éƒ¨åˆ†</param>
+        /// <param name="nvc">è¾“å‡ºåˆ†æåå¾—åˆ°çš„ (å‚æ•°å,å‚æ•°å€¼) çš„é›†åˆ</param>
         public static void ParseUrl(string url, out string baseUrl, out NameValueCollection nvc)
         {
             if (url == null)
@@ -179,7 +179,7 @@ namespace Utilities
                 return;
             string ps = url.Substring(questionMarkIndex + 1);
 
-            // ¿ªÊ¼·ÖÎö²ÎÊı¶Ô    
+            // å¼€å§‹åˆ†æå‚æ•°å¯¹    
             Regex re = new Regex(@"(^|&)?(\w+)=([^&]+)(&|$)?", RegexOptions.Compiled);
             MatchCollection mc = re.Matches(ps);
 

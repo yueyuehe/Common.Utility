@@ -9,12 +9,12 @@ namespace Utilities
 {
     /// <summary>
     /// ResourceManagerWrapper
-    /// ��Դ������
+    /// 资源管理器
     /// 
-    ///	�޸ļ�¼
-    ///		2007.05.16 �汾��1.0 JiRiGaLa	���µ�������Ĺ淶����
+    ///	修改纪录
+    ///		2007.05.16 版本：1.0 JiRiGaLa	重新调整代码的规范化。
     /// 
-    /// �汾��1.0
+    /// 版本：1.0
     /// 
     /// <author>
     ///		<name>JiRiGaLa</name>

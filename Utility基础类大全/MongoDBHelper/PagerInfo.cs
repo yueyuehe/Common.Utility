@@ -1,4 +1,4 @@
-﻿namespace MongoDBHelper
+namespace MongoDBHelper
 {
     public class PagerInfo
     {

@@ -1,4 +1,4 @@
-﻿using Common.Utility;
+using Common.Utility;
 using Maticsoft.Common.Mail;
 using Maticsoft.Common.Mime;
 using System;

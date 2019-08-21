@@ -1,4 +1,4 @@
-﻿using Maticsoft.Common.Mail;
+using Maticsoft.Common.Mail;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;

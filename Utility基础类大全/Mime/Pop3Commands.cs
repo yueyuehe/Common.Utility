@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Maticsoft.Common.Mail
 {
     internal static class Pop3Commands

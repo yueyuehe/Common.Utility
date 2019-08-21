@@ -5,6 +5,7 @@ using System.Web.UI;
 
 namespace Utilities
 {
+    
     public class BasePage :System.Web.UI.Page
     {
         public BasePage()
@@ -14,7 +15,7 @@ namespace Utilities
             //
         }
 
-        public  static string Title = "标题";
+        public  static new string Title = "标题";
         public static string keywords = "关键字";
         public static string description = "网站描述";
 

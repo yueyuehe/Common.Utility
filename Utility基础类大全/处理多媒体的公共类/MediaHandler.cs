@@ -16,24 +16,16 @@ namespace Utilities
         /// <param name="wavFilePath">wav文件的路径</param>
         public static void SyncPlayWAV(SoundPlayer sp, string wavFilePath)
         {
-            try
-            {
-                //设置wav文件的路径 
-                sp.SoundLocation = wavFilePath;
+            //设置wav文件的路径 
+            sp.SoundLocation = wavFilePath;
 
-                //使用异步方式加载wav文件
-                sp.LoadAsync();
+            //使用异步方式加载wav文件
+            sp.LoadAsync();
 
-                //使用同步方式播放wav文件
-                if (sp.IsLoadCompleted)
-                {
-                    sp.PlaySync();
-                }
-            }
-            catch (Exception ex)
+            //使用同步方式播放wav文件
+            if (sp.IsLoadCompleted)
             {
-                string errStr = ex.Message;
-                throw ex;
+                sp.PlaySync();
             }
         }
 
@@ -43,24 +35,16 @@ namespace Utilities
         /// <param name="wavFilePath">wav文件的路径</param>
         public static void SyncPlayWAV(string wavFilePath)
         {
-            try
-            {
-                //创建一个SoundPlaryer类，并设置wav文件的路径
-                SoundPlayer sp = new SoundPlayer(wavFilePath);
+            //创建一个SoundPlaryer类，并设置wav文件的路径
+            SoundPlayer sp = new SoundPlayer(wavFilePath);
 
-                //使用异步方式加载wav文件
-                sp.LoadAsync();
+            //使用异步方式加载wav文件
+            sp.LoadAsync();
 
-                //使用同步方式播放wav文件
-                if (sp.IsLoadCompleted)
-                {
-                    sp.PlaySync();
-                }
-            }
-            catch (Exception ex)
+            //使用同步方式播放wav文件
+            if (sp.IsLoadCompleted)
             {
-                string errStr = ex.Message;
-                throw ex;
+                sp.PlaySync();
             }
         }
         #endregion
@@ -73,24 +57,17 @@ namespace Utilities
         /// <param name="wavFilePath">wav文件的路径</param>
         public static void ASyncPlayWAV(SoundPlayer sp, string wavFilePath)
         {
-            try
-            {
-                //设置wav文件的路径 
-                sp.SoundLocation = wavFilePath;
 
-                //使用异步方式加载wav文件
-                sp.LoadAsync();
+            //设置wav文件的路径 
+            sp.SoundLocation = wavFilePath;
 
-                //使用异步方式播放wav文件
-                if (sp.IsLoadCompleted)
-                {
-                    sp.Play();
-                }
-            }
-            catch (Exception ex)
+            //使用异步方式加载wav文件
+            sp.LoadAsync();
+
+            //使用异步方式播放wav文件
+            if (sp.IsLoadCompleted)
             {
-                string errStr = ex.Message;
-                throw ex;
+                sp.Play();
             }
         }
 
@@ -100,24 +77,17 @@ namespace Utilities
         /// <param name="wavFilePath">wav文件的路径</param>
         public static void ASyncPlayWAV(string wavFilePath)
         {
-            try
-            {
-                //创建一个SoundPlaryer类，并设置wav文件的路径
-                SoundPlayer sp = new SoundPlayer(wavFilePath);
 
-                //使用异步方式加载wav文件
-                sp.LoadAsync();
+            //创建一个SoundPlaryer类，并设置wav文件的路径
+            SoundPlayer sp = new SoundPlayer(wavFilePath);
 
-                //使用异步方式播放wav文件
-                if (sp.IsLoadCompleted)
-                {
-                    sp.Play();
-                }
-            }
-            catch (Exception ex)
+            //使用异步方式加载wav文件
+            sp.LoadAsync();
+
+            //使用异步方式播放wav文件
+            if (sp.IsLoadCompleted)
             {
-                string errStr = ex.Message;
-                throw ex;
+                sp.Play();
             }
         }
         #endregion

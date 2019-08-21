@@ -1,4 +1,4 @@
-﻿ 
+﻿
 
 using System;
 using System.Web;
@@ -28,10 +28,11 @@ namespace Common.Utility
         public static string GetCookieValue(string cookiename)
         {
             HttpCookie cookie = HttpContext.Current.Request.Cookies[cookiename];
+
             string str = string.Empty;
             if (cookie != null)
             {
-                str =HttpUtility.UrlDecode(cookie.Value);
+                str = HttpUtility.UrlDecode(cookie.Value);
             }
             return str;
         }

@@ -1,4 +1,4 @@
-﻿ 
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +16,7 @@ namespace Common.Utility
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
-        public static readonly string connectionString = System.Configuration.ConfigurationSettings.AppSettings["con"].ToString().Trim();
+        public static readonly string connectionString = ""; //System.Configuration.ConfigurationSettings.AppSettings["con"].ToString().Trim();
 
         // Hashtable to store cached parameters
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
@@ -191,12 +191,12 @@ namespace Common.Utility
             try
             {
                 SqlConnection conn = new SqlConnection(connectionString);
-                
-                    PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
-                    SqlDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                    cmd.Parameters.Clear();
-                    return rdr;
-      
+
+                PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
+                SqlDataReader rdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                cmd.Parameters.Clear();
+                return rdr;
+
             }
             catch
             {
